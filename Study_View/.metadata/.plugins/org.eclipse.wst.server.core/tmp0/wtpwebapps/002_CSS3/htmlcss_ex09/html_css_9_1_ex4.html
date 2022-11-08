@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3 Style Property Basic</title>
+<style>
+#box {
+	display: inline;
+	/* inline
+	넓이와 높이를 최소값만 갖는다.(줄바꿈 안됨)
+	width, height 속성 적용 안됨.(크기 지정 안되어 한줄로만 입력)
+	다만, margin 속성은 div 좌우로만 적용 
+	줄간격 조정은 line-height 속성 사용
+	inline 속성값 안에 block 속성값은 사용 불가
+	block 속성값 안에 inline 속성값은 사용 가능
+	*/
+}
+</style>
+</head>
+<body>
+	<span>Dummy</span>
+	<div id="box">
+		<span>
+			Lorem ipsum dolor sit amet, 
+			consectetur adipiscing elit.
+		</span>
+	</div>
+	<span>Dummy</span>
+</body>
+</html>

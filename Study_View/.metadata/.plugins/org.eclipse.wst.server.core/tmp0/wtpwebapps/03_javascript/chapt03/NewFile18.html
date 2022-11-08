@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	table {
+		border: 1px solid black;
+		text-align: center;
+		margin: 0px auto;
+		display: table;
+		border-collapse: collapse;
+	}
+	
+	td {
+		border: 1px solid black;
+	}
+
+</style>
+
+<script type="text/javascript">
+	var rows = prompt("행수를 입력하세요","");
+	
+	while (!rows || !rows.trim() || isNaN(rows*1)) {
+		rows = prompt("행수를 정확히 입력하세요","");
+	}
+	
+	var cols = prompt("열수를 입력하세요","");
+	
+	while (!cols || !cols.trim() || isNaN(cols*1)) {
+		cols = prompt("열수를 정확히 입력하세요","");
+	}
+	//2행 3열이라면
+	var num = 1; //증가되는 수
+	
+	document.write("<table>"); //table 시작
+	
+	for (var i = 1; i <= rows; i++) { //행수
+		document.write("<tr>");
+			
+		for (var j = 1; j <= cols; j++) { //열수
+			document.write("<td>" + num + "</td>");
+			num++
+		} //열 종료
+		document.write("</tr>");
+	} //행 종료
+	document.write("</table>"); //table 종료
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

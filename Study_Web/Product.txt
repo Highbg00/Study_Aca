@@ -1,0 +1,50 @@
+
+
+
+
+○ Dynamic Web Project 생성(03.TestMVC : tm)
+   - Library 등록 : ojdbc11.jar → WebContet > WEB-INF > lib
+   
+○ w_product 테이블 생성
+	- 상품명 : 	title 	varchar2(30)
+	- 상품코드 : 	code 	varchar2(20) primary key not null
+	- 제조사 : 	comp 	varchar2(30)
+	- 단가 : 		cost 	number
+	- 수량 : 		su 	number
+	- 가격 : 		price 	number
+
+○ ProductMain.html
+	상품명	[   		  ]
+	상품코드[P____________]
+	제조사	[			  ]
+	단가	[		 	  ]
+	수량	[			  ]
+   [상품정보입력][입력정보취소][전체상품보기]
+
+	- 모든 항목은 반드시 입력되어야 한다.
+	- 상품코드는 유효성 검사를 수행 : 첫 글자는 반드시 P로 시작하며 이후 숫자를 조합하여 8~12자릿수까지 입력하세요
+	- 단가와 수량은 숫자만 입력되어야 한다.
+	- 위의 작성조건을 만족하면 서버로 전송(insert.do)
+
+○ Servlet 정의 : default package ▶ web.xml : servlet-mapping 설정
+	- InsertServlet.java(insert.do) : 상품정보 입력
+	- GetAllListServlet.java(gals.do) : 전체상품 목록보기
+	- DeleteServlet.java(ds.do) : 상품정보 삭제
+		
+○ ProductDTO.java : com.hanul.study package ▶ 직렬화
+	- 멤버변수(필드) 선언 : title, code, comp, cost, su, price
+	- 디폴트 생성자 메서드
+	- 생성자 메서드 초기화 : 메서드 오버 로딩(필요하면 사용)
+	- Getters & Setters 메서드
+
+○ ProductDAO.java : com.hanul.study package
+	- getConn() : DB 접속
+	- dbClose() : DB 접속 해제
+	- insertProduct() : 가격 계산 후 상품정보 등록
+	- searchAllProduct() : 전체상품 목록조회
+	- deleteProduct() : 상품정보 삭제	
+
+★ 최종적으로 프로젝트가 완성이 되면 "본인이름.zip" 압축 후,
+	 
+	 - 가점부분 : CSS 적용, javascript/jQuery 주석, JAVA 주석
+   

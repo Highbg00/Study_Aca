@@ -1,0 +1,215 @@
+@charset "UTF-8";
+
+/* input 태그안에 기본 글자색 외 지정 */
+input::-ms-input-placeholder { 
+	color: black; 
+	font-size: 1.0rem;
+}
+input::-webkit-input-placeholder { 
+	color: black; 
+	font-size: 1.0rem;
+}
+input::-moz-placeholder { 
+	color: black; 
+	font-size: 1.0rem;
+}
+
+* {
+	font-family: "Black Han Sans", sans-serif;
+	margin: 0px;
+	padding: 0px;
+/* 	color: white; */
+}
+
+body{
+/*  background-color: #dddddd; */
+/*  background-color: navy; */
+/* 	position: relative; /* relative 지정시적용 안됨!!! */ */
+}
+
+#wrap {
+	width: 450px;
+	padding: 10px;
+	border: 2px solid black;
+	font-size: 1.2rem;
+	text-align: center;
+/* 	background-color: #191919; */
+	
+	/* 중요!!! 대상을 상하좌우 가운데로 정렬 */
+	position: absolute;	/* 중요 */
+  top: 50%;		/* 중요 */
+  left: 50%;	/* 중요 */
+  transform: translate(-50%,-120%);	/* 중요 */
+  
+/*  transform:translate() - 지정 요소 X 또는 Y축으로 이동 */
+/* 	translate는 요소를 지정한 위치로 X 또는 Y축만큼 이동 시킵니다. */
+	
+/* 	transform:translateX(10px);        // X축으로 10px 이동 */
+/* 	transform:translateY(10px);        // Y축으로 10px 이동 */
+/* 	transform:translate(-10px, -10px); // X축으로 -10px, Y축으로 -10px 이동 */
+ 
+  
+  
+  box-shadow: 10px 10px 30px gray;
+/*   box-shadow: none | x-position y-position blur spread color | inset | initial | inherit */
+/* 	☞ 선택한 요소에 그림자 효과를 만들어주는 속성 */
+/* 	none : 그림자 효과를 없앱니다. */
+/* 	x-position : 가로 위치입니다. 양수면 오른쪽에, 음수면 왼쪽에 그림자가 만들어집니다. (필수) */
+/* 	y-position : 세로 위치입니다. 양수면 아래쪽에, 음수면 위쪽에 그림자가 만들어집니다. (필수) */
+/* 	blur : 그림자를 흐릿하게 만듭니다. 값이 클수록 더욱 흐려집니다. */
+/* 	spread : 양수면 그림자를 확장하고, 음수면 축소합니다. */
+/* 	color : 그림자 색을 정합니다. */
+/* 	inset : blur와 color 사이에 사용해서 그림자를 요소의 안쪽에 만듭니다.  */
+
+}
+
+#wrap fieldset {
+	border: none;
+}
+
+
+#wrap legend {
+  text-transform: uppercase; /* 영문자를 대문자로 변경 */
+  font-size: 1.8rem;
+}
+
+table {
+	width: 445px;
+	text-align: center;
+}
+
+table tr td {
+	height: 35px;
+	line-height: 35px;
+}
+
+table tr td:first-child  {
+	width: 15%;
+}
+
+table tr td:last-child {
+	width: 85%;
+	text-align: left;
+}
+
+input[type="text"],
+input[type="password"] {
+	background: none;
+	display: inline-block;
+	
+	text-align: center;
+	border: 2px solid #3498db;
+	width: 250px;
+	height: 25px;
+	line-height: 25px;
+	outline: none;
+	border-radius: 25px;
+  transition-duration: 0.25s;
+	margin: 5px auto;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+	display: inline-block;
+  background: none;
+  
+	width: 270px;
+  border-color: red;
+  color: orange;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  border: 2px solid #2ecc71;
+  color: black;
+  border-radius: 25px;
+  transition-duration: 0.25s;
+  text-align: center;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  margin: 10px auto;
+  
+  width: 170px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 1.2rem;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #2ecc71;
+}
+
+input[type="submit"]:focus {
+		
+}
+
+.icon {
+	width: 36px;
+}
+
+.alert {
+	display: block;
+	font-weight: normal;
+	color: red;
+	font-size: 14px;
+	text-align: center;
+	line-height: 10px;
+	width: 270px;
+}
+
+.notAMember {
+	display: block;
+	width: 450px;
+	padding: 0px;
+	text-align: center;
+}
+
+.notAMember a {
+	color: red;	
+}
+
+table tr:last-child td {
+	text-align: center;
+}
+#close {
+	display:inline-block;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	outline: none;
+	border: 0px;
+	border-radius: 5px;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	background-color: pink;
+	color: red;
+	font-size: 16px;
+	cursor: pointer;
+	transition-duration: 1s;
+}
+
+#close:hover {
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+/* 	padding: 5px; */
+}
+
+#eye {
+	font-size: 14px;
+	color: blue;
+}
+
+#nun {
+  color: orange;
+}
+
+
+
+
+
+

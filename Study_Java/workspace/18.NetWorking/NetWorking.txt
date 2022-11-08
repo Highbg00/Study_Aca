@@ -1,0 +1,35 @@
+○ IP Address : 네트워크에 연결되어 있는 터미널(단말기)을 구분하기 위한 고유의 주소
+	- CMD(명령프롬프트) > ipconfig
+	- IPv4 : 32bit 주소 체계
+	- IPv6 : 128bit 주소 체계(차세대 IP주소)
+	
+○ Port Number : 네트워크에 연결되어 있는 터미널(단말기)간의 데이터가 전송되는 통로
+	- 0 ~ 65536 할당
+	- 0 ~ 1023 : 예약된 포트로서 사용할 수 없다.
+	- CMD(명령프롬프트) > netstat /an, netstat -an
+	
+○ Socket : IP Address + Port Number
+	- Server Socket : Response(응답) ▶ ServerSocket, Socket
+	- Client Socket : Request(요청) ▶ Socket
+	- Socket 간의 통신은 JAVA의 IO를 이용해서 통신 : 입출력 Stream Class ▶ IO의 연장선
+
+○ TCP/UDP 통신
+	- TCP : 전송 제어 프로토콜, 신뢰성 있는 전송 중시
+	- UDP : 사용자 데이터그램 프로토콜, 전송속도 중시
+=====================================================
+[Client]							[Server]
+Socket : 서버IP주소 + Port번호		ServerSocket : Port번호 할당
+									Socket : ss.accept(); → 클라이언트의 접속정보
+									
+
+○ 송신(출력스트림)
+	OutputStream : socket.getOutputStream();
+	OutputStreamWriter
+	BufferedWriter
+	★ PrintWriter : OutputStreamWriter + BufferedWriter
+	 
+○ 수신(입력스트림)
+	InputStream : socket.getInputStream();
+	InputStreamReader
+	BufferedReader
+									

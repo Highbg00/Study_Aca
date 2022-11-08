@@ -1,0 +1,195 @@
+@charset "UTF-8";
+
+* {
+	font-family: "Black Han Sans", sans-serif;
+	margin: 0px;
+	padding: 0px;
+/* 	color: white; */
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+/*   background-color: navy; */
+}
+
+#wrap {
+	width: 600px;
+	padding: 10px;
+	border: 2px solid black;
+	font-size: 1.3rem;
+	text-align: center;
+/* 	background-color: #191919; */
+		
+	position: absolute;	/* 중요 */
+  top: 50%;		/* 중요 */
+  left: 50%;	/* 중요 */
+  transform: translate(-50%,-50%);	/* 중요 */
+  
+  box-shadow: 10px 10px 30px gray;
+}
+
+#wrap h1{
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+
+td {
+/* 	height: 30px; */
+/* 	line-height: 30px; */
+/* 	padding-bottom: 3px; */
+}
+
+table tr td:first-child {
+	width: 150px;
+}
+
+table tr td:last-child {
+	text-align: left;
+}
+
+table tr:last-child td {
+	text-align: center;
+}
+
+table tr:nth-child(even) td:last-child span {
+	text-align: center;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+	background: none;
+	display: inline-block;
+	text-align: center;
+	border: 2px solid #3498db;
+	width: 250px;
+	height: 25px;
+	line-height: 25px;
+	outline: none;
+	border-radius: 25px;
+  transition-duration: 0.75s;
+  font-size: 1.05rem;
+}
+
+input[type="submit"], button[type="submit"],
+input[type="reset"], button[type="reset"],
+input[type="button"], button[type="button"] {
+  background: none;
+  display: inline-block;
+  border: 2px solid green;
+/*   color: white; */
+  border-radius: 25px;
+  transition: 0.75s;
+  text-align: center;
+  outline: none;
+  width: 100px;
+  height: 25px;
+	line-height: 25px;
+  cursor: pointer;
+  font-size: 1.05rem;
+}
+
+input[type="submit"], button[type="submit"],
+input[type="reset"], button[type="reset"] {
+  font-size: 1.5rem;
+	width: 150px;
+	height: 40px;
+	line-height: 40px;
+	display: inline-block;
+}
+
+input[type="button"], button[type="button"] {
+	width: 130px;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus {
+  border-color: red;
+  color: orange;
+  background: none;
+  font-size: 1.05rem;
+}
+
+input[type="submit"]:hover, button[type="submit"]:hover,
+input[type="reset"]:hover, button[type="reset"]:hover,
+input[type="button"]:hover, input[type="button"]:hover {
+  background-color: green;
+}
+
+/* input 태그안에 기본 글자색 외 지정 */
+input::-ms-input-placeholder { 
+	color: black; 
+}
+input::-webkit-input-placeholder { 
+	color: black; 
+}
+input::-moz-placeholder { 
+	color: black; 
+}
+/* input[type="number"] 스핀 버튼 없애는 css 속성 */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+	-webkit-appearance: none;
+	margin: 0px; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+}	
+
+span {
+	display: inline-block;
+	width: 250px;
+	margin-top: 0px;
+	font-size: 0.8rem;
+}
+
+#tel1, #tel2, #tel3 {
+	width: 65px;
+}
+
+#wrap>p {
+  margin-top: 30px;
+}
+
+#wrap>p>a {
+  color: red;
+}
+
+#close {
+	display:inline-block;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	outline: none;
+	border: 0px;
+	border-radius: 5px;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	background: pink;
+	color: red;
+	font-size: 16px;
+	cursor: pointer;
+	transition-duration: 1s;
+}
+
+/*
+#close:hover {
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+}
+*/
+
+
+
+
+
+
+
+
+

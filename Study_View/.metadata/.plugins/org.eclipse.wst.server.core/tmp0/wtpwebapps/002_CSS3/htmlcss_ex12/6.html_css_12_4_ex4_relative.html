@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<!-- 
+	relative : 마지막을 시작점으로 
+	즉, 새줄에서 시작
+-->
+<style>
+#static1 {
+	width: 100px;
+	height: 100px;
+	background-color: green;
+}
+
+#relative2 {
+	width: 100px;
+	height: 100px;
+	background-color: yellow;
+	position: relative;
+	top: 0px;
+	left: 100px;
+}
+
+#relative3 {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	position: relative;
+	top: 0px;
+	left: 200px;
+}
+</style>
+</head>
+
+<body>
+	<div id="static1">static1</div>
+	<div id="relative2">relative2</div>
+	<div id="relative3">relative3</div>
+</body>
+</html>

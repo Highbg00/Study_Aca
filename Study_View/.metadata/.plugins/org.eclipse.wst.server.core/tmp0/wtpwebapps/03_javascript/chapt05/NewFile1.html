@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chColorOver() {
+// 		document.getElementsByTagName("input")[0].style.color = 'red';
+// 		document.getElementsByTagName("input")[0].value = '마우스 오버';
+		
+		document.getElementById("btn1").style.color="red";
+		document.getElementById("btn1").value="마우스 오버";
+		
+	}
+	
+	function chColorOut() {
+// 		document.getElementsByTagName("input")[0].style.color = 'blue';
+// 		document.getElementsByTagName("input")[0].value = '마우스 아웃';
+		
+		document.getElementById("btn2").style.color="blue";
+		document.getElementById("btn2").value="마우스 아웃";
+	}
+
+</script>
+</head>
+<body>
+	<input type="button" id="btn1"
+				 onmouseover="chColorOver();"
+				 onmouseout="chColorOut();" value="마우스" />
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

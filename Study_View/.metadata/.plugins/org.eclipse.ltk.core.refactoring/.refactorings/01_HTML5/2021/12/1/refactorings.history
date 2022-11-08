@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;img01.png&apos; to &apos;html04&apos;&#x0D;&#x0A;- Original project: &apos;01_HTML5&apos;&#x0D;&#x0A;- Destination element: &apos;html04&apos;&#x0D;&#x0A;- Original element: &apos;img01.png&apos;" description="Copy file" element1="WebContent/html03/img01.png" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1640831591574" target="/01_HTML5/WebContent/html04" units="0" version="1.0"/>
+</session>

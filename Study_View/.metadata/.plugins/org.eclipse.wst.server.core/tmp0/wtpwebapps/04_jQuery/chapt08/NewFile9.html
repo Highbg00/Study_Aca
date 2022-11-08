@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script>
+
+$(document).ready(function() {
+	$("#site").change(function() {
+		
+// 		$("#txt").text($("#site").val());
+		$("#txt").text($(this).val()); //이벤트가 발생한 요소
+		
+	}); //change
+}); //ready
+
+</script>
+</head>
+<body>
+	<select name="site" id="site">
+		<option value="">사이트선택</option>
+		<option value="http://www.naver.com">네이버</option>
+		<option value="http://www.nate.com">네이트</option>
+		<option value="http://www.google.com">구글</option>
+	</select>	
+	<p id="txt"></p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

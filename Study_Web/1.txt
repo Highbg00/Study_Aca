@@ -1,0 +1,24 @@
+https://meet.jit.si/hanul_202
+비번 : 0202*
+
+
+
+01.FirstProject    →    02.MVC
+/fp	         →	   /m
+
+
+                   (hs.do)
+index.html → web.xml → Controller(Servlet) → Model(.java)
+→ DB 연동(*.DAO) → return (result) → web.xml → View (클라이언트에게 응답)
+
+
+
+
+
+
+
+
+
+
+
+

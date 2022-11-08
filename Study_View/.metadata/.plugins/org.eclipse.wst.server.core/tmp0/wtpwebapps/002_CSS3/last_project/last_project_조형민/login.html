@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>로그인</title>
+
+	<style type="text/css">
+		@import url("https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap");
+
+		@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css");
+
+		@import url("css/login.css");
+	</style>
+	
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	
+	<script src="js/login.js">
+$(document).ready(function() {
+
+			
+		document.getElementById("form").onsubmit = function() {
+			
+			$.ajax({
+				
+				url: "json/loginCheck.json",
+				
+				data : {
+					name : $("#id").val(),
+					pw : $("#pw").val() 
+				}, 
+				
+				success: function(result) {
+					$("#txt").text(result);
+				} 
+				
+			}); 
+	
+			return false; 
+			
+		}; 
+		
+	}); 
+	</script>
+</head>
+
+<body>
+ <form name=form method="post">
+
+	<a id="homm" href="./index.html"><img src="image/home.png" width="40px" height="40px"></a>
+	
+		<table id="table">
+			<tr>
+				<th colspan="3" id="top_text">LOGIN</th>
+			</tr>
+
+
+			<tr id="id">
+				<td><img src="image/id_icon.png"></td>
+				<td><input name = "id"type="text" placeholder="아이디(이메일)를 입력하세요"></td>
+				<td id="t"></td>
+			</tr>
+			<tr id="pw">
+				<td id="pw_j"><img src="image/pw_icon.png"></td>
+				<td><input name = "pw"type="password" placeholder="비밀번호를 입력하세요"></td>
+				<td id="pw_eye"><img src="image/eye.jpg"></td>
+				<td>비밀번호&nbsp;&nbsp;&nbsp;</td>
+			</tr>
+			<tr id="mbutton">
+				<td colspan="3"><input type="submit"  value="로그인"><input type="reset" type="button" value="취  소"></td>
+
+			</tr>
+			<tr id="bottom_text">
+				<td colspan="3"><a href="./signup.html">회원가입</a></td>
+			</tr>
+
+		</table>
+	</form>
+</body>
+
+</html>

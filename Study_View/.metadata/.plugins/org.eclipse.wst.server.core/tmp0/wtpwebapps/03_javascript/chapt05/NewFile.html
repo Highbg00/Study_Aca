@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var color = ["red","yellow","aqua","purple"];
+	var i = 0;
+	
+	function colorBg() {
+		
+		document.getElementsByTagName("body")[0].style.backgroundColor = color[i];
+		
+		i++;
+		
+		if (i == color.length) {
+			i = 0;
+		}
+		
+	}
+
+	window.onload = function () {
+		
+		document.getElementById("btn3").onclick = function () {
+			colorBg();
+		}
+		
+		document.getElementById("btn4").onmouseover =	
+		document.getElementById("btn4").onfocus = function () {
+			colorBg();
+		}
+		
+	}
+	
+	
+	
+</script>
+</head>
+<body>
+	<p>
+		<button type="button" onclick="colorBg();">버튼1</button>
+	</p>
+	
+	<p>
+		<button type="button" onmouseover="colorBg();" onfocus="colorBg();">버튼2</button>
+	</p>
+	
+	
+	<p>
+		<button type="button" id="btn3">버튼3</button>
+	</p>
+	
+	<p>
+		<button type="button" id="btn4">버튼4</button>
+	</p>
+
+	<script type="text/javascript">
+	
+	
+	
+	</script>
+	
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

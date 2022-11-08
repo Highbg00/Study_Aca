@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/* 
+※ 객체를 생성할때는 new라는 키워드와 생성자함수를 사용
+객체 생성시 반드시 생성자 함수 필요한 객체 : Date()객체
+객체 생성시 생성자 함수 필요없는 객체 : Math()수학, Number()숫자, String()문자,
+Array()배열, RegExp()정규표현식
+*/
+
+// var tv = new Object() //생성된 객체를 변수 tv가 참조
+
+// tv.width="30cm";
+// tv.height="25cm";
+// tv.weight="20kg";
+// tv.color="white";
+
+// tv.off=function(){
+// 	document.write("전원off<br />");
+// }
+
+var tv = {
+		width: "30cm",
+		height: "25cm",
+		weight: "20kg",
+		color: "white",
+		off : function() {
+			document.write("전원 off<br />");
+		}
+}
+
+document.write(tv.width + "<br />");
+document.write(tv.height + "<br />");
+document.write(tv.weight + "<br />");
+document.write(tv.color + "<br />");
+
+tv.off();
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

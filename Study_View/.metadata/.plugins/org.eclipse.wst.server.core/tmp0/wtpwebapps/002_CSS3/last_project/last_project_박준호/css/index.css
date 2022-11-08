@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Shizuru&display=swap');
+
+* {	
+	margin: 0px auto; 
+	padding: 0px; 
+	box-sizing: border-box;
+	font-family: 'Shizuru', cursive;
+	
+}
+
+
+#wrap{
+width: 1000px;
+}
+
+body{
+background-color: black;
+}
+
+.hd {
+	width: 1000px;
+	text-align: center;
+	border: 1px solid black;
+	color: white;
+	font-family: 'Shizuru', cursive;
+}
+
+#main_header {
+	border-top: 0px;
+	background-image: url("../img/pexels-photo-11034442.jpeg");
+	background-repeat : no-repeat;
+    background-size : cover;
+	border-bottom: 2px solid #F5D92B;
+}
+
+
+#header{
+	background-color: black;
+	overflow: hidden;
+	border-bottom: 2px solid #F5D92B;
+}
+
+#header ul
+{
+	float: right;
+	padding: 0px;
+	margin: 0px auto;
+	overflow: hidden;
+}
+
+#header ul li{
+	float: left;
+	list-style: none;
+	color: #F5D92B;
+	font-size: 5px;
+	line-height: 20px;
+}
+
+#header ul li a{
+	text-decoration: none;
+	margin: 5px;
+	color: white;
+	font-size: 15px;
+}
+
+#header ul li a:hover{
+color: #73A9DF;
+}
+
+.animation_canvas {
+	overflow: hidden;
+	position: relative;
+	width: 1000px;
+	height: 600px;
+	margin: 0 auto;
+}
+
+.slider_panel {
+	width: 6000px;
+	position: relative;
+}
+
+.slider_image {
+	float: left;
+	width: 1000px;
+	height: 600px;
+}
+
+.slider_text_panel {
+	position: absolute;
+	top: 500px;
+	left: 50px;
+}
+
+
+.control_panel {
+	position: absolute;
+	top: 650px;
+	left: 630px;
+	height: 15px;
+	overflow: hidden;
+}
+
+.control_button {
+	width: 15px;
+	height: 75px;
+	position: relative;
+	float: left;
+	cursor: pointer;
+	background-image: url('../img/point_button.png');
+}
+
+.control_button:hover {
+	top: -15px;
+}
+
+.control_button.active {
+	top: -30px;
+}
+
+#footer_h1{
+	border-top: 2px solid #F5D92B;
+	background-image: url("../img/pexels-photo-11034442.jpeg");
+	background-repeat : no-repeat;
+    background-size : cover;
+	border-bottom: 2px solid #F5D92B;
+}
+
+footer {
+width: 1000px;
+background-color: black;
+}
+footer > div {
+overflow: hidden;
+}
+
+footer > div > div{
+float: left;
+border: 1px solid black;
+margin-top: 0.5px;
+margin-bottom: 0.5px;
+}
+footer > div > div:first-child{
+margin-left: 0px;
+margin-right: 2px;
+}
+
+footer > div:first-of-type > div{
+margin-top: 0px;
+}
+footer > div > div:nth-child(2){
+margin-left: 0px;
+margin-right: 0px;
+}
+
+footer > div > div:last-child{
+margin-left: 2.00px;
+margin-right: 0px;
+}
+footer > div a{
+width: 330px;
+height: 330px;
+text-align: center;
+display: block;
+}
+
+footer > div > div:hover {
+border-color: #F5D92B;
+}
+
+footer > div:first-of-type > div:hover{
+border-top: 0px;
+padding-top: 1px;
+}
+
+
+#footer_div_1 a {
+	background-image: url("../img/nexon_logo.jpg");
+	background-repeat : no-repeat;
+    background-size : 330px 330px;
+}
+
+#footer_div_2 a {
+	background-image: url("../img/blz_logo.svg.png");
+	background-repeat : no-repeat;
+    background-size : 330px 330px;
+}
+
+#footer_div_3 a {
+	background-image: url("../img/krafton_logo.jpg");
+	background-repeat : no-repeat;
+    background-size : 330px 330px;
+}
+
+#footer_div_4 a {
+	background-image: url("../img/nc_logo.jpeg");
+	background-repeat : no-repeat;
+    background-size : 330px 330px;
+}
+
+#footer_div_5 a {
+	background-image: url("../img/Steam_Logo.png");
+	background-repeat : no-repeat;
+    background-size : 330px 330px;
+}
+
+#footer_div_6 a {
+	background-image: url("../img/google_logo.jpeg");
+	background-repeat : no-repeat;
+    background-size : 330px 330px;
+}
+

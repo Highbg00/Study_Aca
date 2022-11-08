@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>회원가입</title>
+<style type="text/css">
+	@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap');
+ 	@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css");
+ 	@import url("css/signup.css");
+</style>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="js/signup.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<form>
+		<fieldset>
+			<legend>Join Membership</legend><span id="close">x</span>
+			<table>	
+				<tr>
+					<td><label for="name">이름&nbsp;&nbsp;</label></td>
+					<td>
+						<input type="text" name="name" id="name" maxlength="10" placeholder="이름을 입력하세요" required="required" />
+						<a id="letter">한글2~5자</a>
+						<span class="alert" id="nameCheckSpan"></span>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="id">아이디&nbsp;&nbsp;</label></td>
+					<td>
+						<input pattern=".{4,11}" type="text" name="id" id="id" maxlength="11" placeholder="아이디를 입력하세요" required="required"/>
+						<a id="letter">영어소문자/숫자,4~11자</a>
+          	<button type="button" id="idchk">ID중복확인</button>
+						<span class="alert" id="idCheckSpan"></span>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="pw">비밀번호&nbsp;&nbsp;</label></td>
+					<td>
+						<input type="password" name="pw" id="pw" maxlength="11" placeholder="비밀번호를 정확히 입력해주세요" required="required"/>
+						<i id="nun1" class="fa fa-eye fa-lg"></i>
+						<a id="letter">영어소문자/숫자,4~11자</a>
+						<span class="alert" id="pwSpan"></span>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><label for="pwCheck">비밀번호 확인&nbsp;&nbsp;</label></td>
+					<td>
+						<input type="password" name="pwCheck" id="pwCheck" maxlength="11" placeholder="비밀번호를 다시 입력하세요" required="required"/>
+						<i id="nun2" class="fa fa-eye fa-lg"></i>
+						<a id="letter">영어소문자/숫자,4~11자</a>
+						<span class="alert" id="pwCheckSpan"></span>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="tel">휴대전화&nbsp;&nbsp;</label></td>
+					<td>
+						<input type="text" class="tel" id="tel1" maxlength="3" />-
+						<input type="text" class="tel" id="tel2" maxlength="4" />-
+						<input type="text" class="tel" id="tel3" maxlength="4" />
+						<span class="alert" id="telCheckSpan"></span>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="email">이메일&nbsp;&nbsp;</label></td>
+					<td>
+						<input type="text" name="email" id="email" placeholder="이메일을 입력하세요"/>
+          	<button type="button" id="emailCheck">이메일중복확인</button>
+						<span class="alert" id="emailSpan"></span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<input type="submit" id="joinBtn" value="회원가입" />
+						<input type="reset" id="joinResetBtn" value="취소" />
+					</td>
+	 			</tr>
+			</table>
+		</fieldset>
+	</form>
+	<div class="Member">
+		이미 계정이 있다면 <a href="login.html">여기</a>를 클릭하여 로그인하세요
+	</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+

@@ -1,0 +1,82 @@
+$(document).ready(function() {
+	
+	var id = document.getElementById("id");
+	var pw = document.getElementById("pw");
+
+	$("#loginBtn").click(function() {
+		
+		if (!$("#id").val()) {
+			alert("아이디를 입력하세요");
+			$("#id").focus();
+			return false;
+		}
+		
+		if (!$("#pw").val()) {
+			alert("비밀번호를 입력하세요");
+			$("#pw").focus();
+			return false;
+		}
+		
+		$.ajax({
+			
+			url: "loginCheck.json", 
+			dataType: "json",
+			success: function(result) {
+				
+				$(result).each(function(key, value) {
+					
+					if ($("#id").val() == (value.id) && $("#pw").val() == (value.pw)) {
+						alert($("#id").val() + "님 로그인 하셨습니다.");
+						
+						location.replace("index.html");
+						return false;
+						
+					} else {}//if
+					
+				});//each
+				
+			} //succes
+			
+		}); //ajax
+		
+		
+		
+	}); //loginBtn click
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}); //ready
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

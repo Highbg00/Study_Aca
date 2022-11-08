@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8" />
+<title>이미지 넣기</title>
+</head>
+<body>
+<!-- 	
+	src : 이미지 경로
+	alt  : 이미지 없을 때 대체문자
+	width : 이미지 너비
+	height : 이미지 높이
+	css로 사용해 입력하므로 width와 height는 잘 사용하지 않음. 
+-->
+
+	<p><img src="navi.png" alt="aaa" /></p>
+	<p><img src="navi1.png" alt="bbb" /></p>
+	<hr />
+	  <!-- 다른 경로에 있는경우 -->
+	<p><img src="image/navi.png" alt="ccc"/></p>  <!-- ../img/img01.png 는 안됨 -->
+	
+	<p><img src="img/img02.png" alt="ddd"/></p>
+	
+	<p><img src="img/img03.png" alt="fff" width="200"/></p> 
+	<hr />
+	<!-- 이미지 크기는 아는데 이미지가 없을때 src="http://placehold.it/300x200" 
+		웹페이지 디자인시 임시로 그림 넣기, placehold : 표시자  -->    
+	<p><img src="http://placehold.it/300x200"/></p> 
+
+        
+</body>
+</html>

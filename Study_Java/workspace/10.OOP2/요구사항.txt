@@ -1,0 +1,79 @@
+○ BookMain.java ▶ default package
+	- 3권의 도서정보(제목, 저자, 출판사, 단가, 수량 ▶ BookDTO.java)를 저장할
+	  객체배열(book[])을 선언 및 생성하고 값을 할당
+	- JAVA, 신용권, 한빛, 24000, 11
+	- View, 김은옥, 삼양, 28000, 15
+	- SQL, 개발팀, 한울, 15000, 13
+	- 가격을 계산하는 메소드를 호출 : getPrice()
+	- 출력하는 메소드를 호출 : display()
+
+○ BookDTO.java ▶ com.hanul.book package
+	- 멤버변수 선언 : title, name, company, cost, qty, price ▶ 정보은닉
+	- 디폴트 생성자 메소드
+	- 생성자 메소드 초기화 : 멤버변수 5개로 초기화
+	- Getters & Setters 메소드
+
+○ BookDAO.java ▶ com.hanul.book package
+	- 가격계산 메소드 정의 : getPrice() → 단가 * 수량
+	- 출력 메소드 정의 : display()
+=======================================================
+○ FruitMain.java ▶ default package
+	- 5개의 과일정보(과일명, 단가, 수량 ▶ FruitDTO.java)를 저장할
+	  객체배열(fruit[])을 선언 및 생성하고 값을 할당
+	- 망고, 5000, 10		- 귤, 4500, 10
+	- 사과, 2000, 10		- 멜론, 8000, 10		- 딸기, 9900, 3
+	- FruitDAO 객체 생성하고 메소드 호출 : 객체 생성 시 객체배열(fruit[])을 매개변수로 전달
+	- 가격을 계산하는 메소드 호출 : getPrice()
+	- 가격의 내림차순으로 정렬하는 메소드 호출 : priceDescSort()
+	- 출력메소드 호출 : display() → 금액의 경우 통화기호와 천단위 구분기호를 표시
+	
+○ FruitDTO.java ▶ com.hanul.fruit package
+	- 멤버변수 선언 : name, cost, qty, price ▶ 정보은닉
+	- 디폴트 생성자 메소드
+	- 생성자 메소드 초기화 : 멤버변수 3개로 초기화
+	- Getters & Setters 메소드
+	
+○ FruitDAO.java ▶ com.hanul.fruit package
+	- 객체배열(fruit[])을 매개변수로 전달받는 생성자 메소드 구현
+	- 가격계산 메소드 : getPrice()
+	- 가격의 내림차순 정렬 메소드 : priceDescSort()
+	- 출력 메소드 : display() → 금액의 경우 통화기호와 천단위 구분기호를 표시
+==============================================================================
+○ StudentMain.java ▶ default package
+	- 3명의 학생정보(이름, 학번, 학과, C++, JAVA ▶ StudentDTO.java)를 저장할
+	  객체배열(student[])을 선언 및 생성하고 값을 할당
+	- 홍길동, 20220101, 컴공과, 95.4, 90.3
+	- 김길동, 20220102, 전산과, 85, 97.8
+	- 나길동, 20220103, 정통과, 80.7, 85.6
+	- StudentDAO 객체 생성 시 객체배열(student[])을 매개변수로 전달
+	- 총점(sum)을 계산하는 메소드 호출 : getSum()
+	- 평균(avg)을 계산하는 메소드 호출 : getAvg()
+	- 평균의 내침차순으로 정렬하는 메소드 호출 : avgDescSort()
+	- 출력하는 메소드 호출 : display()
+	
+○ StudentDTO.java ▶ com.hanul.student package
+	- 멤버변수 선언 : name, num, major, cpp, java, sum, avg ▶ 정보은닉
+	- 디폴트 생성자 메소드
+	- 생성자 메소드 초기화 : 멤버변수 5개로 초기화
+	- Getters & Setters 메소드
+
+○ StudentDAO.java ▶ com.hanul.student package
+	- 객체배열(student[])을 매개변수로 전달받는 생성자 메소드 구현
+	- 총점(sum)을 계산하는 메소드 정의 : getSum()
+	- 평균(avg)을 계산하는 메소드 정의 : getAvg()
+	- 평균의 내림차순으로 정렬하는 메소드 정의 : avgDescSort()
+	- 출력 메소드 정의 : display() → 각 과목별 점수와 총점, 평균은 소수 첫째자리까지 표시
+
+
+
+
+
+
+
+
+
+
+
+
+
+

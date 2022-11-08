@@ -1,0 +1,102 @@
+* {	
+	margin: 0px auto; 
+	padding: 0px; 
+	width: 1000px;
+}
+
+.hd { 
+	text-align: center; 
+}
+
+	#toph,baro{
+	text-align: center;
+	}
+#toph h1 {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 60px;
+}
+#toph a {
+  position: relative;
+	top :-10px;
+	left: 280px;
+  text-decoration: none;
+  color: red;
+}
+#baro {
+  text-align: center;
+  position: relative;
+  right: 270px;
+  top: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+#bottom_table {
+  display: inline-block;
+  text-align: center;
+}
+
+.animation_canvas {
+  overflow: hidden;
+  position: relative;
+  width: 680px;
+  height: 400px;
+  margin: 0px auto;
+}
+
+.slider_panel {
+	width: 3000px;
+	position: relative;
+}
+
+.slider_image {
+	float: left;
+	width: 680px;
+	height: 400px;
+}
+
+
+.slider_text_panel {
+	position: absolute;
+	top: 350px;
+	left:10px;
+}
+
+.slider_text {
+  position: absolute;
+  width: 300px;
+  height: 70px;
+  color: white;
+ 
+}
+table tr:first-child td:first-child img {
+  /* bmw로고 */
+  width: 120px;
+  height: 100px;
+  position: relative;
+  right: -50px;
+  top: 20px;
+}
+table tr:first-child td:nth-child(2) img {
+  /* 벤츠로고 */
+  width: 120px;
+  height: 100px;
+  position: relative;
+  left: -50px;
+  top: 20px;
+}
+
+table tr:nth-child(2) td:first-child img {
+  width: 276px;
+  height: 60px;
+  position: relative;
+  right: -50px;
+  top: 60px;
+}
+table tr:nth-child(2) td:nth-child(2) img {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  left: -50px;
+  top: 60px;
+}

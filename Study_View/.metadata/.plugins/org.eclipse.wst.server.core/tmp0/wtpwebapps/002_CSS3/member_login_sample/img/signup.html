@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+
+</style>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+	$(document).ready(function() {
+
+		$('#btn').click(function() {
+			$.ajax({
+				url : "lo_chk.json",
+				dataType : "json",
+				success : function(data) {
+					var succ = false;
+					$.each(data, function(key, val) {
+						if (val.id == $('#id').val()) {
+							succ = true;
+						}
+					});
+					if (succ)
+						alert("이미있는 아이디 입니다");
+					else if (!succ)
+						alert("사용가능한 아이디 입니다.");
+				},
+				error : function() {
+					alert("로딩실패");
+				}
+			});
+		});
+
+		$('#new').click(function fnCheck() {
+			var id = $('#id').val();
+			var pw1 = $('#pw1').val();
+			var pw2 = $('#pw2').val();
+			if (!id) {
+				$('#id').focus();
+				alert("아이디를 입력해주세요");
+				return false;
+			} else if (!pw1) {
+				$('#pw1').focus();
+				alert("비밀번호를 입력해주세요");
+				return false;
+			} else if (!pw2) {
+				$('#pw2').focus();
+				alert("비밀번호를 입력해주세요");
+				return false;
+			} else if (pw1 != pw2) {
+				$('#pw2').val('');
+				$('#pw2').focus();
+				alert("비밀번호가 일치하지 않습니다.");
+				return false;
+			} else {
+				alert("회원가입이 완료되었습니다.");
+				return true;
+			}
+		})
+	});
+</script>
+</head>
+<body>
+	<form onsubmit="return whenSubmit();">
+		<h1>회원가입</h1>
+		<table>
+			<tr>
+				<th>이름</th>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<th>아이디</th>
+
+				<td><input type="text" id="id"> <input id="btn"
+					type="button" value="중복확인"></td>
+
+			</tr>
+			<tr>
+				<th>비밀번호</th>
+				<td><input id="pw1" type="password"></td>
+			</tr>
+			<tr>
+				<th>비밀번호 확인</th>
+				<td><input id="pw2" type="password"></td>
+			</tr>
+			<tr>
+				<th>이메일</th>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<th>전화번호</th>
+				<td><input style="width: 40px;" type="tel"> - <input
+					style="width: 40px;" type="tel"> - <input
+					style="width: 40px;" type="tel"></td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td><input id="new" type="submit" value="회원가입" onclick="location='login.html'"> <input
+					class="calcle" type="button" value="취소"
+					onclick="location='login.html'"></td>
+			</tr>
+		</table>
+	</form>
+	<div class="console"></div>
+
+</body>
+</html>

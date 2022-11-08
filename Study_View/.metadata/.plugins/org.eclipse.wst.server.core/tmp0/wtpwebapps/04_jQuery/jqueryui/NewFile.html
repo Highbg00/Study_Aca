@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="ui-lightness/jquery-ui.css">
+<style type="text/css">
+body {
+	font-size: 62.5%; /* jQuery 폰트가 일반 폰트보다 커서 줄인거 */
+}
+
+h1 {
+	text-align: center;
+}
+
+input[type="text"],label {
+	margin-bottom: 12px;
+	padding: 0.4em;
+	width: 95%;
+}
+
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="ui-lightness/jquery-ui.js"></script>
+<!-- 같은 이름의 메서드가 핵심
+Dialog 플러그인 : dialog() 메서드, 대화형, div 에 적용하는 플러그인, 대부분의 테마클래스 div 태그에 적용
+Datepicker 플러그인 : datepicker 메서드, input [type="text"] 에 적용하는 플러그인 --> 
+<script>
+
+$(document).ready(function() {
+	$("#open_button").click(function() {
+		$("#dialog").dialog("open"); //클릭하면 dialog 상자 open
+	}); //open_button click
+	
+	
+	$("#dialog").dialog({
+		autoOpen: false, //세미콜론 없음, 컴마로 구분
+		buttons : {
+			확인 : function() {
+				var event_name = $("#event_name").val();
+				var event_date = $("#event_date").val();
+				
+				$("#output").append("<h1>" + event_name + ":" + event_date + "</h1>");
+				
+				$("#event_name").val(""); //값 초기화
+				$("#event_date").val(""); //값 초기화
+				
+				$("#dialog").dialog("close"); //dialog 상자 close
+			}, //세미콜론 없음, 컴마로 구분
+			초기화 : function() {
+				$("#event_name").val(""); //값 초기화
+				$("#event_date").val(""); //값 초기화
+				
+				$("#event_name").focus(); 
+			}, //세미콜론 없음, 컴마로 구분
+			취소 : function() {
+				$("#event_name").val(""); //값 초기화
+				$("#event_date").val(""); //값 초기화
+				
+				$("#dialog").dialog("close"); //dialog 상자 close
+			} //세미콜론 없음
+		},
+		modal : true
+		
+	}); //dialog()메서드
+	$("#event_date").datepicker({
+		dateFormat: "yy년 mm월 dd일", //세미콜론 없음, 컴마로 구분
+		numberOfMonths: 3
+	}); //datepicker()메서드
+	
+}); //ready
+
+</script>
+</head>
+<body>
+	<h1 id="open_button">일정생성</h1>
+	<hr >
+	<div id="output"></div>
+	
+	<div id="dialog" title="jQuery UI dialog">
+		<h1>Hello jQuery UI ... !</h1>
+		
+		<label for="event_name">일정이름</label>
+		<input type="text" id="event_name">
+
+		<label for="event_date">날짜</label>
+		<input type="text" id="event_date">
+	</div>	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,63 @@
+○ 제품정보(Product)
+제품번호	제품명
+num			name
+------------------
+1			컴퓨터
+2			모니터
+3			프린터
+
+출력예시 ▶ display()
+num : x
+name : xxx
+==============
+
+○ 학생정보(Student)
+이름	국어	영어	수학	총점	평균
+name	kor		eng		mat		sum		avg
+---------------------------------------------
+홍길동	90		65		100		계산	계산
+박문수	100		95		80		계산	계산
+
+출력예시 ▶ display()
+이름 : xxx
+국어 : xx
+영어 : xx
+수학 : xx
+총점 : xx ▶ getSum()
+평균 : xx ▶ getAvg()
+=====================
+
+○ 도서정보(Book)
+도서명	저자	출판사		단가	수량	가격
+title	name	company		cost	qty		price
+--------------------------------------------------
+JAVA	신용권	한빛미디어	24000	11		계산
+View	김은옥	삼양미디어	28000	15		계산
+SQL		개발팀	한울		15000	13		계산
+
+출력예시 ▶ display()
+도서명 : xxx
+저자 : xxx
+출판사 : xxx
+단가 : xxx
+수량 : xxx
+주문금액 : xxx ▶ getPrice() → 단가 * 수량
+============================================
+
+○ PersonMain.java
+    - 3명의 개인정보(이름, 나이, 키, 체중, 성별 ▶ PersonDTO.java)를 저장할
+    - 객체배열( person[])을 선언 및 생성하고 값을 할당
+    - 홍길동, 33, 175.5, 75, 남
+    - 박문수, 30, 180, 65.5, 남
+    - 성춘향, 28, 165,  48.5, 여
+
+○ PersonDTO.java
+    - 멤버변수 선언 : name, age, height, weight, gender
+    - 디폴트 생성자 메소드
+    - 생성자 메소드 초기화
+    - getters & setters Method
+
+○ PersonDAO.java
+    - 출력 : display()
+	- 나이의 오름차순 정렬 후 출력 : ageAscSort()
+	- 키의 내림차순 정렬 후 출력 : heightDescSort()

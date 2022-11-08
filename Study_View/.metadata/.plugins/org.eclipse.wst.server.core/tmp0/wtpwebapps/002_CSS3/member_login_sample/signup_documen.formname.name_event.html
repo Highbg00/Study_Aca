@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>회원가입</title>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap" rel="stylesheet">
+<style type="text/css">
+
+/* input 태그안에 글자색 지정 */
+input::-ms-input-placeholder { color: white; font-size: 1.1em;}
+input::-webkit-input-placeholder { color: white; font-size: 1.1em;}
+input::-moz-placeholder { color: white; font-size: 1.1em;}
+
+* {
+	font-family: "Black Han Sans", sans-serif;	
+	margin: 0px;
+	padding: 0px;
+	color: white;
+}
+
+body {
+  background: navy;
+}
+
+.wrap {
+	width: 600px;
+	padding: 10px;
+	border: 3px solid black;
+	font-size: 1.1em;
+	text-align: center;
+	background-color: #191919;
+		
+	position: absolute;	/* 중요 */
+  top: 50%;		/* 중요 */
+  left: 50%;	/* 중요 */
+  transform: translate(-50%,-50%);	/* 중요 */
+  
+  box-shadow: 0px 0px 30px #ccc;
+}
+
+.wrap h1{
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+
+td {
+	/* height: 30px;
+	line-height: 30px; */
+/* 	padding-bottom: 3px; */
+}
+
+table tr td:first-child {
+	width: 150px;
+}
+
+table tr td:last-child {
+	text-align: left;
+}
+
+table tr:last-child td {
+	text-align: center;
+}
+
+table tr:nth-child(even) td:last-child span {
+	text-align: center;
+}
+
+input[type="text"],
+input[type="password"] {
+	background: none;
+	display: inline-block;
+	text-align: center;
+	border: 0px;
+	border: 2px solid #3498db;
+	width: 250px;
+ 	/* height: 25px;
+	line-height: 25px; */
+	padding: 6px 5px;
+	outline: none;
+	border-radius: 25px;
+  transition: 0.25s;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	border: 0px;
+  background: none;
+  border: 2px solid #2ecc71;
+  color: white;
+  border-radius: 25px;
+  transition: 0.25s;
+  text-align: center;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  padding: 5px 50px;
+/*   margin: 0px auto; */
+  font-size: 1.1em;
+}
+
+input[type="button"] {
+	font-size: 0.8em;
+	padding: 2px;
+/* 	margin: 0px auto; */
+	text-align: center;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #2ecc71;
+  color: orange;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
+  background: #2ecc71;
+}
+
+#idCheckBtn, #emailCheckBtn {
+	width: 110px;
+}
+
+span {
+	font-size: 0.8em;
+	display: inline-block;
+	width: 250px;
+	padding-top: 0px;
+}
+
+#tel1, #tel2, #tel3 {
+	width: 60px;
+}
+
+</style>
+<script>
+$(document).ready(function() { /* 다른부분 */
+	
+	var name = document.joinForm.name;
+	var id = document.joinForm.id;
+	var pw = document.joinForm.pw;
+	var pwCheck = document.joinForm.pwCheck;
+	var email = document.joinForm.email;
+	var tel1 = document.joinForm.tel1;
+	var tel2 = document.joinForm.tel2;
+	var tel3 = document.joinForm.tel3;
+	
+	//var regTel = /^(010|011|016|017|018|019)\d{3,4}\d{4}$/;
+	var regName = /^[가-힣]{2,5}$/;
+	var regId = /^[a-z]\w{4,11}$/;
+	var regPw = /^[a-z]\w{4,11}$/;
+	var regPwCheck = /^[a-z]\w{4,11}$/;
+	
+	var regEmail = /^[a-z]\w{4,11}@[a-z]{2,10}[\.][a-z]{2,3}[\.]?[a-z]{0,2}$/;
+	var regTel1 = /^010$/;
+	//var regTel1 = /^010|011|016|017|018|019)$/;
+	//var regTel1 = /^01([0|1|6|7|8|9])$/;
+	var regTel2 = /^\d{4}$/;
+	var regTel3 = /^\d{4}$/;
+
+	document.joinForm.onsubmit = function() { /* 다른부분 */
+	
+		if (!name.value) {
+			alert("이름를 입력해주세요");
+			name.focus();
+			return false;
+		} else if(!regName.test(name.value)) {
+			alert("이름은 한글로 2자 이상 5글자로 입력하세요!");
+			name.value="";
+			name.focus();
+			return false;			
+		} 
+		
+		if (!id.value) {
+			alert("아이디를 입력해주세요");
+			id.focus();
+			return false;
+		} else if(!regId.test(id.value)) {
+			alert("아이디는 영문자로 시작하고 5자 이상 11글자로 입력하세요!");
+			id.value="";
+			id.focus();
+			return false;			
+		} 
+		
+		if (!pw.value) {
+			alert("비밀번호를 입력해주세요");
+			document.joinForm.pw.focus();
+			return false;
+		} else if(!regPw.test(pw.value)) {
+			alert("비밀번호는 영문자로 시작하고 5자 이상 11글자로 입력하세요!");
+			pw.value="";
+			pw.focus();
+			return false;			
+		} 
+		
+		if (!pwCheck.value) {
+			pwCheck.focus();
+			alert("비밀번호확인란에 비밀번호를 입력해주십시오");
+			return false;
+		} else if(!regPwCheck.test(pwCheck.value)) {
+			alert("비밀번호는 영문자로 시작하고 5자 이상 11글자로 입력하세요!");
+			pwCheck.value="";
+			pwCheck.focus();
+			return false;			
+		} 
+		
+		if(pw.value != pwCheck.value) {
+			alert("비밀번호가 일치하지 않습니다.");
+			pwCheck.value="";
+			pwCheck.focus();
+			return false;
+		} 
+		
+		if (!email.value) {
+			alert("이메일를 입력해주세요");
+			email.focus();
+			return false;
+		} else if (!regEmail.test(email.value)) {
+			alert("이메일 양식에 맞게 입력해 주세요");
+			email.focus();
+			return false;
+		}
+		
+		if (!tel1.value) {
+			alert("전화번호 첫번째자리 입력하세요!");
+			tel1.focus();
+			return false;
+		} else if (!regTel1.test(tel1.value)) {
+			alert("010, 011, 016, 017, 018, 019만 가능합니다.")
+			tel1.value="";
+			tel1.focus();
+			return false;
+		}
+		
+		if (!tel2.value) {
+			alert("전화번호 두번째자리를 입력하세요!");
+			tel2.focus();
+			return false;
+		} else if (!regTel2.test(tel2.value)) {
+			alert("전화번호을 두번째 자리를 3~4개의 숫자로 꼭 입력하세요!");
+			tel2.value="";
+			tel2.focus();
+			return false;
+		} 
+		
+		if (!tel3.value) {
+			alert("전화번호 세번째자리를 입력하세요!");
+			tel3.focus();
+			return false;
+		} else if (!regTel3.test(tel3.value)) {
+			alert("전화번호 세번째 자리를 4개의 숫자로 꼭 입력하세요!");
+			tel3.value="";
+			tel3.focus();
+			return false;
+		}
+		
+		alert("회원가입이 완료되었습니다.");
+		//location.replace("index.html");
+		location.href="index.html";
+		return false;
+		
+	} //onsubmit
+	
+	document.joinForm.onreset = function () { /* 다른부분 */
+		
+		var input = confirm("회원가입을 취소하시겠습니까?");
+
+		if (input) {
+			alert("회원 가입이 취소 되었습니다\n메인페이지로 이동합니다.");
+			location.replace("index.html");
+		} else {
+			return false;
+		}
+		
+	}//onreset
+	
+	/* 이름 형식 확인 */
+	$("#name").keyup(function(){
+		if (!$(this).val()) {
+			$(".nameSpan").html("&nbsp;");
+		//} else if (!regName.test($(this).val())) {
+		} else if (!regName.test($("#name").val())) {
+			$(".nameSpan").html("한글로 2자 이상 5글자!").css("color","red");
+		} else {
+			$(".nameSpan").html("사용 가능한 이름입니다.").css("color","yellowgreen");
+		} //if
+	});//name keyup
+	
+	/* 아이디 중복 및 형식 확인 */
+	$("#id").keyup(function(){
+		
+		var idCheck = 0; //0 : 중복 안됨
+		
+		$.ajax({
+			
+			url: "loginCheck.json",
+			async: false, /* 중요 */
+			
+			success: function(result){
+
+				$(result).each(function(key, value){
+					
+					if($("#id").val() == value.id) {
+						idCheck = 1; //1 : 중복
+					} //if
+				
+				});//each
+				
+			}//success
+			
+		});//ajax	
+		
+		if (!$(this).val()) {
+			$(".idSpan").html("&nbsp;");
+		//} else if (!regId.test($(this).val())) {
+		} else if (!regId.test($("#id").val())) {
+			$(".idSpan").html("영문자로 시작하고 5자 이상 11글자!").css("color","red");
+		} else if (idCheck == 0) { //0 : 중복 안됨
+			$(".idSpan").html("사용 가능한 아이디입니다.").css("color","yellowgreen");
+		} else if (idCheck == 1) {
+			$(".idSpan").html("이미 존재하는 아이디입니다.").css("color","red");
+		} //if
+		
+	});//id keyup
+
+	/* 아이디 중복 및 형식 idCheckBtn 버튼으로 확인  */
+ 	//document.joinForm.idCheckBtn.onclick = function(){
+	//document.getElementById("idCheckBtn").onclick = function(){
+	$("#idCheckBtn").click(function(){
+		
+		var idCheck = 0; //0 : 중복 안됨
+		$.ajax({
+			
+			url: "loginCheck.json",
+			async: false, /* 중요 */
+			
+			success: function(result){
+
+				$(result).each(function(key, value){
+					
+					if($("#id").val() == value.id) {
+						idCheck = 1; //1 : 중복
+					} //if
+				
+				});//each
+
+			}//success
+			
+		});//ajax	
+		
+		if (!$("#id").val()) {
+			alert("아이디를 입력하세요");
+			$("#id").focus();
+		//} else if (!regId.test($(this).val())) {
+		} else if (!regId.test($("#id").val())) {
+			alert("영문자로 시작하고 5자 이상 11글자로 입력하세요!");
+			$("#id").focus();
+		} else if (!idCheck) {
+			alert("사용 가능한 아이디입니다.");
+			$("#pw").focus();
+		} else {
+			alert("이미 존재하는 아이디입니다.");
+			$("#id").focus();
+		} //if		
+		
+		
+
+	}); //$("#idCheckBtn").click(function(){ ★★★★ click 이벤트와 onclick이벤트의 차이점
+	//}; //document.joinForm.idCheckBtn.onclick = function(){
+
+	/* 비밀번호 형식 확인 */
+	$("#pw").keyup(function(){
+		if (!$(this).val()) {
+			$(".pwSpan").html("&nbsp;");
+		//} else if (!regPw.test($(this).val())) {
+		} else if (!regPw.test($("#pw").val())) {
+			$(".pwSpan").html("영문자로 시작하고 5자 이상 11글자!").css("color","red");
+		} else {
+			$(".pwSpan").html("사용 가능한 비밀번호입니다.").css("color","yellowgreen");
+		} //if
+	});//pw keyup	
+		
+	/* 비밀번호 확인 형식 확인 */
+	$("#pwCheck").keyup(function(){
+		if (!$(this).val() || !$("#pw").val()) {
+			$(".pwCheckSpan").html("&nbsp;");
+		//} else if (!regPwCheck.test($(this).val())) {
+		} else if (!regPwCheck.test($("#pwCheck").val())) {
+			$(".pwCheckSpan").html("영문자로 시작하고 5자 이상 11글자!").css("color","red");
+		} else if ($(this).val().length != $("#pw").val().length){
+			$(".pwCheckSpan").html("비밀번호가 일치하지 않습니다.").css("color","red");
+		} else if ($(this).val() == $("#pw").val()) {
+			$(".pwCheckSpan").html("비밀번호가 일치합니다.").css("color","yellowgreen");
+		}//if
+	});//pwCheck keyup		
+		
+	/* 이메일 형식 확인 */
+	$("#email").keyup(function(){
+		
+		var emailCheck = 0; //0 : 중복 안됨
+		
+		$.ajax({
+			
+			url: "loginCheck.json",
+			async: false, /* 중요 */
+			
+			success: function(result){
+
+				$(result).each(function(key, value){
+					
+					if($("#email").val() == value.email) {
+						emailCheck = 1; //1 : 중복
+					} //if
+					//$("body").append("<div>" + value.id + " : " + value.pw + " : " + value.email	+ "</div>");
+				});//each
+				
+			}//success
+			
+		});//ajax	
+
+		//alert($("#email").val());
+		if (!$(this).val()) {
+			$(".emailSpan").html("&nbsp;");
+		//} else if (!regEmail.test($(this).val())) {
+		} else if (!regEmail.test($("#email").val())) {
+			$(".emailSpan").html("영문자로 시작하고 5자 이상 11글자!").css("color","red");
+		} else if (emailCheck == 0) { //0 : 중복 안됨
+			$(".emailSpan").html("사용 가능한 email 입니다.").css("color","yellowgreen");
+		} else if (emailCheck == 1) { //1 : 중복
+			$(".emailSpan").html("이미 존재하는 email 입니다.").css("color","red");
+		} //if
+		
+	});//email keyup	
+	
+	/* 이메일 중복 및 형식 emailCheckBtn 버튼으로 확인  */
+ 	//document.joinForm.emailCheckBtn.onclick = function(){
+	//document.getElementById("emailCheckBtn").onclick = function(){
+	$("#emailCheckBtn").click(function(){
+		
+		var emailCheck = 0; //0 : 중복 안됨
+		
+		$.ajax({
+			
+			url: "loginCheck.json",
+			async: false, /* 중요 */
+			
+			success: function(result){
+
+				$(result).each(function(key, value){
+					
+					if($("#email").val() == value.email) {
+						emailCheck = 1; //1 : 중복
+					} //if
+				
+				});//each
+				
+			}//success
+			
+		});//ajax	
+		//alert($("#email").val());
+		//alert(emailCheck);
+		if (!$("#email").val()) {
+			alert("email을 입력하세요");
+			$("#email").focus();
+		//} else if (!regEmail.test($(this).val())) {
+		} else if (!regEmail.test($("#email").val())) {
+			alert("영문자로 시작하고 5자 이상 11글자로 입력하세요!");
+			$("#email").focus();
+		} else if (emailCheck == 0) { //0 : 중복 안됨
+			alert("사용 가능한 email입니다.");
+			$("#pw").focus();
+		} else if (emailCheck == 1){
+			alert("이미 존재하는 email입니다.");
+			$("#email").focus();
+		} //if		
+		
+	}); //$("#emailCheckBtn").click(function(){ ★★★★ click 이벤트와 onclick이벤트의 차이점
+	//}; //document.joinForm.emailCheckBtn.onclick = function(){
+	
+	
+		/* 전화번호(tel1) 형식 확인 */
+	$("#tel1").keyup(function(){
+		if (!$(this).val()) {
+			$(".telSpan").html("&nbsp;");
+		//} else if (!regTel1.test($(this).val())) {
+		} else if (!regTel1.test($("#tel1").val())) {
+			$(".telSpan").html("국번은 010만 가능합니다!").css("color","red");
+		} else {
+			$(".telSpan").html("사용 가능한 숫자입니다.").css("color","yellowgreen");
+		} //if
+	});//tel1 keyup
+	
+	/* 전화번호(tel2) 형식 확인 */
+	$("#tel2").keyup(function(){
+		if (!$(this).val()) {
+			$(".telSpan").html("&nbsp;");
+		//} else if (!regTel2.test($(this).val())) {
+		} else if (!regTel2.test($("#tel2").val())) {
+			$(".telSpan").html("가운데 숫자는 숫자로 4자만 가능!").css("color","red");
+		} else {
+			$(".telSpan").html("사용 가능한 숫자입니다.").css("color","yellowgreen");
+		} //if
+	});//tel2 keyup
+
+	/* 전화번호(tel3) 형식 확인 */
+	$("#tel3").keyup(function(){
+		if (!$(this).val()) {
+			$(".telSpan").html("&nbsp;");
+		//} else if (!regTel3.test($(this).val())) {
+		} else if (!regTel3.test($("#tel3").val())) {
+			$(".telSpan").html("마지막 숫자는 숫자로 4자만 가능!").css("color","red");
+		} else {
+			$(".telSpan").html("사용 가능한 숫자입니다.").css("color","yellowgreen");
+		} //if
+	});//tel3 keyup
+	
+}); //ready
+		
+		
+
+</script>
+</head>
+<body>
+<div class="wrap">
+	<h1>회원 가입</h1>
+	<form name="joinForm" method="post" id="joinForm" >
+		<table border="0">
+			<tr>
+				<td>&nbsp;이&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;름</td>
+				<td>
+					<input type="text" name="name" id="name" tabindex="1" 
+					autofocus="autofocus" onkeypress="if(event.keyCode==13){return false;}" 
+					placeholder="이름을 입력하세요" style="ime-mode:active;"
+					maxlength="5" >
+					<!-- style="ime-mode:disabled;" //영문만 가능
+					style="ime-mode:active;"   //한글우선
+					style="ime-mode:inactive;" //영문우선, 모두 익스플로러에서만 가능-->
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>
+					<span class="nameSpan"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D</td>
+				<td>
+					<input type="text" name="id" id="id" onkeypress="if(event.keyCode==13){return false;}"
+					placeholder="ID를 입력하세요" maxlength="11" style="ime-mode:disabled;" >
+					<input type="button" name="idCheckBtn" id="idCheckBtn" value="ID중복확인" >
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<span class="idSpan"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;비&nbsp;밀&nbsp;&nbsp;번&nbsp;호</td>
+				<td>
+					<input type="password" name="pw" id="pw" onkeypress="if(event.keyCode==13){return false;}"
+					placeholder="비밀번호를 입력하세요" maxlength="11">
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>
+					<span class="pwSpan"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;비밀번호확인</td>
+				<td>
+					<input type="password" name="pwCheck" id="pwCheck" onkeypress="if(event.keyCode==13){return false;}"
+					placeholder="비밀번호를 다시 입력하세요" maxlength="11" >
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>
+					<span class="pwCheckSpan"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>이&nbsp;&nbsp;&nbsp;&nbsp;메&nbsp;&nbsp;&nbsp;&nbsp;일</td>
+				<td>
+					<input type="text" name="email" id="email" onkeypress="if(event.keyCode==13){return false;}" 
+					placeholder="이메일을 입력하세요" >
+					<input type="button" name="emailCheckBtn" id="emailCheckBtn" value="email중복확인" />
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>
+					<span class="emailSpan"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>휴&nbsp;대&nbsp;&nbsp;전&nbsp;화</td>
+				<td>
+					<input type="text" name="tel1" id="tel1" maxlength="3" size="3" onkeypress="if(event.keyCode==13){return false;}"> - 
+					<input type="text" name="tel2" id="tel2" maxlength="4" size="4" onkeypress="if(event.keyCode==13){return false;}"> - 
+					<input type="text" name="tel3" id="tel3" maxlength="4" size="4" onkeypress="if(event.keyCode==13){return false;}">
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>
+					<span class="telSpan"></span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" name="joinBtn" id="joinBtn" value="회원가입" />
+					<input type="reset" name="resetBtn" id="resetBtn" value="가입취소" />
+				</td>
+			</tr>
+		</table>
+	</form>
+</div>
+</body>
+</html>

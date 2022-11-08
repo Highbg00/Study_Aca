@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//키 입력, 변수 선언
+var userHeight = prompt("키를 입력하세요","");
+//제대로 된 데이터만 입력 받기, 숫자만 입력받기
+//값이 있는지 없는지 구분, 공백, 문자 거르기
+while (!userHeight || !userHeight.trim() || isNaN(userHeight*1)) {
+	//다시 입력받기, var 선언 하면 다시 초기화
+	userHeight = prompt("키를 입력하세요","");
+}
+
+//몸무게 입력, 변수 선언
+var userWeight = prompt("몸무게를 입력하세요","");
+//제대로 된 데이터만 입력 받기, 숫자만 입력받기
+//값이 있는지 없는지 구분, 공백, 문자 거르기
+while (!userWeight || !userWeight.trim() || isNaN(userWeight*1)) {
+	//다시 입력받기, var 선언 하면 다시 초기화
+	userWeight = prompt("몸무게를 입력하세요","");
+}
+
+// 정상(평균)  체중 = (키-100)*0.9
+// 저(평균이하) 체중 = (키-100)*0.75
+// 과(평균이상) 체중 = (키-100)*1.05
+
+var averageWeight = (userHeight - 100) * 0.9; 
+var lowWeight = (userHeight - 100) * 0.75;
+var overWeight = (userHeight - 100) * 1.05;
+
+if (userWeight >= overWeight) {
+	alert("적정 몸무게는 " + averageWeight + "입니다. \n당신의 키는 " + userHeight +
+			   "이고 \n당신의 몸무게는 " + userWeight + "이므로 과체중입니다.");
+} else if (userWeight <= lowWeight) {
+	alert("적정 몸무게는 " + averageWeight + "입니다. \n당신의 키는 " + userHeight +
+		   "이고 \n당신의 몸무게는 " + userWeight + "이므로 저체중입니다.");
+} else {
+	alert("적정 몸무게는 " + averageWeight + "입니다. \n당신의 키는 " + userHeight +
+		   "이고 \n당신의 몸무게는 " + userWeight + "이므로 정상입니다.");
+}
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

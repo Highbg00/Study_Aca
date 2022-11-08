@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>transform, translate</title>
+<style type="text/css">
+/* 
+transform : translate ()과는 별도로 
+"position : absolute"를 사용하여 요소를 top과 left로 이동시키는 방법도 있지만, 
+transform : translate ()와 비교해 어느 쪽이 좋은지는 주어진 환경에 따라 다른 것 같습니다.
+ */
+
+.parent {
+  background-color: yellow;
+	width: 600px; 
+  height: 600px;
+	margin: 0px auto;
+	/* width: 100%; */
+  position: relative; /* width, height 지정시 relative 적용!!! */ /* 중요 */
+}
+
+.child {
+	width: 300px;
+  height: 150px;
+  line-height: 150px;
+  
+  position: absolute;	/* 중요 */
+	top: 50%;		/* 중요 */
+	left: 50%;	/* 중요 */
+	transform: translate(-50%,-50%); /* 중요 */
+  
+	background-color:blue;
+	text-align: center;
+}
+
+</style>
+</head>
+<body>
+	<div class="parent">
+		<div class="child">vertical and centering</div>
+	</div>
+</body>
+</html>

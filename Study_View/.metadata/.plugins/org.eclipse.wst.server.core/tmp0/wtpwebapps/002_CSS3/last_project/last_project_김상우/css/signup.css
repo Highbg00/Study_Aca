@@ -1,0 +1,186 @@
+@charset "UTF-8";
+
+* {
+	margin: 0px auto;
+	padding: 0px;
+}
+
+#wrap {
+	width: 550px;
+	padding: 10px;
+	border: 2px solid black;
+	text-align: center;
+	position: absolute;
+	margin: 0px auto;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -100%);
+}
+
+#wrap fieldset {
+	border: none;
+}
+
+#wrap legend {
+	font-size: 1.8rem;
+	padding-bottom: 15px;
+}
+
+table {
+	width: 550px;
+	text-align: center;
+	border: 0px solid black;
+	text-align: center;
+	border-collapse: collapse;
+}
+/* tr {
+	margin: 15px;	
+	padding: 15px;
+} */
+th {
+	text-align: center;
+	border: 0px solid black;
+	width: 220px;
+}
+
+th:last-child {
+	/* padding-right: 50px; */
+	
+}
+
+table tr td {
+	height: 50px;
+	line-height: 35px;
+	border: 0px solid black;
+	text-align: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 300px;
+}
+
+table tr td:first-child {
+	text-align: left;
+}
+
+table tr td:last-child {
+	width: 150px;
+	text-align: left;
+}
+/* 회원가입 */
+input[type="text"], input[type="password"] {
+	display: inline-block;
+	text-align: center;
+	border: 1px solid black;
+	width: 270px;
+	height: 25px;
+	line-height: 25px;
+	outline: none;
+	transition-duration: 0.25s;
+}
+/* 전화번호  */
+input[type="number"] {
+	display: inline-block;
+	text-align: center;
+	border: 1px solid black;
+	width: 80px;
+	height: 25px;
+	line-height: 25px;
+	outline: none;
+	transition-duration: 0.25s;
+}
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button
+	{
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type="password"] {
+	color: black;
+	border: 1px solid black;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+	display: inline-block;
+	width: 279px;
+	border-color: black;
+	color: black;
+}
+/* 전송 취소 버튼  */
+input[type="submit"], input[type="reset"] {
+	border: 1px solid black;
+	color: black;
+	tansition-duration: 0.25s;
+	text-align: center;
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	margin: 10px auto;
+	background-color: white;
+	width: 170px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 1.2rem;
+}
+
+table tr:last-child td {
+	text-align: center;
+}
+
+input[type="button"] {
+	width: 100px;
+	height: 30px;
+	background-color: white;
+	border: 1px solid black;
+}
+
+input[type="button"]:hover {
+	background-color: black;
+	color: white;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+	background-color: black;
+	color: white;
+}
+
+.alert {
+	display: block;
+	font-weight: normal;
+	color: red;
+	font-size: 14px;
+	text-align: center;
+	line-height: 10px;
+	width: 270px;
+}
+/* 로그인 링크  */
+.notAMember {
+	display: block;
+	width: 450px;
+	padding: 0px;
+	text-align: center;
+}
+
+.notAMember a {
+	color: red;
+}
+/* 나가기 버튼 */
+#close {
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	outline: none;
+	border: 0px;
+	width: 20px;
+	height: 20px;
+	line-height: 15px;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#close:hover {
+	background-color: black;
+	color: white;
+}

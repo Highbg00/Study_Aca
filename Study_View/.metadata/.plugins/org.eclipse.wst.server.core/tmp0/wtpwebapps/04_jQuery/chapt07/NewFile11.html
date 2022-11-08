@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script>
+
+$(document).ready(function() {
+// 	$("선택자").val() : 입력요소에 있는 value 의 속성값을 불러옴
+// 	$("선택자").val("값") : 입력요소에 있는 value 의 속성값을 지정
+
+//	alert 창에 yourName 값 출력
+	alert($("#yourName").val()); //jQuery
+// 	yourName 값을 myName 값으로 출력
+// 	$("#myName").val() = $("#yourName").val(); //XXX 논리적으로 맞지만, 문법적으로 틀림
+	$("#myName").val($("#yourName").val()); //OOO 문법적으로 맞음
+// 	$("#yourName").val() = ""; //XXX 논리적으로 맞지만, 문법적으로 틀림
+	$("#yourName").val(""); 	//OOO 문법적으로 맞음
+// 	yourName에 포커스 맞추기
+	$("#yourName").focus(); 	
+
+// 	alert(document.getElementById("yourName").value); //javascript
+// 	document.getElementById("myName").value = document.getElementById("yourName").value;
+// 	document.getElementById("yourName").value = "";
+// 	document.getElementById("yourName").focus();
+	
+}); //ready
+
+</script>
+</head>
+<body>
+	<p>
+		yourName : <input type="text" name="yourName" id="yourName" value="yourName" />
+	</p>	
+	<p>
+		myName : <input type="text" name="myName" id="myName" value="myName" />
+	</p>	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

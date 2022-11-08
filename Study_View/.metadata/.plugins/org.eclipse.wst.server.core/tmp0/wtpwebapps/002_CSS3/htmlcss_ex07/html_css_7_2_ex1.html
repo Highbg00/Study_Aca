@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+
+<!-- 하위 태그 선택자와 클래스 선택 -->
+<style>
+	#header {
+		width: 700px;
+		background-color: #ffd800;
+		border: 1px solid #808080;
+		text-align: center;
+	}
+	
+	#wrap {
+		width: 700px;
+		background-color: #66dbf6;
+		border: 2px solid #808080;
+		overflow: hidden;
+	}
+	
+	#content {
+		width: 450px;
+		border: 1px solid red;
+		float: left;
+	}
+	
+	#banner {
+		border: 1px solid blue;
+		float: left;
+	}
+	
+	#footer {
+		clear: both;
+		width: 700px;
+		background-color: #ffd800;
+		border: 3px solid #808080;
+		text-align: center;
+	}
+	
+	/* #wrap #content ul .menu1 */
+	/* ul .menu1 */
+	ul li.menu1 { 
+		color: red;
+		font-size: 30px;
+	}
+	
+	/* ul li.menu { */
+	ul .menu {
+		color: blue;
+		font-weight: bold;
+		font-size: 30px;
+	}
+	
+	#content ul li:nth-child(5) {
+		color: green;
+		font-size: 30px;
+	}
+</style>
+</head>
+<body>
+	<div id="header">
+		<h1>HEADER</h1>
+	</div>
+
+	<div id="wrap">
+		<div id="content">
+			<h1>CONTENT</h1>
+			<ul>
+				<li class="menu1">menu1</li>
+				<li>menu2</li>
+				<li class="menu">menu3</li>
+				<li>menu4</li>
+				<li class="menu">menu5</li>
+			</ul>
+			<ol>
+				<li class="menu1">menu1</li>
+				<li>menu2</li>
+				<li class="menu">menu3</li>
+				<li>menu4</li>
+				<li class="menu">menu5</li>
+			</ol>
+		</div>
+		<div id="banner">
+			<h1>BANNER</h1>
+			<img src="logo.png" />
+
+			<ol>
+				<li class="menu1">menu1</li>
+				<li>menu2</li>
+				<li class="menu">menu3</li>
+				<li>menu4</li>
+				<li class="menu">menu5</li>
+			</ol>
+		</div>
+	</div>
+	<div id="footer">
+		<h1>FOOTER</h1>
+	</div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: 'Nanum Myeongjo', serif;
+	}
+
+li {
+	list-style: none;
+	}
+
+a {
+	text-decoration: none;
+	}
+
+#header, #content, #footer {
+	width: 1000px;
+	margin: 10px auto;
+	text-align: center;
+	}
+
+#header .gnb {
+	background-color: white;
+	height: 25px;
+	
+	} 
+
+#header .gnb ul {
+	overflow: hidden;
+	padding:0px;
+	margin: 0px auto;
+	} 
+
+#header .gnb ul li {
+	float: right;
+	}
+
+#header .gnb ul li a {
+	padding: 15px 25px;
+	color: #190954;;
+	}
+
+#header .logo {
+	width: 1000px;
+	color: white;
+	background-color: #190954;		
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	margin-bottom : 10px auto;
+	}
+
+#content .section {
+	margin: 10px 0px;
+	}
+
+#content .section .product {
+	
+	}
+
+#content .section .product ul {
+	overflow: hidden;
+	}
+
+#content .section .product ul li {
+	float: left;
+	}
+
+#content .section .product ul li a {
+	display: block;
+	color: black;
+	width: 330px;
+	margin-right: 2px;
+	margin-bottom: 2px;
+	height: 200px;
+	line-height: 100px;
+	text-align: center;
+	border: 1px solid black;
+	}
+	
+	#a{	background: url("../img/albert.jpg") no-repeat center;}
+	#b{	background: url("../img/cop.png") no-repeat center;}
+	#c{	background: url("../img/pro.png") no-repeat center;}
+	#d{	background: url("../img/wedg.png") no-repeat center;}
+	#e{	background: url("../img/vil.jpg") no-repeat center;}
+	#f{	background: url("../img/den.jpg") no-repeat center;}
+
+#footer .logo {
+	width: 1000px;
+	color: white;
+	background-color: #190954;		
+	height: 150px;
+	line-height: 150px;
+	text-align: center;
+	margin-bottom : 10px auto;
+	}		
+		
+
+/*  */	
+/* Animation Canvas */
+.animation_canvas {
+	overflow: hidden;
+	position: relative;
+	width: 1000px;
+	height: 500px;
+	margin: 0px auto;
+	
+}
+
+/* Slider Panel */
+.slider_panel {
+	width: 5000px;
+	position: relative;
+	
+}
+
+.slider_image {
+	float: left;
+	width: 1000px;
+	height: 500px;
+	
+}
+

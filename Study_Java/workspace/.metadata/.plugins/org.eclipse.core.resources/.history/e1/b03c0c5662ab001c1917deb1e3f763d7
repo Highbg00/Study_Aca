@@ -1,0 +1,15 @@
+
+public class Gugudan {
+
+	public void gugudan(int dan1, int dan2) {
+		
+		int temp;
+		if ( dan1 < dan2) {
+			temp = dan2;
+			dan1 = dan2;
+			dan2 = temp;
+		}
+		
+	}
+	
+}

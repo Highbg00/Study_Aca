@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+* {
+	font-family: "Black Han Sans", sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+
+#wrap {
+	width: 450px;
+	padding: 10px;
+	border: 2px solid black;
+	font-size: 1.2rem;
+	text-align: center;
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -100%);
+	box-shadow: 10px 10px 30px gray;
+}
+
+#wrap fieldset {
+	border: none;
+}
+
+#wrap legend {
+	font-size: 1.8rem;
+}
+
+table {
+	width: 445px;
+	text-align: center;
+}
+
+table tr td {
+	height: 35px;
+	line-height: 35px;
+}
+
+table tr td:first-child {
+	width: 15%;
+}
+
+table tr td:last-child {
+	width: 85%;
+	text-align: left;
+}
+
+input[type="text"],input[type="password"] {
+	display: inline-block;
+	text-align: center;
+	border: 2px solid green;
+	
+	width: 250px;
+	height: 25px;
+	line-height: 25px;
+	border-radius: 25px;
+	margin: 5px auto;
+	
+	outline: none;
+	transition-duration: 0.25s;
+}
+
+input[type="text"]:focus,input[type="password"]:focus {
+	display: inline-block;
+	width: 270px;
+	border-color: red;
+	color: orange;
+}
+
+input[type="submit"],input[type="reset"] {
+	border: 2px solid red;
+	color: black;
+	border-radius: 25px;
+	tansition-duration: 0.25s;
+	text-align: center;
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	margin: 10px auto;
+	
+	width: 170px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 1.2rem;
+}
+
+table tr:last-child td {
+	text-align: center;
+}
+
+input[type="submit"]:hover,input[type="reset"]:hover {
+	background-color: green;
+}
+
+.icon {
+	width: 36px;
+}
+
+.alert {
+	display: block;
+	font-weight: normal;
+	color: red;
+	font-size: 14px;
+	text-align: center;
+	line-height: 10px;
+	width: 270px;
+}
+
+.notAMember {
+	display: block;
+	width: 450px;
+	padding: 0px;
+	text-align: center;
+}
+
+.notAMember a {
+	color: red;
+}
+
+#close {
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	outline: none;
+	border: 0px;
+	border-radius: 5px;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	background-color: pink;
+	color: red;
+	font-size: 16px;
+	cursor: pointer;
+	transition-duration: 1s;
+}
+
+
+
+
+
+
+
+
+
+
+
+

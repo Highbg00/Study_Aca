@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+
+<!--박스의 크기 : box-sizing 
+		box-sizing: border-box; 
+		border와 padding 모두 box 안쪽으로, 
+		margin은 box 바깥쪽으로 지정 되어 box크기에 포함 안됨
+		박스너비/높이 = width/height + 2 x margin
+				
+		box-sizing: content-box; 모두 box 밖으로, 디폴트임 
+		박스너비/높이 = width/height + 2 x (padding + border + margin)
+-->
+
+<style>
+body {
+	margin: 0px;
+}
+
+div {
+	width: 200px;
+	height: 200px;
+	padding: 10px;
+	border: 10px solid yellow;
+	margin: 10px;
+}
+
+div:nth-child(1) {
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+	background-color: #ff0000;
+}
+
+div:nth-child(2) {
+	background-color: #00ff00;
+	box-sizing: border-box; /* 너비 : 220px; */
+}
+
+div:nth-child(3) {
+	background-color: #0000ff;
+	box-sizing: content-box; /* 너비 : 260px; */
+}
+</style>
+
+</head>
+<body>
+	<div>200*200</div>
+	<div>200*200<br />border-box</div>
+	<div>200*200<br />content-box</div>
+</body>
+</html>

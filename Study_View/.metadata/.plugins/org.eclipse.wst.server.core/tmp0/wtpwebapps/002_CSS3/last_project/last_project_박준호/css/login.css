@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Shizuru&display=swap');
+
+* {	
+	font-family: 'Shizuru', cursive;
+}
+
+html, body{
+background-color: black;
+}
+form {
+	width: 550px;
+	height: 310px;
+	margin: 0px auto;
+	padding: 0px;
+	border: 3px solid #F5D92B;
+	background-color: black;
+}
+
+form * {
+	background-color: black;
+}
+
+table {
+	margin: 0px auto;
+	padding: 5px;
+	color: white;
+}
+
+td {
+	padding: 15px;
+}
+
+h2 {
+	margin: 5px;
+	color: white;
+}
+
+input::placeholder {
+	text-align: center;
+	font-size: 10px;
+}
+
+input {
+	border: 3px solid black;
+	border-radius: 5px;
+}
+
+#id, #pw {
+	border-color: #F5D92B;
+	color: white;
+}
+
+
+#login, #cancel {
+	border: 0px;
+	margin: 5px;
+	background: #0079C4; 
+	color: white;
+}
+
+#btn_table input {
+	width: 100px;
+	height: 30px;
+}
+
+table tr:last-child {
+	text-align: center;
+}
+
+table tr:last-child td {
+	padding: 5px;
+}
+
+#close {
+	float: right;
+	margin: 1px;
+	margin-right: 2px;
+	display: block;
+}
+
+#close>button {
+	border: 0px;
+	color: red;
+}
+
+#login, #cancel {
+	text-align: center;
+}
+
+#login:hover, #cancel:hover, #pwcheck:hover {
+	color: red;
+}
+a:hover {
+	color: red;
+}
+
+a {
+	color: yellow;
+}

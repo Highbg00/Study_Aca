@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>id 속성 중복</title>
+<style>
+/* id 속성값으로 rint를 가지는 태그의 color 속성에 red 키워드를 적용합니다. */
+	#rint {
+		color: red;
+	}
+</style>
+</head>
+<body>
+	<!-- 
+	특정 id 속성을 사용한 모든 태그에 스타일 적용
+	스타일 시트에서는 id 속성 중복이 문제가 되지 않지만, 
+	자바스크립트에서는 id 속성이 중복이 되면 문제 생김. 
+	그래서, id 중복 안되게 사용 
+	-->
+	<h1 id="rint">CSS3 Selector Basic</h1>
+	<h2 id="rint">CSS3 Selector Basic</h2>
+	<h3 id="rint">CSS3 Selector Basic</h3>
+</body>
+</html>

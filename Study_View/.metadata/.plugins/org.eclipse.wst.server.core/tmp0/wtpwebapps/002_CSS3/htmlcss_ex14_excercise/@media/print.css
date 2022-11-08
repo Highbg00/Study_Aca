@@ -1,0 +1,9 @@
+﻿@charset "UTF-8";
+/* print.css */
+* {
+	background-color: blue; /* 인쇄시 background-color 는 흰색으로 고정이 되어 바뀌지 않음 */
+}
+h1 {
+	text-align: center;
+	color: red;
+}

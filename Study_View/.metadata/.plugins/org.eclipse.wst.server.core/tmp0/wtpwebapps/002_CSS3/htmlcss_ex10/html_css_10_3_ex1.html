@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+
+<!-- display속성 : 
+	block : 넓이와 높이를 모두 갖는다, 즉, 크기 지정가능 
+	width, height, align, margin 속성 적용됨
+	inline : 넓이와 높이를 최소값만 갖는다, 
+		width, height 속성 적용 안됨.(크기 지정 안되어 한줄로만 입력)
+		margin 속성은 div 좌우로만 적용 
+	inline-block : 넓이와 높이를 모두 가지면서 인라인성격을 갖는다
+		한 줄에서만 요소들 연결되고 크기 지정 가능 
+	none : 아예 모든것을 없애버린다(공간자체를 없앤다) -->
+
+<style>
+div:nth-child(1) {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	color: #ffffff;
+	font-weight: bold;
+	text-align: center;
+}
+
+div:nth-child(2) {
+	width: 100px;
+	height: 100px;
+	background-color: green;
+	color: #ffffff;
+	font-weight: bold;
+	text-align: center;
+}
+
+div:nth-child(3) {
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+	color: #ffffff;
+	font-weight: bold;
+	text-align: center;
+}
+
+div:nth-child(4) {
+	width: 100px;
+	height: 100px;
+	background-color: purple;
+	color: #ffffff;
+	font-weight: bold;
+	text-align: center;
+}
+
+div:nth-child(5) {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	color: #ffffff;
+	font-weight: bold;
+	text-align: center;
+	display: inline;
+	margin: 10px 10px 10px 10px;
+}
+
+div:nth-child(6) {
+	width: 100px;
+	height: 100px;
+	background-color: green;
+	color: #ffffff;
+	font-weight: bold;
+	text-align: center;
+	display: inline;
+	/* margin: 없음 */
+}
+
+div:nth-child(7) {
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+	color: #ffffff;
+	font-weight: bold;
+	text-align: center;
+	display: none;
+}
+
+div:nth-child(8) {
+	width: 100px;
+	height: 100px;
+	background-color: aqua;
+	color: #ffffff;
+	font-weight: bold;
+	text-align: center;
+	display: inline;
+}
+
+div:nth-child(9) {
+	width: 100px;
+	height: 100px;
+	background-color: purple;
+	color: #ffffff;
+	font-weight: bold;
+	text-align: center;
+	display: inline-block;
+	/* display: block; */
+}
+</style>
+
+</head>
+<body>
+
+	<div>content1</div>
+	<div>content2</div>
+	<div>content3</div>
+	<div>content4</div>
+
+	<div>content5</div>
+	<div>content6</div>
+	<div>content7</div>
+	<div>content8</div>
+	<div>content9</div>
+
+</body>
+</html>

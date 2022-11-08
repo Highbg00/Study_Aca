@@ -1,0 +1,9 @@
+package board;
+
+import java.sql.Date;
+
+public class BoardCommentVO {
+
+	private int id, pid;
+	private String content, writer, name, writedate;	
+}

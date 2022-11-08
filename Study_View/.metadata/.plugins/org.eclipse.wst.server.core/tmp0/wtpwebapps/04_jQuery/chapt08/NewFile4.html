@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script>
+
+$(document).ready(function() {
+	
+	$(document).mousemove(function(e) {
+		
+		//pageX : 브라우저 페이지에서 x좌표 위치를 반환
+		//pageY : 브라우저 페이지에서 y좌표 위치를 반환
+		
+		$("#loc").text("x좌표 : " + e.pageX + " y좌표 : " + e.pageY);
+		
+	}); //mousemove
+	
+}); //ready
+
+</script>
+</head>
+<body>
+	<div id = "loc"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

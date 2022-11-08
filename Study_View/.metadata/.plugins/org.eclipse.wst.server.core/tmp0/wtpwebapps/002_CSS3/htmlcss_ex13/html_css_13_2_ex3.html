@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3변형속성, 벤더 프리픽스(공급업체접두사)</title>
+<script src="prefixfree.min.js"></script>
+<style>
+/* http://tcpschool.com/css/css3_transform_transition */
+/* http://tcpschool.com/css/css3_transform_3Dtransform */
+
+/* body { */
+/* 	position: relative; */
+/* } */
+
+.box {
+	width: 100px;
+	height: 100px;
+	background-color: orange;
+	transition-duration: 3s;
+}
+
+.box:hover {
+ 	/* position: absolute; */ /* 안됨!, 삭제 후 실행 */
+ 	/* left: 200px; */  /* 안됨!, 삭제 후 실행 */
+	
+	/* width: 200px; */ /* 가로로 넒히기 */
+	
+ 	transform: translate(200px,0px); /* 중요, translate : 번역하다, 이동하다 */
+/* 	margin-left: 200px;*/ /* XXX */ 
+}
+
+.box:active {
+	background-color: blue;
+	border-radius: 100px;
+}
+div {
+}
+</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>회원가입</title>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<style>
+* {
+	margin: 5px;
+	padding: 0;
+}
+
+.container {
+	margin-top: 150px;
+}
+
+form {
+	margin: 0 auto;
+	width: 600px;
+	border: 3px solid #000000;
+	padding: 5px;
+}
+
+table {
+	width: 580px;
+}
+
+h4 {
+	font-size: 2em;
+}
+
+h5 {
+	font-size: 1.3em;
+}
+
+input {
+	width: 250px;
+	height: 25px;
+}
+
+#idCheckBtn {
+	width: 65px;
+	margin: 0 auto;
+}
+
+span{
+	display: inline-block;
+	padding: 0px;
+	margin-left: 0px;
+	width: 150px;
+	height: 20px;
+	line-height: 20px;
+}
+#tel1, #tel2, #tel3 {
+	width: 70px;
+	float: none;
+}
+
+</style>
+<script>
+
+	function submitCheck() {
+		var name = document.getElementById("name");
+		var id = document.getElementById("id");
+		var pw = document.getElementById("pw");
+		var pwCheck = document.getElementById("pwCheck");
+		var email = document.getElementById("email");
+		var tel1 = document.getElementById("tel1");
+		var tel2 = document.getElementById("tel2");
+		var tel3 = document.getElementById("tel3");
+		
+// 		var reg = /^(010|011|016|017|018|019)\d{3,4}\d{4}$/;
+		var regname = /^[가-힣]{2,5}$/;
+		var regemail = /^\w{5,12}@[a-z]{2,10}[\.][a-z]{2,3}[\.]?[a-z]{0,2}$/;
+		var regTel1 = /^(010|011|016|017|018|019)$/;
+// 		var regTel1 = /^01([0|1|6|7|8|9])$/;
+		var regTel2 = /^\d{3,4}$/;
+		var regTel3 = /^\d{4}$/;
+
+		if (!name.value) {
+			name.focus();
+			alert("이름를 입력해주세요");
+			return false;
+		}
+
+		if (!regname.test(name.value)) {
+			alert("이름은 한글로 2자 이상 5글자로 입력하세요!");
+			name.value="";
+			name.focus();
+			return false;
+		}
+		
+		if (!id.value) {
+			id.focus();
+			alert("아이디를 입력해주세요");
+			return false;
+		} 
+		if (!pw.value) {
+			pw.focus();
+			alert("비밀번호를 입력해주세요");
+			return false;
+		} 
+		if (!pwCheck.value) {
+			pwCheck.focus();
+			alert("비밀번호확인란에 비밀번호를 입력해주십시오");
+			return false;
+		} 
+		if (pw.value != pwCheck.value) {
+			pwCheck.value="";
+			pwCheck.focus();
+			alert("비밀번호가 일치하지 않습니다.");
+			return false;
+		} 
+		if (!email.value) {
+			email.focus();
+			alert("이메일를 입력해주세요");
+			return false;
+		}  
+		if (!regemail.test(email.value)) {
+			email.focus();
+			alert("이메일 양식에 맞게 입력해 주세요");
+			return false;
+		}
+		if (!tel1.value) {
+			alert("전화번호 첫번째자리 입력하세요!");
+			tel1.focus();
+			return false;
+		} else if (!regTel1.test(tel1.value)) {
+			alert("010, 011, 016, 017, 018, 019만 가능합니다.")
+			tel1.value="";
+			tel1.focus();
+			return false;
+		}
+		if (!tel2.value) {
+			alert("전화번호 두번째자리를 입력하세요!");
+			tel2.focus();
+			return false;
+		} else if (!regTel2.test(tel2.value)) {
+			alert("전화번호을 두번째 자리를 3~4개의 숫자로 꼭 입력하세요!");
+			tel2.value="";
+			tel2.focus();
+			return false;
+		} 
+		if (!tel3.value) {
+			alert("전화번호 세번째자리를 입력하세요!");
+			tel3.focus();
+			return false;
+		} else if (!regTel3.test(tel3.value)) {
+			alert("전화번호 세번째 자리를 4개의 숫자로 꼭 입력하세요!");
+			tel3.value="";
+			tel3.focus();
+			return false;
+		} else {
+			alert("회원가입이 완료되었습니다.");
+			location.replace("index.html");
+			return false;
+		}
+	}
+
+	$(document).ready(function() {
+
+		$("#idCheckBtn").click(function() {
+			var id = $("#id").val();
+			var check = 0;
+			
+			if (!id) {
+				$("#id").focus();
+				alert("아이디를 입력해주세요");
+				return false;
+			}
+			
+		$("#pw").keyup(function(){
+			$("#statementpwCheck").html("");
+		});
+		
+		$("#pwCheck").keyup(function(){
+			if($("#pw").val() != $("#pwCheck").val()){
+				$("#statementpwCheck").html("일치하지 않음").css("color", "red");
+			} else {
+				$("#statementpwCheck").html("일치함").css("color", "black");
+			}
+		});	
+			
+			$.ajax({
+				
+				url : "loginCheck.json",
+				dataType : "json",
+				success : function(result) {
+					 {
+						if (id == (value.id)) {
+							check = 1;
+						} //if
+					}); //each
+					
+					if (check == 1) {
+						alert("이미 있는 존재합니다.");
+						$("#id").val("");
+						$("#id").focus();
+					} else {
+						alert("사용할수 있는 아이디 입니다.");
+						$("#pw").focus();
+					} //if
+				} //success
+			}); //ajax
+
+		}); //idCheckBtn
+		
+	}); //ready
+		
+</script>
+</head>
+<body onload="document.joinForm.name.focus();">
+	<div class="container">
+		<form name="joinForm" method="post" id="joinForm" onsubmit="return submitCheck();">
+			<table>
+				<thead>
+					<tr>
+						<th colspan="3"><h4>회 원 등 록</h4></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><h5>&nbsp;이&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;름</h5></td>
+						<td colspan="2"><input type="text" name="name" id="name" onkeypress="if(event.keyCode==13){return false;}"></td>
+					</tr>
+					<tr>
+						<td><h5>&nbsp;I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D</h5></td>
+						<td colspan="2">
+							<input type="text" name="id" id="id" onkeypress="if(event.keyCode==13){return false;}">
+							<input type="button" name="idCheckBtn" id="idCheckBtn" value="중복확인">
+						</td>
+					</tr>
+					<tr>
+						<td><h5>&nbsp;비&nbsp;밀&nbsp;&nbsp;번&nbsp;호</h5></td>
+						<td colspan="2"><input type="password" name="pw" id="pw" onkeypress="if(event.keyCode==13){return false;}"></td>
+					</tr>
+					<tr>
+						<td><h5>&nbsp;비밀번호확인</h5></td>
+						<td colspan="2">
+							<input type="password" name="pwCheck" id="pwCheck" onkeypress="if(event.keyCode==13){return false;}">
+							<span id="statementpwCheck"></span>
+						</td>
+					</tr>
+					<tr>
+						<td><h5>&nbsp;이&nbsp;&nbsp; 메&nbsp; &nbsp;일</h5></td>
+						<td colspan="2"><input type="email" name="email" id="email" onkeypress="if(event.keyCode==13){return false;}"></td>
+					</tr>
+					<tr>
+						<td><h5>&nbsp;전&nbsp;화&nbsp;번&nbsp;호</h5></td>
+						<td colspan="2">
+							<input type="text" name="tel1" id="tel1" maxlength="3" size="3" onkeypress="if(event.keyCode==13){return false;}"> - 
+							<input type="text" name="tel2" id="tel2" maxlength="4" onkeypress="if(event.keyCode==13){return false;}"> - 
+							<input type="text" name="tel3" id="tel3" maxlength="4" onkeypress="if(event.keyCode==13){return false;}">
+						</td>
+					</tr>
+					<tr>
+						<td colspan="5">
+							<input type="submit" name="joinBtn" id="joinBtn" value="회원가입" />
+							<input type="reset" name="resetBtn" id="resetBtn" value="가입취소"
+							onclick="location.href='index.html';">
+						</td>
+					</tr>
+
+
+				</tbody>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

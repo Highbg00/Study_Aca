@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>메인화면</title>
+
+<style type="text/css">
+@import url("css/index3.css");
+
+@import url("css/modal.css");
+
+@import url("css/login3.css");
+
+@import
+	url("https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css")
+	;
+</style>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="js/index3.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+</head>
+<body>
+
+	<div class="hd">
+		<div class="icon_logo">
+			<img src="image3/applelogo100.jpg" />
+		</div>
+		<div class="icon_list">
+			<li>
+				<div class="icon">
+					<img src="image3/phon500.png" />
+				</div>
+			</li>
+			<li>
+				<div class="icon">
+					<img src="image3/mac400.png" />
+				</div>
+			</li>
+			<li>
+				<div class="icon">
+					<img src="image3/pad300.png" />
+				</div>
+			</li>
+			<li>
+				<div class="icon">
+					<img src="image3/watch500.png" />
+				</div>
+			</li>
+			<li>
+				<div class="icon">
+					<img src="image3/pods100.png" />
+				</div>
+			</li>
+		</div>
+		<div class="icon_login">
+			<button type='button' id="modal_btn">
+				<img src="image3/login100.png">
+			</button>
+		</div>
+	</div>
+	<!-- <div class="control_panel">
+			control_button과 같은 요소는 div태그로 만들고 
+			스타일시트에서 background속성으로 이미지를 설정 
+			이렇게 하면 스타일시트의 hover필터와 active필터 사용 가능
+			<div class="control_button"></div>
+			<div class="control_button"></div>
+			<div class="control_button"></div>
+			<div class="control_button"></div>
+			<div class="control_button"></div>
+		</div> -->
+
+
+	<div class="animation_canvas">
+		<div class="slider_panel">
+			<img src="image3/iphon_main.jpg" class="slider_image" /> <img
+				src="image3/mac_main.jpg" class="slider_image" /> <img
+				src="image3/ipad_main1.jpg" class="slider_image" /> <img
+				src="image3/watch_main.jpg" class="slider_image" /> <img
+				src="image3/airpods_main.jpg" class="slider_image" />
+
+		</div>
+		<div class="slider_text_panel">
+			<div class="slider_text">
+				<h1>1. iphon</h1>
+			</div>
+			<div class="slider_text">
+				<h1>2. Mac</h1>
+			</div>
+			<div class="slider_text">
+				<h1>3. ipad</h1>
+			</div>
+			<div class="slider_text">
+				<h1>4. apple Watch</h1>
+			</div>
+			<div class="slider_text">
+				<h1>5. Air Pods</h1>
+			</div>
+		</div>
+
+	</div>
+	<div class="ft">
+		<div class="ft_cp">
+			<ul class="cp_ul">
+				<li>
+					<div class="cp">
+						<img src="image3/samsung100.jpg" />
+					</div>
+				</li>
+				<li>
+					<div class="cp">
+						<img src="image3/lg100.jpg" />
+					</div>
+				</li>
+				<li>
+					<div class="cp">
+						<img src="image3/lenovo100.jpg" />
+					</div>
+				</li>
+
+				<li>
+					<div class="cp">
+						<img src="image3/vivo100.jpg" />
+					</div>
+				</li>
+				<li>
+					<div class="cp">
+						<img src="image3/huawei100.jpg" />
+					</div>
+				</li>
+				<li>
+					<div class="cp">
+						<img src="image3/xiaomi100.jpg" />
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-----modal------------------------------------------------------------------------>
+	<div class="black_bg"></div>
+	<div class="modal_wrap">
+		<div class="modal_close">
+			<a href="#">close</a>
+		</div>
+		<!--login----------------------------------------------------------------------->
+		<div id="wrap">
+			<img class="aplogo" src="image3/applelogo100.jpg">
+			<form method="get" name="loginForm" id="loginForm">
+				<fieldset>
+					<!-- <legend>Login</legend><span id="close">x</span> -->
+					<table border="0">
+						<tr>
+							<td><img src="images/id_icon.png" class="icon" onclick="document.getElementById('id').focus();" /></td>
+							<td>
+								<input type="text" name="id" id="id" placeholder="아이디(이메일)를 입력하세요" />
+								<span class="alert"id="idspan"></span>
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								<img src="images/pw_icon.png" class="icon"onclick="document.getElementById('pw').focus();" />
+							</td>
+							<td>
+								<input type="password" name="pw" id="pw"placeholder="비밀번호를 입력하세요" /> 
+								<i id="nun"class="fa fa-eye fa-lg"></i> 
+								<span id="eye">비번보기</span> 
+								<span class="alert" id="pwspan"></span>
+							</td>
+						</tr>
+
+						<tr>
+							<td colspan="2">
+								<input type="submit" id="loginBtn"value="로그인" /> &nbsp;&nbsp; 
+								<input type="reset" id="resetBtn" value="취소" />
+							</td>
+						</tr>
+
+					</table>
+				</fieldset>
+			</form>
+			<div class="notAMember">
+				잠깐! 회원이 아니세요? <a href="signup.html">가입</a>하세요
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>메인화면</title>
+	<style type="text/css">
+		@import url("css/index.css");
+	</style>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<script src="js/index.js"></script>
+
+	<style>
+
+	</style>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<script>
+	$(document).ready(function() {
+		var refreshInterval = null;
+		var time = null;
+		var imgCnt = $(".slider_panel").children().length;
+		var imgIdx = 1; //처음에 3초 보여주고 setInterval로 3초 후에 2번째 보여주려고
+		
+		
+		function moveSlider(index) {
+			//이동할 변수 선언
+			var willMoveLeft = -680 * index;
+			//slider_panel 이동
+			$(".slider_panel").animate({
+				left: willMoveLeft //세미콜론 없음
+			},"slow"); //animate
+			
+			//slider_text 이동
+			$(".slider_text[data-index=" + index + "]").show("fast").animate({
+				left: 0 //세미콜론 없음
+			},"slow");
+			$(".slider_text[data-index!=" + index + "]").hide("fast").animate({
+				left: -300 //세미콜론 없음
+			},"slow");
+
+			
+		}//moveSlider
+		
+		timer = function() {
+			moveSlider(imgIdx);
+			
+			if (imgIdx < imgCnt-1) {
+				imgIdx++;
+			} else {
+				imgIdx = 0;
+			}
+			
+		} //timer
+		
+
+		
+		//초기 텍스트 위치 지정 및 data-index 할당
+		$(".slider_text").css("left",-300).each(function(index) {
+			$(this).attr("data-index",index);//attr
+		});//each
+		
+		//초기 0번째 인덱스 텍스트 가져오기 및 0번째 인덱스 컨트롤 버튼 설정 
+		$(".slider_text[data-index=" + 0 + "]").show("fast").animate({
+			left: 0 //세미콜론 없음
+		},"slow");
+		
+		//3초마다 자동으로 움직이는 timer 함수 호출
+		refreshInterval = setInterval(timer, 3000);
+		
+		
+	});
+	
+	</script>
+</head>
+
+<body>
+	
+		<div id="toph">
+			<h1 class="hd">Canola</h1>
+			<a href="./login.html">로그인</a>
+			<a href="./signup.html">회원가입</a>
+		</div>
+		
+		<div class="animation_canvas">
+		
+			<div class="slider_panel">
+				<img src="img/bmw.png" class="slider_image" />
+				<img src="img/benz.jpg" class="slider_image" />
+				<img src="img/genesis.jpg" class="slider_image" />
+				<img src="img/porsche.jpg" class="slider_image" />
+			</div>
+		
+			<div class="slider_text_panel">
+				
+				<div class="slider_text">
+					<h1>BMW</h1>
+
+				</div>
+				
+				<div class="slider_text">
+					<h1>BENZ</h1>
+
+				</div>
+		
+				<div class="slider_text">
+					<h1>GENESIS</h1>
+
+				</div>
+		
+				<div class="slider_text">
+					<h1>PORSCHE</h1>
+
+				</div>
+
+			</div>
+
+		</div>
+		<div id="baro">사이트바로가기</div>
+		<table id="bottom_table">
+
+			<tr>
+				<td><a href="https://www.bmw.co.kr/ko/index.html" target="_blank"><img src="img/bmwlogo.jpg"></a></td>
+				<td><a href="https://www.mercedes-benz.co.kr/passengercars.html?group=all&subgroup=see-all&view=BODYTYPE"
+						target="_blank">
+						<img src="img/benzlogo.jpg"></a></td>
+			</tr>
+			<tr>
+				<td><a href="https://www.genesis.com/kr/ko/main.html" target="_blank"><img
+							src="img/genesislogo.jpg"></a></td>
+				<td><a href="https://www.porsche.com/korea/ko/" target="_blank"><img src="img/porschelogo.png"></a></td>
+			</tr>
+
+		</table>
+	
+</body>
+
+</html>

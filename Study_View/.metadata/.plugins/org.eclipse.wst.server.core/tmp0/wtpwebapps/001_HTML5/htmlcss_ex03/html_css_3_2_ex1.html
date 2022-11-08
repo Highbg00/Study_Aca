@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>HTML Basic Page</title>
+
+<style type="text/css">
+	table {
+		border: 1px solid black;
+		width: 500px;
+		text-align: center;
+		border-collapse: collapse;
+	}
+	
+	th, td {
+		border: 1px solid black;
+	}
+</style>
+
+</head>
+<!-- 
+table 요소 태그 : 예전에는 table 태그 사용해 레이아웃을 구성했지만 현재는 대부분 div로 구성
+tr(table row) : 표 내부 행 태그
+th(table head) : 행 내부의 제목 셀 태그
+td(table data) : 행 내부의 일반 셀 태그
+ -->
+<body>
+	<table>
+		<!-- table 태그 : html5에서는 border (표 테두리 두께) 속성 하나만 가짐 -->
+		<!-- tbody 저절로 생성, 검사로 확인 -->
+		<tr>
+			<th>table header 1</th>
+			<th>table header 2</th>
+		</tr>
+		<tr>
+			<td>table data 1</td>
+			<td>table data 2</td>
+		</tr>
+		<tr>
+			<td>table data 3</td>
+			<td>table data 4</td>
+		</tr>
+	</table>
+</body>
+</html>

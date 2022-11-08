@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 슬라이더</title>
+    <link rel="stylesheet" href="./slider2.css">
+</head>
+<div id="wrapper">
+    <input type="checkbox" id="menu" name="menu" class="menu-checkbox">
+    <div class="menu">
+      <label class="menu-toggle" for="menu"><span>Toggle</span></label>
+      <ul>
+        <li>
+          <a href="#">메인화면</a>
+        </li>
+        <li>
+          <a href="#">다이어리</a>
+        </li>
+        <li>
+            <a href="#">그룹지정</a>
+          </li>        
+        <li>
+          <a href="#" onClick="location.href='login.html'">로그인</a>
+          </li>        
+        <li>
+          <a href="#" onClick="location.href='register.html'">회원가입</a>
+        </li>                
+      </ul>
+    </div>
+  </div><!-- #wrapper -->
+
+
+
+<body>
+  
+    <img src="white_logo.png" alt="My Image" id="image">      
+    <img src="search.png" alt="My Image" id="image2">
+<div class="slider">
+    <input type="radio" name="slide" id="slide1" checked>
+    <input type="radio" name="slide" id="slide2">
+    <input type="radio" name="slide" id="slide3">
+    <input type="radio" name="slide" id="slide4">
+    <ul id="imgholder" class="imgs">
+        <li><img src="001.png" style="width: 640px;  height: 480px;"></li>
+        <li><img src="002.png" style="width: 640px;  height: 480px;"></li>
+        <li><img src="003.png" style="width: 640px;  height: 480px;"></li>
+        <li><img src="004.png" style="width: 640px;  height: 480px;"></li>
+    </ul>
+    <div class="bullets">
+        <label for="slide1">&nbsp;</label>
+        <label for="slide2">&nbsp;</label>
+        <label for="slide3">&nbsp;</label>
+        <label for="slide4">&nbsp;</label>
+    </div>  
+</div>
+<div class="logo">
+    <a href="www.facebook.com"><img src="facebook.png" alt="My Image" id="facebook"></a> 
+    <a href="www.instagram.com"><img src="instragram.png" alt="My Image" id="instagram"></a>
+    <a href="www.kakaotalk.com"><img src="kakaotalk.png" alt="My Image" id="kakaotalk"></a>
+    <a href="www.twitter.com"><img src="twitter.png" alt="My Image" id="twitter"></a>   
+</div>
+</body>
+</html>

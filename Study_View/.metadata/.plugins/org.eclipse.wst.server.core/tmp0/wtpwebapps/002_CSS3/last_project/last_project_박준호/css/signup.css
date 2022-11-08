@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap'); 	
+ 	
+ *{
+	font-family: 'Nanum Pen Script', cursive;
+	margin: 0px auto;
+	padding: 0px;
+	font-size: medium;
+ }
+
+ 	
+html, body{
+background-color: black;
+}
+
+ table tr:first-child td {
+ 	padding: 0px;
+ }
+ 
+ #wrap {
+ 	width: 450px;
+ 	height: 450px;
+ }
+ 
+ form {
+	border: 3px solid #F5D92B;
+	background-color: blcak;
+}
+	
+form * {
+	background-color: black;
+}
+
+table {
+	margin: 0px auto;
+	padding: 5px;
+	color: white;
+}
+
+td {
+	padding: 10px;
+	}
+
+tr:nth-child(2n+1) td{
+	padding: 0px;
+	font-size: 10px;
+}
+
+h1{
+	margin: 5px;
+	}
+	
+input::placeholder {
+ 	text-align: center;
+ 	font-size: 10px;
+}
+	
+input, button{
+	border: 3px solid black;
+	border-radius: 5px;
+	color: white;
+}
+	
+#name, #id, #pw, #pwcheck, #email, #tel1
+	,#tel2, #tel3{
+	border-color: #F5D92B;
+	color: white;
+}
+	
+#idcheck, #cancel, #emailcheck, #sign_up{
+	border-color: green;
+}
+	
+#id:focus, #name:focus, #pw:focus,
+	#pwcheck:focus, #email:focus, #tel1:focus, #tel2:focus, #tel3:focus  {
+	border-color: red;
+}
+
+	
+#close button {
+	border: 0px;
+	color: red;
+}
+	
+	
+#sign_up, #cancel{
+	margin: 5px;
+}
+	
+#sign_up, #cancel, #idcheck, #emailcheck{
+		background: #0079C4; 
+		color: white;
+		border: 0px;
+		padding: 5px;
+	}
+	
+a:hover {
+	color: red;
+}
+	
+#idcheck:hover, #emailcheck:hover, #sign_up:hover, #cancel:hover {
+	color: red;
+}
+
+a {
+	color: yellow;
+}

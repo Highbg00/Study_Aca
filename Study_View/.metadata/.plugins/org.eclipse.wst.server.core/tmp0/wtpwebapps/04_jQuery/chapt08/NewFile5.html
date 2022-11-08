@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script>
+//키보드 이벤트 : focus(), 			blur()
+//마우스 이벤트 : mouseenter(), 	mouseleave()
+//  				 mouseover(),   mouseout();
+$(document).ready(function() {
+	
+// 	$("#userName").focus(function() {
+		
+// // 		$("#userName").val()=""; //XXX
+// 		$("#userName").val(""); //OOO
+		
+// 	}); //userName focus
+	
+// 	$("#userName").blur(function() {
+		
+// 		$("#userName").val("이름 입력"); //OOO
+	
+// 	}); //userName blur
+	
+	$("#userName").focus(function() {
+// 		$("#userName").val("");
+		$(this).val("");
+	}).blur(function() {
+// 		$("#userName").val("이름 입력");
+		$(this).val("이름 입력");
+	}); //메서드 체이닝
+	
+	$("#userId").focus(function() {
+// 		$("#userId").val("");
+		$(this).val("");
+	}).blur(function() {
+// 		$("#userId").val("이름 입력");
+		$(this).val("아이디 입력");
+	}); //메서드 체이닝
+	
+	
+	
+	
+	
+}); //ready
+
+</script>
+</head>
+<body>
+	<p>
+		<label for="userName">이&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;름 : </label> 
+		<input type="text" name="userName" id="userName" value="이름 입력" />
+	</p>
+	<p>
+		<label for="userId">아&nbsp;이&nbsp;디 : </label> 
+		<input type="text" name="userId" id="userId" value="아이디 입력" />
+	</p>	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

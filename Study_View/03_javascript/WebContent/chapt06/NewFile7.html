@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var userName = prompt("당신의 영문이름은?","");
+	
+	while (!userName || !userName.trim()) {
+		userName = prompt("당신의 영문이름을 정확히 입력하세요?","");
+	}
+	
+	document.write(userName.toUpperCase() + "<br />");
+	
+	//substr(x,y) : x번째부터 y갯수 글자 반환
+	//substring(x,y) : x번째 부터 y-1 번째까지 반환 
+	
+	var userPhoneNumber = prompt('당신의 휴대폰번호는? ',"");
+	
+	while (!userPhoneNumber || !userPhoneNumber.trim() || userPhoneNumber.length < 11) {
+		userPhoneNumber = prompt('당신의 휴대폰번호를 정확히 입력하세요? ',"");
+	}
+	
+	//0101234**** 형태로
+	//1. substr
+	document.write(userPhoneNumber.substr(0,7) + "****<br />");
+	document.write(userPhoneNumber.substr(0,userPhoneNumber.length-4) + "****<br />");
+	//2. substring
+	document.write(userPhoneNumber.substring(0,7) + "****<br />");
+	document.write(userPhoneNumber.substring(0,userPhoneNumber.length-4) + "****<br />");
+	
+	//010****5678 형태로
+	//1. substr
+	document.write(userPhoneNumber.substr(0,3) + "****" + userPhoneNumber.substr(7,4) + "<br />");
+	document.write(userPhoneNumber.substr(0,userPhoneNumber.length-8) + "****" 
+			+ userPhoneNumber.substr(userPhoneNumber.length-4,4) + "<br />");
+	
+	//2. substring
+	document.write(userPhoneNumber.substring(0,3) + "****" + userPhoneNumber.substring(7,11)+ "<br />");
+	document.write(userPhoneNumber.substring(0,userPhoneNumber.length-8) + "****" 
+			+ userPhoneNumber.substring(userPhoneNumber.length-4, 11) + "<br />");
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

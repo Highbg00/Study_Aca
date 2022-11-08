@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+	@import url(""color_red.css");  /* * { color: red; } */
+	@import url("background_black.css"); /* * { background: black; } */
+	
+	h1 {
+		color: white;
+	}

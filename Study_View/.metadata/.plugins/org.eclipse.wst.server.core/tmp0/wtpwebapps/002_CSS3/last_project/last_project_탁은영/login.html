@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://kit.fontawesome.com/7eea2c5627.js" crossorigin="anonymous"></script>
+<style type="text/css">
+	  @import url("css/login.css"); 
+</style>
+<script src="js/login.js"></script>
+</head>
+<div class="back">
+	 <div class="login_form">
+        <div class="img_logo"><a href="index.html"><img src="img/bakery.png"></a></div>
+        <h1>login</h1>
+        <form method="get" name="form" id="form">
+            <div class="form_class">
+            <input type="text" placeholder="아이디를 입력하세요"  id="id">
+            <span id="idspan"></span>
+            </div> 
+            <div class="form_class">
+             <input type="password" placeholder="비밀번호를 입력하세요" id="pw">
+             <div id="show"><i class="fa-solid fa-unlock fa-2x" id="unlock"></i></div> 
+             <span id="pwspan"></span>
+             </div>
+             <button type="button" id="loginbtn">로그인</button>
+             <h5>계정이 없으면 <a href="signup.html">회원가입</a>을 먼저 해주세요</h5>
+        </form>
+    </div>
+</div> 
+</body>
+</html>

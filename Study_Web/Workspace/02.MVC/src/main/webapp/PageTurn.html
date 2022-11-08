@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>정적페이지 전환</title>
+
+<script type="text/javascript">
+	function fnGo() {
+		var id = 'kim';
+		var pw = 9999;
+		alert('페이지를 전환합니다.');
+		location.href="page.do?id=" + id + "&pw=" +pw;
+	}
+</script>
+
+</head>
+<body>
+- 현재 페이지(PageTurn.html)에서 회원 1명의 정보(id, pw)를 PageServlet.java(page.do)로 넘기시오.
+<form action="page.do" method="get">
+	ID : <input type='text' name='id' value='DefaultID' required /> <br />
+	PW : <input type='password' name='pw' value='1234' required /> <br />
+	<input type='submit' value='페이지 전환 A' />
+</form>
+
+<a href="page.do?id=korea&pw=1234">페이지 전환 B</a>
+<br />
+
+<button onclick='fnGo()'>페이지 전환 C</button>
+<!-- id = 'kim' pw = 9999   id, pw 를 출력하시오.. (page.do)에서... -->
+<br />
+<br />
+
+<input type="button" value="페이지 전환 D" 
+		onclick='location.href="page.do?id=lee&pw=1234"' />
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

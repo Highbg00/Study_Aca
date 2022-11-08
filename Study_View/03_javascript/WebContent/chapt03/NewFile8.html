@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//공백, 문자(순수)
+var num = prompt("숫자를 입력하세요","");
+
+if (num == "") { //공백
+	alert("입력되지 않았습니다. 정확히 입력하세요");
+	location.reload();
+} else if (num.trim() == "") { //공백
+	alert("입력되지 않았습니다. 정확히 입력하세요");
+	location.reload();
+} else if (num % 2 == 1) {
+	alert("홀수입니다.")
+} else if (num % 2 == 0) {
+	alert("짝수입니다.")
+} else {
+	alert("숫자가 아닙니다.");
+	location.reload();
+}
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

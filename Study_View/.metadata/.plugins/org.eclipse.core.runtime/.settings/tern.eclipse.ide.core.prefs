@@ -1,0 +1,6 @@
+defaultTernModules=guess-types,outline,cordovajs,ecma5,browser,jquery,jquery-extension,browser-extension,jquery-mobile1.5,jquery-ui1-12
+eclipse.preferences.version=1
+loadingLocalPlugin=false
+repositories=
+traceOnConsole=false
+used-repository-name=default

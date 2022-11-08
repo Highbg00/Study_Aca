@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>회원가입</title>
+
+
+
+	<link rel="stylesheet" href="css/signup.css">
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+	<script src="js/signup.js"></script>
+
+</head>
+
+<body>
+	<a id="homm" href="./index.html"><img src="image/home.png" width="40px" height="40px"></a>
+	<form>
+		<table>
+			<tr>
+				<th colspan="3" id="sign">회원 가입</th>
+			</tr>
+
+			<tr id="name">
+				<td>이&emsp;&emsp;&emsp;&emsp;름</td>
+				<td><input type="text" placeholder="이름을 입력하세요"></td>
+			</tr>
+			<tr id="id">
+				<td>I&emsp;&emsp;&emsp;&nbsp;&nbsp;&emsp;D</td>
+				<td><input type="text" placeholder="ID를 입력하세요"></td>
+				<td><button type="button">ID중복확인</button></td>
+
+			</tr>
+			<tr id="pw">
+				<td>비&nbsp;&nbsp;밀&nbsp;&nbsp;번&nbsp;&nbsp;호</td>
+				<td><input type="password" id="pw1" placeholder="비밀번호를 입력하세요"></td>
+			</tr>
+
+			<tr id="rpw">
+				<td>비밀번호확인</td>
+				<td><input type="password" id="pw2" placeholder="비밀번호를 다시 입력하세요"></td>
+
+			</tr>
+
+			<tr id="email">
+				<td>이&nbsp;&nbsp;&nbsp;&nbsp;메&nbsp;&nbsp;&nbsp;&nbsp;일</td>
+				<td><input type="text" placeholder="이메일을 입력하세요"></td>
+				<td><button type="button">email중복확인</button></td>
+
+			</tr>
+
+			<tr id="phone">
+
+				<td><label id="tel" for="tel">휴&nbsp;&nbsp;대&nbsp;&nbsp;전&nbsp;&nbsp;화</label></td>
+				<td><input text="text" name="phone1" id="phone1" size="3" />- <input text="text" name="phone2"
+						id="phone2" size="4" />- <input text="text" name="phone3" id="phone3" size="4" /></td>
+			</tr>
+
+			<tr id="bottom_button">
+				<td colspan="3"><input id="signupbt" onclick="pwtest()" type="submit" value="회원가입"><input type="reset"
+						value="가입취소"></td>
+
+			</tr>
+
+			<tr id="bottom_text">
+				<td colspan="3"><a href="./login.html">로그인 하러가기</a></td>
+			</tr>
+		</table>
+	</form>
+</body>
+
+</html>

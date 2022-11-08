@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#temp {
+		height: 2000px;
+	}
+	
+	div {
+		width: 100px;
+		height: 100px;
+		background-color: purple;
+		opacity: 0.7;
+	}
+	
+	div:nth-child(1) {
+		background-color: red;
+		top: 0px;
+		left: 0px;
+/*  		position: absolute; */
+	}
+	div:nth-child(2) {
+		background-color: green;
+		top: 50px;
+		left: 50px;
+/*  		position: absolute; */
+	}
+	
+	div:nth-child(3) {
+		background-color: blue;
+		top: 100px;
+		left: 100px;
+/*  		position: absolute; */
+	}
+	
+	#wrap {
+		width: 300px;
+		height: 300px;
+		position: fixed;
+		top: 200px;
+		left: 200px;
+		background-color: yellow;
+		opacity: 1.0;
+	}
+	
+	#wrap #content {
+		position: absolute;
+		top: 100px;
+		left: 100px;
+		background-color: red;
+		opacity: 1.0;
+	}
+	
+	#fixed {
+		width: 100px;
+		height: 50px;
+		position: fixed;
+		bottom: 10px;
+		right: 10px;
+		background-color: yellow;
+		border: 2px solid red;
+	}
+</style>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+
+	<div id="wrap">
+		<div id="content">content</div>
+	</div>
+	
+	<div id="fixed">여긴 고정된 박스입니다.</div>
+	<div id="temp"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

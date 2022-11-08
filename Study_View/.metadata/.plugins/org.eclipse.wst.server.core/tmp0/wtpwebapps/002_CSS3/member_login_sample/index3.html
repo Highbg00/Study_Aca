@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="ui-lightness/jquery-ui.css" />
+
+<style>
+* { margin: 0px auto; padding: 0px; }
+a { text-decoration: none; }
+li {list-style: none; }
+#wrap { width: 1024px; margin: 0 auto; }
+
+#header {
+	width: 1000px;
+	height: 50px;
+	margin: 5px auto;
+}
+
+#header_in {
+	overflow: hidden;
+}
+
+.header_text {
+	float: left;
+	width: 800px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 2em; 
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	background-color: black;
+}
+
+.login {
+	float: right;
+}
+
+.login input{
+	float: right;
+	margin: 1px 2px;
+}
+
+.login input[type="button"] {
+	display: block;
+	border: 1px solid #ccc;
+	width: 90px;
+	height: 48px;
+	line-height: 48px;
+	text-align: center;
+	font-size: 1.1em;
+}
+
+#signup:hover,
+#login:hover {
+	color: white;
+	background-color: black;
+}
+
+#mouseslider {
+	width: 1000px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	position: relative;
+	height: 600px;
+	overflow: hidden;
+	margin: 5px auto;
+	width: 1000px;
+	background: url("img/backimg.jpg");
+}
+
+.animation_canvas1 {
+	overflow: hidden;
+	position: absolute;
+	width: 450px;
+	height: 600px;
+	margin: 0 auto;
+}
+
+.left_slider {
+	width: 2250px;
+	position: relative;
+}
+
+.slider_image1 {
+	float: left;
+	width: 450px;
+	height: 600px;
+}
+
+.animation_canvas2 {
+	overflow: hidden;
+	position: absolute;
+	width: 450px;
+	height: 600px;
+	margin: 0 auto;
+	right: 0;
+}
+
+.right_slider {
+	width: 2250px;
+	position: relative;
+	right: 0;
+}
+
+.slider_image2 {
+	float: left;
+	width: 450px;
+	height: 600px;
+}
+
+.control_panel1, .control_panel2 {
+	position: absolute;
+	top: 550px;
+	left: 200px;
+	height: 13px;
+	overflow: hidden;
+}
+
+.control_button1, .control_button2 {
+	width: 12px;
+	height: 46px;
+	position: relative;
+	float: left;
+	cursor: pointer;
+	background: url("img/point_button.png");
+}
+
+.control_button1:hover, .control_button2:hover {
+	top: -16px;
+}
+
+.control_button1.active, .control_button2.active {
+	top: -31px;
+}
+
+#foot_link {
+	margin-top: 5px;
+	width: 1000px;
+}
+
+#foot_link a {
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	width: 33%;
+	height: 50px;
+	float: left;
+	width: 33%;
+}
+
+#foot_link a:nth-child(2), #foot_link a:nth-child(5) {
+	width: 34%
+}
+</style>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="ui-lightness/jquery-ui.js"></script>
+
+<script>
+$(document).ready(function() {
+	var imgCnt = $(".left_slider").children().length;
+	var imgIdx = 1;
+	var refreshInterval = null;
+	var timer = null;
+
+	function moveSlider(index) {
+		var willMoveLeft = -(index * 450);
+		$(".left_slider").animate({
+			left : willMoveLeft
+		}, "slow");
+
+		$(".control_button1[data-index=" + index + "]").addClass("active");
+		$(".control_button1[data-index!=" + index + "]").removeClass("active");
+	}
+
+	timer = function() {
+		moveSlider(imgIdx);
+
+		if (imgIdx < imgCnt - 1) {
+			imgIdx++;
+		} else {
+			imgIdx = 0;
+		}
+	};
+
+	$(".animation_canvas1").on({
+		mouseenter : function() {
+			clearInterval(refreshInterval);
+		},
+		mouseleave : function() {
+			refreshInterval = setInterval(timer, 3000);
+		}
+
+	});
+
+	$(".control_button1").each(function(index) {
+		$(this).attr("data-index", index);
+	}).click(function() {
+		var index = $(this).attr("data-index");
+		imgIdx = index;
+		moveSlider(index);
+	});
+
+	$(".control_button1[data-index=" + 0 + "]").addClass("active");
+
+	refreshInterval = setInterval(timer, 3000);
+	
+
+});
+
+$(document).ready(function() {
+	var imgCnt = $(".right_slider").children().length;
+	var imgIdx = 1;
+	var refreshInterval = null;
+	var timer = null;
+
+	function moveSlider(index) {
+		var willMoveLeft = -(index * 450);
+		$(".right_slider").animate({
+			left : willMoveLeft
+		}, "slow");
+
+		$(".control_button2[data-index=" + index + "]").addClass("active");
+		$(".control_button2[data-index!=" + index + "]").removeClass("active");
+	}
+
+	timer = function() {
+		moveSlider(imgIdx);
+
+		if (imgIdx < imgCnt - 1) {
+			imgIdx++;
+		} else {
+			imgIdx = 0;
+		}
+	};
+
+	$(".animation_canvas2").on({
+		mouseenter : function() {
+			clearInterval(refreshInterval);
+		},
+		mouseleave : function() {
+			refreshInterval = setInterval(timer, 3000);
+		}
+
+	});
+
+	$(".control_button2").each(function(index) {
+		$(this).attr("data-index", index);
+	}).click(function() {
+		var index = $(this).attr("data-index");
+		imgIdx = index;
+		moveSlider(index);
+	});
+
+	$(".control_button2[data-index=" + 0 + "]").addClass("active");
+
+	refreshInterval = setInterval(timer, 3000);
+	
+	
+	$("#loginUi").click(function () {
+		$("#login_form").dialog("open");
+	});
+	
+	$("#login_form").dialog({
+		autoOpen: false,
+		buttons: {
+			로그인: function () {
+				var id = $("#id").val();
+				var pw = $("#pw").val();
+				
+				idCheck = false;
+				$.ajax({
+					url : "loginCheck.json",
+					dataType : "json",
+					async: false,
+					
+					success : function(result){
+						$(result).each(function(key, value){
+							if(id==value.id && pw == value.pw) 	
+								idCheck = true;
+						}); //each
+						
+					}, //success
+					error : function() { alert("로딩 실패!"); } 
+				}); //ajax
+				
+				if(idCheck) {
+					alert(id + "님 로그인되었습니다.");
+					$(".header_text").text("");
+					$(".header_text").append(id + "님 반갑습니다.");
+					$("#login_form").dialog("close");
+				} else	{
+					alert("존재하지 않는 아이디입니다.");
+					$("#id").val("");
+					$("#pw").val("");
+					$("#id").focus();
+				} //if
+				
+			}, //로그인 function
+			
+			취소 : function () {
+				$("#id").val("");
+				$("#pw").val("");
+				$("#login_form").dialog("close");
+			} //취소 function
+		}, //buttons
+		
+		modal: true
+	});	//dialog
+
+});
+</script>
+</head>
+<body>
+<div id="wrap">
+	<div id="header">
+		<div id="header_in">
+			<div class="header_text">
+				<span>라이트노벨 인기 소설</span>
+			</div>
+			<div class="login">
+				<input type="button" id="signupUi" name="signupUi" value="회원가입" 
+							 onclick="location.href='signup.html';" />
+				<input type="button" id="loginUi"  name="loginUi"  value="로그인" />
+			</div>
+		</div>
+	</div>
+	
+	<div id="mouseslider">
+		<div class="animation_canvas1">
+			<div class="left_slider">
+				<a href="#"><img src="img/전생슬1.jpg" class="slider_image1" /></a> 
+				<a href="#"><img src="img/전생슬2.jpg" class="slider_image1" /></a> 
+				<a href="#"><img src="img/전생슬3.jpg" class="slider_image1" /></a> 
+				<a href="#"><img src="img/전생슬4.jpg" class="slider_image1" /></a> 
+				<a href="#"><img src="img/전생슬5.jpg" class="slider_image1" /></a>
+			</div>
+			<div class="control_panel1">
+				<div class="control_button1"></div>
+				<div class="control_button1"></div>
+				<div class="control_button1"></div>
+				<div class="control_button1"></div>
+				<div class="control_button1"></div>
+			</div>
+
+		</div>
+		<div class="animation_canvas2">
+			<div class="right_slider">
+
+				<a href="#"><img src="img/던만추1.jpg" class="slider_image2" /></a> 
+				<a href="#"><img src="img/던만추2.jpg" class="slider_image2" /></a> 
+				<a href="#"><img src="img/던만추3.jpg" class="slider_image2" /></a> 
+				<a href="#"><img src="img/던만추4.jpg" class="slider_image2" /></a> 
+				<a href="#"><img src="img/던만추5.jpg" class="slider_image2" /></a>
+			</div>
+			<div class="control_panel2">
+				<div class="control_button2"></div>
+				<div class="control_button2"></div>
+				<div class="control_button2"></div>
+				<div class="control_button2"></div>
+				<div class="control_button2"></div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div id="foot_link">
+
+		<a href="http://www.aniplustv.com" target="_blank"><img src="img/애니플러스.gif" /></a> 
+		<a href="https://www.bandaimall.co.kr" target="_blank"><img src="img/반다이몰.gif" /></a>
+		<a href="https://www.aladin.co.kr" target="_blank"><img src="img/알라딘.gif" /></a> 
+		<a href="http://www.kyobobook.co.kr" target="_blank"><img src="img/교보문고.gif" /></a> 
+		<a href="http://www.naver.com" target="_blank"><img src="img/네이버.gif" /></a> 
+		<a href="http://www.daum.net" target="_blank"><img src="img/다음.gif" /></a>
+
+	</div>
+</div>
+<div id="login_form" title="로그인 페이지">
+	I&nbsp;&nbsp;&nbsp;D&nbsp;
+	<input id="id" type="text" /><br/><br/>
+	P&nbsp;W&nbsp;
+	<input id="pw" type="password" />
+</div>
+</body>
+</html>

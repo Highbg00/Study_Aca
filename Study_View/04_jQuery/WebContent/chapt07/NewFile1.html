@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script>
+
+$(document).ready(function() {
+	
+// 	$("#ttl").css("border","2px dashed red"); //css
+// 	$("#ttl").css("background-color","yellow"); //css
+	
+// 	$("#ttl").css("border","2px dashed red").css("background-color","yellow"); //css, 메서드 체이닝
+	
+	$("#ttl").css({
+// 		"속성" : "속성값", // 세미콜론 없음
+// 		"속성" : "속성값"  // 세미콜론 없음
+		"border" : "2px dashed red",
+		"background-color" : "yellow"
+	}); //세미콜론존재, 객체형태
+	
+// 	$(".direct").css("background-color","blue");
+	
+// 	$("h3:first").css("background-color","aqua");
+// 	$("h3:last").css("background-color","red");
+	
+	$("h1, h2").css("background-color","purple");
+	
+}); //ready
+
+</script>
+</head>
+<body>
+	<h1 id="ttl">제이쿼리</h1>
+	<h2>직접선택자 및 관계선택자</h2>
+	<h3 class="direct">직접선택자</h3>
+	<h3>관계선택자</h3>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+
+<!--
+	바깥쪽에 position:relative 
+	안쪽에 position:absolute 
+	시작점이 감싸고 있는 태그를 기준으로 하기위해 
+-->
+<style>
+#contain {
+	width: 800px;
+	margin: 0px auto;
+	border: 1px solid red;
+}
+
+#header {
+	height: 50px;
+	background-color: gray;
+}
+
+#content {
+	height: 200px;
+	position: relative;
+	/* overflow: hidden; */
+	/* overflow: scroll; */
+}
+
+#content>div {
+	width: 100px;
+	height: 100px;
+	border: 2px dashed green;
+}
+
+#content1 {
+	background-color: aqua;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 20; /* 깊이값  : 높을수록 위로 덮어진다*/
+}
+
+#content2 {
+	background-color: yellow;
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	z-index: 10;
+}
+
+#content3 {
+	background-color: blue;
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	z-index: 5;
+}
+
+#content4 {
+	background-color: purple;
+	position: absolute;
+	top: 150px;
+	left: 150px;
+	z-index: 1;
+}
+
+#content1:hover, #content2:hover, #content3:hover, #content4:hover {
+	z-index: 30;
+}
+
+/* 적용이 안되면 full 경로 사용 */
+/* #contain #content>div:hover */
+
+/* #content>div:hover {
+	z-index: 30px;
+} */
+
+#footer {
+	height: 50px;
+	background-color: gray;
+}
+
+span {
+	display: block;
+	color: red;
+	font-weight: bold;
+}
+
+#content>span {
+	text-align: center;
+	line-height: 200px;
+}
+</style>
+
+</head>
+
+<body>
+	<div id="contain">
+		<div id="header">HEADER<span>(800*50)</span></div>
+		<div id="content"><span>(800*200)</span>
+			<div id="content1">content1<span>(100*100)</span></div>
+			<div id="content2">content2<span>(100*100)</span></div>
+			<div id="content3">content3<span>(100*100)</span></div>
+			<div id="content4">content4<span>(100*100)</span></div>
+		</div>
+		<div id="footer">FOOTER<span>(800*50)</span></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+○ JDBC : Java DataBase Connectivity
+	- JAVA와 DB(Oracle SQL)를 연동하는 프레임워크(FrameWork)
+	
+○ JDBC 준비사항(프레임워크 구축)
+	- JAVA 개발환경 구축 : JDK, JRE 설치
+	- DataBase 설치 : Oracle SQL 21c
+	- JAVA와 DB를 연동할 수 있는 API(Library) 설치(등록) : ojdbc8.jar
+		▶ Oracle DB 설치된 폴더 > dbhomeXE > jdbc > lib
+			→ C:\oracle21c\dbhomeXE\jdbc\lib
+			
+○ 외부라이브러리 등록(ExternalAPI Project 참조) ▶ 정적로딩
+	- 해당 프로젝트 > 마오 > Build Path > Configure Build Path...
+	- 상단 탭 : Libraries > Add External JARs... > API(Library) 선택 > Apply and Close
+	- Referenced Libraries 항목 생성되고 API(Library) 등록 완료
+	
+	★ JDBC(OracleDriver) Class Not Found Exception 예외 발생 시
+	- ojdbc8.jar 복사 > JAVA JRE 폴더 > lib > ext : 붙여넣기
+		▶ C:\Program Files\Java\jre1.8.0_311\lib\ext
+	
+○ JDBC 주요한 클래스/인터페이스
+	- Connection : JAVA와 DB를 연결객체
+	- Statement, PreparedStatement : SQL 문장(Query) 전송객체
+	- ResultSet : 조회/검색(select query) 요청 시 결과객체
+	- OracleDriver : 동적로딩
+	
+○ 데이터 조작어(DML)
+    - 삽입(insert), 삭제(delete), 수정(update) : ps.executeUpdate(); 동작 → int 리턴
+
+    - 조회(select) : ps.executeQuery(); 동작 → ResultSet(rs) 결과객체
+  

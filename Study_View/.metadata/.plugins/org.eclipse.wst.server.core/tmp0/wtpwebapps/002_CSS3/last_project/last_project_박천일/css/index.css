@@ -1,0 +1,200 @@
+* {   
+  margin: 0px auto; 
+  padding: 0px; 
+}
+
+.hd { 
+  text-align: center; 
+}
+
+.header{
+	width: 1000px;
+	overflow: hidden;
+	
+}
+
+.add{
+	float: right;
+	padding-top: 15px;
+	
+}
+
+
+.hd{
+	float: left;
+}
+
+a{
+	text-decoration: none;	
+	
+}
+
+body {
+  background-color: black;
+}
+
+.wedding{
+	overflow: hidden;
+	width: 1000px;
+}
+
+#alice{
+	border: 1px solid black;
+	width: 330px;
+	height: 100px;
+	float: left;
+}
+
+#alice>a{
+	background-image: url('../img/alicewedding.png');
+	background-size: 333px 102px;
+	width: 330px;
+	height: 100px;
+	display: block;
+}
+
+#design>a{
+	background-image: url('../img/designwedding.png');
+	background-size: 333px 102px;
+	width: 330px;
+	height: 100px;
+	float: left;
+	border: 1px solid black;
+
+}
+
+#doit>a{
+	background-image: url('../img/doitwedding.png');
+	background-size: 333px 102px;
+	width: 330px;
+	height: 100px;
+	float: left;
+	border: 1px solid black;
+}
+
+#eynoble>a{
+	background-image: url('../img/eynoblewedding.PNG');
+	background-size: 333px 102px;
+	width: 330px;
+	height: 100px;
+	float: left;
+	border: 1px solid black;
+}
+
+#wise>a{
+	background-image: url('../img/wisewedding.png');
+	background-size: 333px 102px;
+	width: 330px;
+	height: 100px;
+	float: left;
+	border: 1px solid black;
+}
+
+#eunbin>a{
+	background-image: url('../img/eunbinwedding.png');
+	background-size: 333px 102px;
+	width: 330px;
+	height: 100px;
+	float: left;
+	border: 1px solid black;
+}
+
+.hd {
+  color: white;
+}
+
+#join {
+  width: 1000px;
+   
+}
+   
+.animation_canvas {
+  overflow: hidden;
+  position: relative;
+  width: 1000px;
+  height: 820px;
+  margin: 0px auto;
+}
+
+.slider_panel {
+  width: 5000px;
+  position: relative;
+  background-size: 100%;
+}
+
+.slider_image {
+  float: left;
+  width: 1000px;
+  height: 800px;
+}
+
+.slider_text_panel {
+  position: absolute;
+  top: 500px;
+  left: 50px;
+}
+
+.slider_text {
+  position: absolute;
+  width: 250px;
+  height: 150px;
+  color: white;
+}
+
+.control_panel {
+  position: absolute;
+  top: 785px;
+  left: 500px;
+  height: 13px;
+  overflow: hidden;
+}
+
+.control_button {
+  width: 12px;
+  height: 46px;
+  position: relative;
+  float: left;
+  cursor: pointer;
+  background-image: url('../img/point_button.png');
+}
+
+.control_button:hover {
+  top: -16px;
+}
+
+.control_button.active {
+  top: -31px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

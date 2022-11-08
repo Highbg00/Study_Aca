@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var site = prompt("네이버, 다음, 네이트, 구글 중 \n즐겨찾는 포털 사이트는?")
+
+	//데이터 거르기, 값이 없거나, 공백제거 후 값이 없거나, 입력값이 네이버, 다음, 네이트, 구글이 아니거나  
+// 	while (!site || !site.trim() || !(site =="네이버" || site =="다음" || site =="네이트" || site =="구글") ) {
+// 		site = prompt("네이버, 다음, 네이트, 구글 중에서만 입력하세요?");
+// 	}
+	
+	//공백만 거르기
+	while (!site || !site.trim()) {
+		site = prompt("네이버, 다음, 네이트, 구글 중에서만 입력하세요?");
+	}
+	
+	switch (site) {
+	case "네이버":
+		location.href = "http://www.naver.com";
+		break;
+	case "다음":
+		location.href = "http://www.daum.net";
+		break;
+	case "네이트":
+		location.href = "http://www.nate.com";
+		break;
+	case "구글":
+		location.href = "http://www.google.com";
+		break;
+	default:
+		alert("네이버, 다음, 네이트, 구글 중에서만 입력하세요?");
+		location.reload();
+		break;
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

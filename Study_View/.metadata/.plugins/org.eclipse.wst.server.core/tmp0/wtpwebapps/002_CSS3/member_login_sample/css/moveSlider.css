@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+#mouseslider {
+	width: 1000px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	position: relative;
+	height: 600px;
+	overflow: hidden;
+	margin: 5px auto;
+	background-image: url('../img/backimg.jpg');
+}
+
+.animation_canvas1 {
+	overflow: hidden;
+	position: absolute;
+	width: 450px;
+	height: 600px;
+	margin: 0 auto;
+}
+
+.left_slider {
+	width: 2250px;
+	position: relative;
+}
+
+.slider_image1 {
+	float: left;
+	width: 450px;
+	height: 600px;
+}
+
+.animation_canvas2 {
+	overflow: hidden;
+	position: absolute;
+	width: 450px;
+	height: 600px;
+	margin: 0 auto;
+	right: 0;
+}
+
+.right_slider {
+	width: 2250px;
+	position: relative;
+	right: 0;
+}
+
+.slider_image2 {
+	float: left;
+	width: 450px;
+	height: 600px;
+}
+
+.control_panel1, .control_panel2 {
+	position: absolute;
+	top: 550px;
+	left: 200px;
+	height: 13px;
+	overflow: hidden;
+}
+
+.control_button1, .control_button2 {
+	width: 12px;
+	height: 46px;
+	position: relative;
+	float: left;
+	cursor: pointer;
+	background: url("../img/point_button.png");
+}
+
+.control_button1:hover, .control_button2:hover {
+	top: -16px;
+}
+
+.control_button1.active, .control_button2.active {
+	top: -31px;
+}

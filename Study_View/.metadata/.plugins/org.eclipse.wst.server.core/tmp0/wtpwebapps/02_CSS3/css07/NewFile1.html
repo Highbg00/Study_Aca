@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#form {
+		width: 500px;
+		border: 3px dashed blue;
+		margin: 0px auto; /* 공식 : 개체를 가운데 정렬, 반드시 크기가 존재해야함 */
+	}
+	
+	input {
+		color: green;
+		font-size: 30px;
+		font-weight: bold;
+	}
+	
+	input[type="text"] {
+		color: orange;
+		font-size: 50px;
+		width: 200px;
+	}
+	
+	input[type="password"] {
+		color: red;
+		border: 5px solid red;
+	}
+	
+/* 	img { */
+	img[src] { /* img : 인라인 */
+		border: 5px solid green;
+		width: 300px;
+		margin: 0px auto; 
+		display: block; /* 인라인 형식의 태그를 블럭 형식의 태그로 변환 */
+	}
+</style>
+</head>
+<body>
+	<form name="form" id="form">
+		<table>
+			<tr>
+				<td><label for="name">이&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;름</label></td>
+				<td><input type="text" id="name" name="name"></td>
+			</tr>	
+			<tr>
+				<td><label for="id">아&nbsp;&nbsp;이&nbsp;&nbsp;디</label></td>
+				<td><input type="text" id="id" name="id"></td>
+			</tr>	
+			<tr>
+				<td><label for="pw">비밀&nbsp;번호</label></td>
+				<td><input type="password" id="pw" name="pw"></td>
+			</tr>	
+			<tr>
+				<td><label for="tel">전화&nbsp;번호</label></td>
+				<td><input type="text" id="tel" name="tel"></td>
+			</tr>	
+		</table>
+	</form>
+	<img alt="그림" src="navi.png" />
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

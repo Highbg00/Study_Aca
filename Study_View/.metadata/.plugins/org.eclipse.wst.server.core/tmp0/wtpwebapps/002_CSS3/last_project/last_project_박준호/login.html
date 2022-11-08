@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>로그인</title>
+<style type="text/css">
+ 	@import url("css/login.css");
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="js/login.js"></script>
+</head>
+<body>
+	<form action="#" id="login_form" name="login_form" onsubmit="return false">
+	<div id="close">
+		<button type="button"><a href="index.html">X</a></button>
+	</div>
+	
+	<table>
+		<tr align="center">
+			<th colspan="3">
+				<h2>Login</h2>
+			</th>
+		</tr>
+
+	<tr>
+		<td>
+			<label for="id">I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D</label>
+		</td>
+		
+		<td>
+			<input type="text" name="id" id="id" placeholder="아이디(이메일)를 입력하세요"/>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+			<label for="pw">P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;W</label>
+		</td>
+		
+		<td>
+			<input type="password" name="pw" id="pw" placeholder="비밀번호를 입력하세요"/>
+		</td>
+		
+		<td>
+			<div id="pwcheck">View</div>
+		</td>
+	</tr>
+	
+	<tr id="btn_table" style="text-align: center;">
+		<td colspan="3" id="3rd_td"> 
+			<input type="submit" value="로그인" id="login"/>
+			<input id="cancel" type="reset" value="취소"/>
+		</td>
+	</tr>
+	
+	<tr>
+		<td colspan="3">잠깐!회원가입은..하셨나요?<a href="signup.html">가입!</a></td>
+	</tr>
+	
+	</table>
+	</form>
+</body>
+</html>

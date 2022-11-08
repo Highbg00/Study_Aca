@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var month = prompt("현재는 몇월입니까?","");
+
+/* 
+if (month >= 3 && month <= 5) {
+	document.write("봄입니다.");
+} else if (month >= 6 && month <= 8) {
+	document.write("여름입니다.");
+} else if (month >= 9 && month <= 11) {
+	document.write("가을입니다.");
+} else if (month == 12 || month == 1 || month == 2){
+	document.write("겨울입니다.");
+} else {
+	alert("1월부터 12월까지만 입력하세요");
+	location.reload(); //현재 페이지 새로고침
+}
+*/
+/* 
+// 1. 조건에 맞는 것만 처리하고 맞지 않는것은 나중에 처리
+if (month >= 1 && month <=12) {
+// 	계절판별
+	if (month >= 3 && month <= 5) {
+		document.write("봄입니다.");
+	} else if (month >= 6 && month <= 8) {
+		document.write("여름입니다.");
+	} else if (month >= 9 && month <= 11) {
+		document.write("가을입니다.");
+	} else {
+		document.write("겨울입니다.");
+	} 
+} else {
+	alert("1월부터 12월까지만 입력하세요");
+	location.reload();
+}
+ */
+
+// 2. 조건에 맞지 않은 것은 거르고 맞는것은 계절 판별
+if (month <= 0 || month >= 13) {
+	alert("1월부터 12월까지만 입력하세요");
+	location.reload();
+} else {
+	if (month >= 3 && month <= 5) {
+		document.write("봄입니다.");
+	} else if (month >= 6 && month <= 8) {
+		document.write("여름입니다.");
+	} else if (month >= 9 && month <= 11) {
+		document.write("가을입니다.");
+	} else {
+		document.write("겨울입니다.");
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

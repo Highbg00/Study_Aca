@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Login Form</title>
+<style type="text/css">
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #34495e;
+	/* position: relative; */ /* relative 지정시적용 안됨!!! */
+}
+.myForm{
+  position: absolute;	/* 중요 */
+  top: 50%;		/* 중요 */
+  left: 50%;	/* 중요 */
+  transform: translate(-50%,-50%);	/* 중요 */
+  	
+  width: 300px;
+  padding: 40px;
+  background-color: #191919;
+  text-align: center;
+}
+.myForm h1{
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.myForm input[type="text"],
+.myForm input[type="password"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.myForm input[type="text"]:focus,
+.myForm input[type="password"]:focus{
+  width: 280px;
+  border-color: #2ecc71;
+}
+.myForm input[type="submit"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.myForm input[type="submit"]:hover{
+  background: #2ecc71;
+}
+
+</style>
+</head>
+<body>
+
+	<form class="myForm" action="index.html" method="post">
+	  <h1>Login</h1>
+	  <input type="text" name="" placeholder="아이디를 입력하세요">
+	  <input type="password" name="" placeholder="비밀번호를 입력하세요">
+	  <input type="submit" name="" value="Login">
+	</form>
+
+</body>
+</html>

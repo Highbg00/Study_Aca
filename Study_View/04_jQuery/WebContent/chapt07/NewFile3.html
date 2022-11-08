@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script>
+
+$(document).ready(function() {
+	
+// 	$("#second, #fourth").css("color","red");
+// 	$("#third").prev().css("color","red"); //이전요소
+// 	$("#third").next().css("color","red"); //다음요소
+	
+// 	$("ul>li:nth-child(2)").css("color","red"); //ul>li 를 기준으로 2,4번째 color red
+// 	$("ul>li:nth-child(4)").css("color","red"); //ul>li 를 기준으로 2,4번째 color red
+	
+// 	$("#third").prevAll().css("color","red"); //이전요소 모두
+// 	$("#third").nextAll().css("color","red"); //다음요소 모두
+	
+// 	$("#second").next().css("color","red");
+// 	$("#second+li").css("color","red");
+// 	$("#second~li").css("color","red");
+	
+// 	$("li:eq(2)").css("background-color","yellow"); //태그선택시 인덱스번호는 0부터 시작
+// 	$("li:lt(2)").css("background-color","red"); //2번 인텍스 이전
+// 	$("li:gt(2)").css("background-color","green"); //2번 인덱스 이후
+	
+	$("li:eq(2)").prevAll().css("background-color","red");
+	$("li:eq(2)").nextAll().css("background-color","green");
+	
+	
+	
+}); //ready
+
+</script>
+</head>
+<body>
+	<h1>인접 관계 연산자</h1>
+	
+	<ul>
+		<li id="first">내용1</li>
+		<li id="second">내용2</li>
+		<li id="third">내용3</li>
+		<li id="fourth">내용4</li>
+		<li id="fifth">내용5</li>
+	</ul>	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

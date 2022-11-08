@@ -1,0 +1,2 @@
+MemberMain.html  →   insert.jsp  →  MemberDAO.memberInsert(dto)
+→ memberMapper.xml(SQL 쿼리문 작성)  →  MemberDAO  → insert.jsp  → list.jsp

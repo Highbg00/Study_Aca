@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>로그인</title>
+<style type="text/css">
+	@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap');
+ 	@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css");
+ 	@import url("css/login.css");
+</style>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="js/login.js"></script>
+</head>
+<body>
+<div id = "wrap">
+	<form>
+		<fieldset>
+			<legend>LOGIN</legend><span id="close">x</span>
+ 			<table border="0">
+ 				<tr>
+ 					<td>
+ 						<label for="id" onclick="document.getElementById('id').focus();">USER ID&nbsp;&nbsp;</label>
+ 					</td>
+					<td>
+						<input type="text" name="id" id="id" placeholder="아이디를 입력하세요">
+					</td>
+ 				</tr>
+ 				<tr>
+ 					<td></td>
+ 					<td>
+						<span class="alert" id="idSpan"></span>
+					</td>
+				</tr>
+ 					<td>
+ 						<label for="pw" onclick="document.getElementById('id').focus();">PASSWORD&nbsp;&nbsp;</label>
+ 					</td>
+					<td>
+						<input type="password" name="pw" id="pw" placeholder="비밀번호를 입력하세요">
+						<i id="nun" class="fa fa-eye fa-lg"></i>
+						<span id="eye">비번보기</span>
+					</td>
+ 				</tr>
+ 				<tr>
+ 					<td></td>
+ 					<td>
+						<span class="alert" id="pwSpan"></span>
+					</td>
+				</tr>
+ 				<tr>
+					<td colspan="2">
+						<input type="submit" id="loginBtn" value="로그인" />
+						<input type="reset" id="resetBtn" value="취소" />
+					</td>
+ 				</tr>
+ 			</table>
+ 		</fieldset>
+	</form>
+	
+	<div class="notAMember">
+	잠깐! 회원이 아니세요? <a href="signup.html">가입</a>하세요
+	</div>
+	
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

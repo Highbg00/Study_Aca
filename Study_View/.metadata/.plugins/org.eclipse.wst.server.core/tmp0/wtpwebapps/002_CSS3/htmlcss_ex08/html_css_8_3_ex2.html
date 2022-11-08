@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/*  
+	일반 구조 선택자 : 특정한 위치에 있는 태그를 선택할 때
+	:first-child ☞  형제 관계 중 첫번째로 등장하는 태그
+	:last-child ☞  형제 관계 중 마지막으로 등장하는 태그
+	:nth-child(n) ☞  형제 관계 중 앞에서 n번째 위치 태그, n은 0부터 시작
+	
+	:first-of-type ☞  형제관계 중 같은 타입 중 첫번째 태그
+	:last-of-type ☞  형제관계 중 같은 타입 중 마지막 태그
+	 
+	p:first-of-type ☞  형제관계 중 첫번째로 등장하는 p 타입의 태그
+	p:last-of-type  ☞  형제관계 중 마지막으로 등장하는 p 타입의 태그
+
+ */
+ 
+/* #lower p:nth-child(2) { */
+/* 형제관계 중 첫 번째로 등장하는 p 타입 태그 */
+#lower p:first-of-type {
+	color: red;
+}
+
+/* .parent h1 { */
+/* .parent h1:first-child { */
+/* 형제관계 중 첫 번째로 등장하는 h1 타입 태그
+	.parent h1:first-of-type { */
+.parent h1:nth-child(1) {
+	color: blue;
+}
+
+/* 형제 관계 중 앞에서 2번째 위치한 div 태그 */
+/* .parent div:nth-child(2) { */
+.parent div:first-of-type {
+	color: purple;
+}
+
+/* .parent p { */
+/* .parent p:first-of-type { */
+.parent p:nth-child(3) {
+	color: red;
+}
+</style>
+</head>
+<body>
+
+	<div id="lower">
+		<div>text1</div> <!-- ☞ #lower div:first-child, #lower div:first-of-type -->
+		<p>text2</p> <!-- ☞  #lower p:nth-child(2), #lower p:first-of-type -->
+		<p>text3</p> <!-- ☞  #lower p:nth-child(3), #lower p:last-child, #lower p:last-of-type -->
+	</div>
+
+	<div class="parent">
+		<h1>h1-Child1</h1><!-- ☞ .parent h1:first-child, .parent h1:first-of-type -->
+		<div>div-Child2</div><!-- ☞  .parent div:nth-child(2), .parent div:first-of-type -->
+		<p>p-Child3</p><!-- ☞   .parent p, .parent p:nth-child(3), .parent p:first-of-type -->
+		<div>div-Child4</div> <!-- .parent div:nth-child(4), .parent div:last-of-type  -->
+	</div>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

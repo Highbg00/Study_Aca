@@ -1,0 +1,234 @@
+@charset "UTF-8";
+
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Nanum Myeongjo', serif;
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: url("../img/bg.jpg") no-repeat center;
+	background-size: cover;
+}
+
+#wrap{
+	width: 800px;
+	padding: 10px;
+	border: 2px solid black;
+	font-size: 1.2rem;
+	text-align: center;
+	background-color: rgba(0,0,0,.75);
+	color:white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 10px 10px 30px gray;
+}
+
+#wrap fieldset{
+	border: none;
+}
+
+#wrap legend {
+	font-size: 1.8rem;
+	padding: 30px;
+}
+
+table{
+	width: 800px;
+	text-align: center;
+}
+
+table tr td{
+	height: 35px;
+	line-height: 35px;
+}
+
+table tr td:first-child{
+	width: 37%;
+	text-align: right;
+	
+}
+
+table tr td:last-child{
+	width: 63%;
+	text-align: left;
+}
+
+input[type="text"],input[type="password"]{
+	display: inline-block;
+	text-align: center;
+	border: 2px solid gray;
+	width: 250px;
+	height: 25px;
+	line-height: 25px;
+	border-radius: 5px;
+	margin: 5px auto;
+	outline: none;
+	transition-duration: 0.25s;
+}
+
+input[type="text"]:focus,input[type="password"]:focus{		
+	display: inline-block;
+	width:270px;
+	border-color: red;
+	color: black;
+}
+
+input[type="submit"],input[type="reset"]{
+	background-color: black;
+	border: 2px solid black;
+	border-radius: 15px;
+	color: white;
+	transition-duration:0.25s;
+	text-align: center;
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	margin: 10px auto;
+	width: 170px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 1.2rem;
+}
+
+table tr:last-child td{
+	text-align: center;
+}
+
+table tr:nth-child(2n){
+	height: 20px;
+}
+
+table tr:nth-child(2n) td{
+	height: 20px;
+}
+
+input[type="submit"]:hover,input[type="reset"]:hover{
+	background-color: white;
+	border:2px solid gray;
+	color:black;
+	font-weight: bold;
+}
+
+.alert{
+	display: block;
+	font-weight: normal;
+	color: red;
+	font-size: 14px;
+	text-align: center;
+	line-height: 10px;
+	width: 270px;
+}
+
+.notAMember{
+	display: block;
+	width: 800px;
+	height:50px;
+	line-height:50px;
+	text-align: center;
+}
+
+.notAMember a{
+	color: red;
+}
+
+#close{
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	outline: none;
+	border: 0px;
+	border-radius: 2px;
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	background-color: black;
+	color: white;
+	font-size: 20px;
+	font-weight:bold;
+	cursor: pointer;
+	transition-duration: 0.5s;
+}
+
+#close:hover{
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+}
+
+#nun{
+	color: orange;
+}
+
+#eye{
+	font-size: 14px;
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+* {	
+	margin: 0px auto; 
+	padding: 0px; 
+}
+
+body{
+	width: 1024px;
+}
+
+h1 {
+	color: white;
+}
+
+html{
+	background-color: black;
+}
+
+.hd { 
+	display: block;
+	text-align: center; 
+	font-family: 'Inconsolata', monospace;
+	float: left;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.log_buttons{
+	display: block;
+	float: right;
+	color: black;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.log_buttons>button{
+	width: 120px;
+	height: 40px;
+}
+
+/* Animation Canvas */
+.animation_canvas {
+	overflow: hidden;
+	position: relative;
+	width: 1000px;
+	height: 600px;
+	margin: 0 auto;
+}
+
+/* Slider Panel */
+.slider_panel {
+	width: 5000px;
+	position: relative;
+}
+
+.slider_image {
+	float: left;
+	width: 1000px;
+	height: 600px;
+}
+
+/* Slider Text Panel */
+.slider_text_panel {
+	position: absolute;
+	bottom: 600px;
+	left: 50px;
+}
+
+.slider_text {
+	position: absolute;
+	width: 250px;
+	height: 150px;
+	color: white;
+}
+
+/* Control Panel */
+.control_panel {
+	position: absolute;
+	top: 587px;
+	left: 480px;
+	height: 13px;
+	overflow: hidden;
+}
+
+.control_button {
+	width: 12px;
+	height: 46px;
+	position: relative;
+	float: left;
+	cursor: pointer;
+	background-image: url('../img/point_button.png');
+}
+
+.control_button:hover {
+	top: -16px;
+}
+
+.control_button.active {
+	top: -31px;
+}
+
+.footer>div {
+	box-sizing: border-box;
+	width: 341px;
+	height: 150px;
+	float: left;
+}
+
+.footer>div>a {
+	background-color: white;
+	width: 341px;
+	height: 150px;
+	display: block;
+	background-size: 341px 150px;
+	border: 1px solid black;
+	}
+
+.footer>div:nth-child(1)>a {
+	background-image: url('../img/netflix_logo.png');
+}
+
+.footer>div:nth-child(2)>a {
+	background-image: url('../img/watcha_logo.png');
+}
+
+.footer>div:nth-child(3)>a {
+	background-image: url('../img/disney_plus_logo.png');
+}
+
+.footer>div:nth-child(4)>a {
+	background-image: url('../img/amazon_prime_video_logo.png');
+}
+
+.footer>div:nth-child(5)>a {
+	background-image: url('../img/apple_tv_plus_logo.png');
+}
+
+.footer>div:nth-child(6)>a {
+	background-image: url('../img/paramount_plus_logo.png');
+}

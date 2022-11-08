@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+
+* {
+  box-sizing: border-box;
+  border-radius: 30px;
+  font-weight: bold;
+  
+}
+ 
+span{
+	font-size: 13px;
+}
+
+
+body {
+  background: url(boracay-g83eba47ba_1920.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-size: cover;
+  
+}
+
+table{
+  background-color: #EEEFF1;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid black;
+}
+
+a{
+	color: red;
+  font-size: 14px;
+}
+
+div {
+	font-size: 14px;
+}

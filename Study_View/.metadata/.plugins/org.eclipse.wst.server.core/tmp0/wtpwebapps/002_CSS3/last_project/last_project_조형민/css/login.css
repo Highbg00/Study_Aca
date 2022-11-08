@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+* {
+  text-align: center;
+  font-weight: bold;
+  background-color: #bfc4a4;
+}
+
+#table {
+  /* 테이블 */
+  display: table;
+  border: 2px solid black;
+  border-collapse: collapse;
+  margin: 0px auto;
+  background-color: white;
+}
+#homm {
+  position: relative;
+  left: 180px;
+  top: 50px;
+}
+#t {
+  width: 119px;
+  background-color: white;
+}
+table tr,
+th,
+td,
+img,
+input,
+button,
+a {
+  /* 테이블내부 배경 */
+  background-color: white;
+}
+
+#top_text {
+  /* 상단 "LOGIN" */
+  font-size: 40px;
+  text-align: center;
+  padding: 10px;
+}
+
+#id img {
+  /* 아이디 이미지 */
+  margin: 3px 15px 2px 40px;
+}
+
+#pw_j img {
+  /* 비밀번호 이미지 */
+  margin: 13px 15px 2px 40px;
+}
+
+#id td input {
+  /* 아이디 입력칸 */
+  height: 20px;
+  width: 200px;
+  border: 2px solid #3399ff;
+  border-radius: 15px;
+  text-align: center;
+  margin: 0px auto;
+}
+#pw {
+  display: table;
+}
+#id {
+  display: table;
+}
+
+#pw td input {
+  /* 비밀번호 입력칸 */
+  height: 20px;
+  width: 200px;
+  border: 2px solid #3399ff;
+  border-radius: 15px;
+  text-align: center;
+  margin: 0px auto;
+}
+#pw_eye img {
+  /* 눈모양 아이콘 */
+  margin: 0px;
+}
+
+#bottom_text td {
+  /* 하단 회원가입 */
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#bottom_text a {
+  /* 하단 "가입" 문구 */
+  color: red;
+}
+
+#mbutton input {
+  /* 로그인 버튼 */
+  background-color: white;
+  border: 2px solid green;
+  border-radius: 20px;
+  padding: 4px 40px;
+  font-size: 22px;
+  margin: 10px 10px 15px 35px;
+}
+
+#mbutton button {
+  /* 취소 버튼 */
+  background-color: white;
+  border: 2px solid green;
+  border-radius: 20px;
+  font-size: 22px;
+}

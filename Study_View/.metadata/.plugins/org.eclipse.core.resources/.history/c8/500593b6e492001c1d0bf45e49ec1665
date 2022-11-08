@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+
+<meta charset="utf-8">
+<title>메인화면</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
+
+<style type="text/css">
+ 	@import url("css/index.css");
+</style>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="js/index.js"></script>
+
+
+<style>
+
+
+* {	
+	margin: 0px auto; 
+	padding: 0px; 
+	font-family: 'Indie Flower', cursive;
+}
+
+body{
+	background-color: #b6d7de;
+	/* overflow: hidden; */
+	box-sizing: border-box;
+	width: 1024px;
+	
+	
+}
+
+
+
+.hd1 { 
+	text-align: center; 
+	width: 1024px;
+	height: 60px;
+	font-size: 40px;
+	
+}
+
+.hd2 { 
+	text-align: center; 
+	width: 300px;
+	height: 70px;
+	line-height: 70px;
+	font-size: 30px;
+	background-color: #f0cec5;
+	margin: 10px auto;
+	border: 3px solid #969196;
+	border-radius: 30px;
+}
+
+#login{
+	font-family: 'Hi Melody', cursive;
+	text-decoration: none;
+	color: black;
+	float: right;
+	margin-right: 10px;
+	margin-top: 5px;
+	padding: 5px;
+	font-size: 20px;
+}
+#signup{
+	font-family: 'Hi Melody', cursive;
+	text-decoration: none;
+	color: black;
+	float: right;
+	margin-right: 10px;
+	margin-top: 5px;
+	padding: 5px;
+	font-size: 20px;
+}
+.header_image{
+	height: 200px;
+	display: block;
+	border-radius: 10px;
+	position: relative;
+	left: 8%;
+}
+
+.line1{
+	border-bottom: 3px solid #8e8580;
+	margin-bottom: 5px;
+}
+	
+/* Animation Canvas */
+.animation_canvas {
+	overflow: hidden;
+	position: relative;
+	width: 1000px;
+	height: 600px;
+	margin: 0 auto;
+	background-size: cover ;
+	background-image: 
+	
+}
+
+/* Slider Panel */
+.slider_panel {
+	width: 5000px;
+	position: relative;
+}
+
+.slider_image {
+	float: left;
+	width:1000px;
+	height: 600px;
+	
+}
+
+/* Slider Text Panel */
+.slider_text_panel {
+	position: absolute;
+	top: 450px;
+	left: 50px;
+}
+
+.slider_text {
+	position: absolute;
+	width: 250px;
+	height: 150px;
+	color: white;
+}
+
+/* Control Panel */
+.control_panel {
+	position: absolute;
+	top: 580px;
+	left: 470px;
+	height: 13px;
+	overflow: hidden;
+}
+
+.control_button {
+	width: 12px;
+	height: 46px;
+	position: relative;
+	float: left;
+	cursor: pointer;
+	background-image: url('img/point_button.png');
+}
+
+.control_button:hover {
+	top: -16px;
+}
+
+.control_button.active {
+	top: -31px;
+}
+
+.footer_image{
+	background-color: #9c6a51;
+	padding: 10px;
+	border-radius: 30px;
+	border: 5px solid #8e8580;
+	width: 1000px;
+}
+
+.footer_image1 {
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	margin-left: 60px;
+	transition: all 0.2s linear;
+}
+.footer_image2 {
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	transition: all 0.2s linear;
+}
+.footer_image3 {
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	transition: all 0.2s linear;
+}
+.footer_image4 {
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	margin-left: 60px;
+	margin-top: 20px;
+	transition: all 0.2s linear;
+}
+.footer_image5 {
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	transition: all 0.2s linear;
+}
+.footer_image6 {
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	transition: all 0.2s linear;
+}
+
+.footer_image1:hover {
+	transform: scale(1.4);
+}
+.footer_image2:hover {
+	transform: scale(1.4);
+}
+.footer_image3:hover {
+	transform: scale(1.4);
+}
+.footer_image4:hover {
+	transform: scale(1.4);
+}
+.footer_image5:hover {
+	transform: scale(1.4);
+}
+.footer_image6:hover {
+	transform: scale(1.4);
+}
+</style>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+	<h1 class="hd1">My Puppy</h1>
+	<a href="login2.html" id="login">로그인</a>
+	<a href="signup3.html" id="signup">회원가입</a>
+	<p class="line1"></p>
+	<img src="img/dogdog.png" class="header_image">
+	<div class="animation_canvas">
+		<div class="slider_panel">
+			<img src="img/dog5.jpg" class="slider_image" /></a> 
+			<img src="img/dog4.jpg" class="slider_image" /></a> 
+			<img src="img/dog3.jpg" class="slider_image" /></a> 
+			<img src="img/dog2.jpg" class="slider_image" /></a> 
+			<img src="img/dog1.jpg" class="slider_image" /></a>
+		</div>
+		<div class="slider_text_panel">
+			<div class="slider_text">
+				<h1>0. Lorem ipsum</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			</div>
+			<div class="slider_text">
+				<h1>1. Nulla eget</h1>
+				<p>Nulla eget sapien mauris, ornare elementum elit.</p>
+			</div>
+			<div class="slider_text">
+				<h1>2. Quisque</h1>
+				<p>Quisque eleifend augue nec lacus lobortis porta.</p>
+			</div>
+			<div class="slider_text">
+				<h1>3. Donec</h1>
+				<p>Donec a ligula lectus, eu iaculis justo.</p>
+			</div>
+			<div class="slider_text">
+				<h1>4. Vivamus</h1>
+				<p>Vivamus scelerisque mauris id nunc dictum sit amet.</p>
+			</div>
+		</div>
+		<div class="control_panel">
+			<!-- control_button과 같은 요소는 div태그로 만들고 
+			스타일시트에서 background속성으로 이미지를 설정 
+			이렇게 하면 스타일시트의 hover필터와 active필터 사용 가능-->
+			<div class="control_button"></div>
+			<div class="control_button"></div>
+			<div class="control_button"></div>
+			<div class="control_button"></div>
+			<div class="control_button"></div>
+		</div>
+	</div>
+	<h1 class="hd2">Pet Shop</h1>
+		<div class="footer_image">
+			<a href="http://www.pethroom.com" target="_blank"><img src="img/logo2.png" class="footer_image1" /></a>
+			<a href="https://pethroom.com/shopinfo/about_01.html" target="_blank"><img src="img/logo3.png" class="footer_image2" /></a>
+			<a href="https://pethroom.com/product/list.html?cate_no=43" target="_blank"><img src="img/logo4.png" class="footer_image3" /></a>
+			<a href="https://pethroom.com/board/product/list.html?board_no=101" target="_blank"><img src="img/logo5.png" class="footer_image4" /></a>
+			<a href="https://pethroom.com/board/index.html" target="_blank"><img src="img/logo6.png" class="footer_image5" /></a>
+			<a href="https://pethroom.com/board/free/list.html?board_no=5" target="_blank"><img src="img/logo7.png" class="footer_image6" /></a>
+		</div>
+	
+	
+	
+	
+	
+</body>
+</html>

@@ -1,0 +1,21 @@
+○ API(Library)
+	- JAVA와 다른 응용프로램간의 상호 작용(연동)을 위해 제공해주는 인터페이스
+	- *.jar 압축파일 형식으로 제공
+	
+○ 외부 API(Library) 등록하는 방법1 ▶ JAVA SE(Java Project)
+	- 등록하고자 하는 API를 다운로드 한다.
+	- 해당 프로젝트 > 마오 > Build Path > Configure Build Path...
+	- 상단 탭 : Libraries > Add External JARs... > API(Library) 선택 > Apply and Close
+	- Referenced Libraries 항목 생성되고 API(Library) 등록 완료
+
+○ 외부 API(Library) 등록하는 방법2 ▶ JAVA EE(Dynamic Web Project)
+	- 등록하고자 하는 API를 다운로드 후 복사한다.
+	- WebContent > WEB-INF > lib : 붙여넣기 ▶ Eclipse Photon Version
+	- src > main > webapp > WEB-INF > lib : 붙여넣기 ▶ Eclipse 2021-09 Version
+	
+○ 외부 API(Library) 등록하는 방법3 ▶ Maven FrameWork : SPRING 	
+	- maven repository 검색 → https://mvnrepository.com 접속
+	- 검색창에 등록하고자 하는 API(Library)를 입력
+	- <dependency> 코드값을 복사
+	- pom.xml 파일을 열고 코드값을 붙여넣기
+	

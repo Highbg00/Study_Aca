@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+	<!-- 예제 해보기 -->
+
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>입력제출양식</title>
+	
+	<script type="text/javascript">
+	/* 	function nameClear() {
+			document.form.name.value="";
+			document.form.id.value="";
+			document.form.password.value="";
+			document.form.introduce.value="";
+		} */
+		function send_function() {
+			alert("전송이 완료되었습니다.")
+		}
+		function cancel_function() {
+			alert("취소 되었습니다. 다시 작성해주세요.")
+		}
+	</script>
+	
+	<style type="text/css">		
+		#form {
+			width: 700px;
+			margin: 20px auto;
+			text-align: center;
+		}
+	
+		table {
+			margin: 0 auto;
+			border-collapse: collapse;
+			border: 1px solid black;
+		}
+		
+		td {
+			border: 1px solid black;
+			padding: 3px 5px;
+		}
+		td:nth-child(1) {		
+			width: 150px;
+			font-weight: bold;
+		}
+		
+		td:nth-child(2) {
+			text-align: left;
+		}
+		
+		tr:last-child > td {
+			font-weight: normal;
+			text-align: right;
+		}
+				
+		img[src], select, textarea, input {
+			border: 1px solid blue;
+		}
+		
+		span {
+			color: red;
+			font-size: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<form action="#" name="form" id="form" method="get">
+		<fieldset>
+			<legend>제출양식</legend>
+				<table id="table">
+					<tr>
+						<td><label for="name" class="name">이름 </label></td>
+						<td>
+							<input type="text" name="name" id="name" 
+							placeholder="이름을 입력하세요" size="30" maxlength="12" onclick="nameClear();">
+							<span>&nbsp;&nbsp;*필수</span>
+						</td>
+					</tr>
+					<tr>
+						<td><label for="id" class="id">아이디 </label></td>
+						<td>
+							<input type="text" name="id" id="id" 
+							placeholder="아이디를 입력하세요." size="30" maxlength="2" onclick="nameClear();">
+							<span>&nbsp;&nbsp;*필수</span>
+						</td>
+					</tr>
+					<tr>
+						<td><label for="password" class="password">비밀번호 </label></td>
+						<td>
+							<input type="password" name="password" id="password" 
+							placeholder="비밀번호를 입력하세요." size="30" maxlength="12" onclick="nameClear();">
+							<span>&nbsp;&nbsp;*필수</span>
+						</td>
+					</tr>
+					<tr>
+						<td><label for="tel" class="tel">연락처 </label></td>
+						<td>
+							<input type="tel" name="tel" id="tel1" size="3" value="010" disabled="disabled">-
+							<input type="tel" name="tel" id="tel2" size="4" maxlength="4">-
+							<input type="tel" name="tel" id="tel3" size="4" maxlength="4">
+							<span>&nbsp;&nbsp;*필수</span>
+						</td>
+					</tr>
+					<tr>
+						<td><label for="email" class="email">이메일 </label></td>
+							<td>
+								<input type="email" name="email" id="email" 
+								placeholder="이메일을 입력하세요." size="30" maxlength="12" onclick="nameClear();">
+								<span>&nbsp;&nbsp;*필수</span></td>
+							</td>
+					</tr>
+					<tr>
+						<td><label for="picture" class="picture">사진 </label></td>
+						<td><input type="file" name="picture" id="picture"></td>
+					</tr>
+					<tr>
+						<td><label for="gender" class="gender">성별구분</label></td>
+						<td>
+							<input type="radio" name="gender" id="gender" checked="checked">남
+							<input type="radio" name="gender" id="gender">여
+						</td>
+					</tr>
+					<tr>
+						<td class="lang">사용언어</td>
+						<td>
+							<input type="checkbox" name="lang" id="lang1" checked="checked">Java
+							<input type="checkbox" name="lang" id="lang2">C++
+							<input type="checkbox" name="lang" id="lang3">Python
+							<input type="checkbox" name="lang" id="lang4">Go
+						</td>
+					<tr>
+						<td class="certificate">보유자격증</td>
+						<td>
+							<input type="checkbox" name="certificate" value="1grade" checked="checked">정보처리기사
+							<input type="checkbox" name="certificate" value="2grade">정보처리산업기사
+							<input type="checkbox" name="certificate" value="3grade">정보처리기능사
+							<input type="checkbox" name="certificate" value="etc">기타
+						</td>
+					</tr>
+					<tr>
+						<td class="introduce">자기소개</td>
+						<td>
+							<textarea rows="10" cols="40" name="introduce" id="introduce" 
+							onclick="this.value=''">간단하게 입력하세요.</textarea>
+						</td>
+					</tr>
+					<tr>
+						<td class="country">국적</td>
+						<td>
+							<select id="country">
+								<optgroup label="Country">
+									<option>USA</option>
+									<option>KOR</option>
+									<option>JPN</option>
+									<option>ENG</option>
+									<option>CHN</option>
+								</optgroup>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td class="food">좋아하는음식</td>
+						<td><select multiple="multiple">
+								<option value="kimchi">김치</option>
+								<option value="bulgogi">불고기</option>
+								<option value="pajeon">파전</option>
+								<option value="pizza">피자</option>
+								<option value="chicken">치킨</option>
+								<option value="steak">스테이크</option>
+								<option value="ramyeon">라면</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2"> Academy by &nbsp;
+							<a href="http://hanuledu.co.kr/" target="_blank"> 
+								<img src="../Images/han.jpg" alt="Null" width="250" height="60">
+							</a>
+						</td>
+					</tr>
+				</table><br />
+				<input type="submit" value="전송" onclick="send_function();">
+				<input type="reset" value="취소" onclick="cancel_function();">
+		</fieldset>
+	</form>
+</body>
+</html>

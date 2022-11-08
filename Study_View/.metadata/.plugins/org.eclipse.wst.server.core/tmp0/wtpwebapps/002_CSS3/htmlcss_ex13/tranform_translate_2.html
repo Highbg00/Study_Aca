@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>transform, translate</title>
+<!-- 
+transform 속성 : 요소의 표시 위치를 이동시키는 translate
+CSS3의 transform 속성은 Flash 나 JavaScript를 사용하지 않고 
+요소를 애니메이션 시키거나 시각적 및 상호 작용의 효과를 풍부하게 제공
+translate () 함수는 기본적으로 X 축과 Y 축을 따라 지정된 거리만큼 요소를 이동시킬 때 사용합니다.
+
+transform：translate(x, y), translateX(), translateY(), 
+					 translateZ(),translate3d() 등의 함수로 이동 거리를 지정합니다.
+
+translate() 속성
+transform:translate()	  translate (x, y) 함수는 요소를 
+	왼쪽에서부터 x거리(距離), 위에서부터 x 거리만큼 상대적으로 위치를 정하거나, 이동 및 재배치를 지정합니다. 
+	y 방향의 거리는 생략할 수 있지만, 이 경우의 y방향의 거리는 "0"이 됩니다.
+transform:translateX()	translateX(거리) 함수는 좌우(수평 방향)의 이동 거리 값을 지정합니다.
+transform:translateY()	translateY(거리) 함수는 상하(수직 방향)의 이동 거리 값을 지정하십시오.
+transform:translateZ()	translateZ(거리) 함수는 Z 방향의 거리로 이동을 지정합니다. 이 함수는 백분율 값으로 지정할 수 없습니다. 백분율로 값을 지정해도 "0"이 됩니다.
+translate() 구문
+▼　아래와 같이 요소를 이동시키기 위해 X 축과 Y 축에 따라 요소의 이동 거리를 나타내는 xy 매개 변수를 지정합니다.
+
+transform:translate(200px,0);
+-->
+
+<style type="text/css">
+
+h1 {
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	transition-duration: 3s; /* 중요 */
+	background-color: #d6d4d4;
+	border-radius: 50%;
+	box-shadow: inset 0 2px 45px #2e2d2d;
+}
+ 
+h1:hover {
+	transform: translate(200px,0); /* 중요 */
+	-webkit-transform: translate(200px,0);
+	-moz-transform: translate(200px,0);
+	-ms-transform: translate(200px,0);
+	-o-transform: translate(200px,0);
+}
+
+</style>
+</head>
+
+<body>
+	<h1>이동</h1>
+</body>
+</html>

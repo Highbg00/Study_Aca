@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	/* #lower div { */
+	/* #lower>div { */
+/* 	#lower div:first-child { */
+/* 	#lower>div:first-child { */
+/* 	#lower div:nth-child(1) { */
+	#lower div:first-of-type {
+		color: blue;
+	}
+	
+/* 	#lower p:first-of-type { */
+	#lower p:nth-child(2) {
+		color: red;
+	}
+	
+/* 	#lower p:nth-child(3) { */
+/* 	#lower p:last-child { */
+	#lower p:last-of-type {
+		color: blue;
+	}
+	
+/* 	.parent h1 { */
+/* 	.parent>h1 { */
+/* 	.parent h1:first-child { */
+/* 	.parent h1:nth-child(1) { */
+	.parent h1:first-of-type {
+		color: blue;
+	}
+	
+/* 	.parent div:nth-child(2) { */
+	.parent div:first-of-type {
+		color: purple;
+	}
+	
+/* 	.parent p:nth-child(3) { */
+/* 	.parent p:first-of-type { */
+	.parent p:last-of-type {
+		color: red;
+	}
+	
+/* 	.parent div:last-child { */
+/* 	.parent div:last-of-type { */
+	.parent div:nth-child(4) {
+		color: green;
+	}
+</style>
+</head>
+<body>
+	<div id="lower">
+		<div>text1파랑</div>
+		<p>text2빨강</p>
+		<p>text3파랑</p>
+	</div>
+	
+	<div class="parent">
+		<h1>h1-child1파랑</h1>
+		<div>div-child2자주</div>
+		<p>p-child3빨강</p>
+		<div>div-child4녹색</div>
+	</div>
+</body>	
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

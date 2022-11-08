@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>textarea</title>
+<style type="text/css">
+	input:focus::-webkit-input-placeholder, 
+	textarea:focus::-webkit-input-placeholder { 
+		/* WebKit browsers */ 
+		color:transparent; 
+	} 
+	input:focus:-moz-placeholder, 
+	textarea:focus:-moz-placeholder { 
+		/* Mozilla Firefox 4 to 18 */ 
+		color:transparent; 
+	} 
+	input:focus::-moz-placeholder, 
+	textarea:focus::-moz-placeholder { 
+		/* Mozilla Firefox 19+ */ 
+		color:transparent; 
+	} 
+	input:focus:-ms-input-placeholder, 
+	textarea:focus:-ms-input-placeholder { 
+		/* Internet Explorer 10+ */ 
+		color:transparent; 
+	}
+</style>
+
+<!-- 
+<style type="text/css">
+	@import url("placeholder_focus.css");
+</style> 
+-->
+
+</head>
+
+<body>
+	<textarea rows="3" cols="10"
+						onclick="this.value='';">자기를 소개해주세요</textarea>
+	<br />
+
+	<textarea rows="3" cols="10" placeholder="자기를 소개해주세요" 
+						onclick="this.placeholder='';"></textarea>
+	<br />
+	
+	<textarea rows="3" cols="10">
+		자기를 소개해주세요
+	</textarea>
+	<br />
+	
+	<textarea rows="3" cols="10">
+자기를 소개해주세요
+	</textarea>
+</body>
+</html>
+
+<!-- 
+<input>태그가 아닌 입력 양식 2개 : 
+<textarea></textarea>, <select></select>
+<textarea></textarea> 태그 : 여러줄 입력
+cols : 너비지정(글자수), rows : 높이지정(줄수)
+☜ width와 height 사용하지 않음 
+-->
+
+

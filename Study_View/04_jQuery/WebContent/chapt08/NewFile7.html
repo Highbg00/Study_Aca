@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script>
+
+$(document).ready(function() {
+	
+	$("#pw").click(function() {
+		$("#pwCheckSpan").html("");
+	}); //pw click
+
+	$("#pwCheck").click(function() {
+		$("#pwCheckSpan").html("");
+	}); //pwCheck click
+	
+	$("#pw").keyup(function() {
+		
+		if ($("#pw").val() != $("#pwCheck").val()) {
+			$("#pwCheckSpan").text("일치하지않음").css("color","red");
+		} else {
+			$("#pwCheckSpan").text("일치함").css("color","black");
+		}
+		
+	}); //pw keyup
+
+	$("#pwCheck").keyup(function() {
+		
+		if ($("#pw").val() != $("#pwCheck").val()) {
+			$("#pwCheckSpan").html("일치하지않음").css("color","red");
+		} else {
+			$("#pwCheckSpan").html("일치함").css("color","black");
+		}
+		
+	}); //pwCheck keyup
+	
+	
+}); //ready
+
+</script>
+</head>
+<body>
+<table>	
+	<tr>
+		<td><label for="pw">비밀번호</label></td>
+		<td><input type="password" name="pw" id="pw"/></td>
+	</tr>
+	<tr>
+		<td><label for="pwCheck">비밀번호확인</label></td>
+		<td><input type="password" name="pwCheck" id="pwCheck"/></td>
+	</tr>
+	<tr>
+		<td colspan="2"><span id="pwCheckSpan"></span></td>
+	</tr>
+</table>		
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

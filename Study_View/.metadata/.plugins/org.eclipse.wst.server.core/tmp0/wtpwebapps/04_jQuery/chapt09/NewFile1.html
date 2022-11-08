@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script>
+//$("선택자").fadeTo("효과속도",투명도, 함수); //노출 되어 있는 요소에 투명도 지정
+$(document).ready(function() {
+	
+	$("#btn1").click(function() {
+		$("h1").fadeTo("slow", 0.3);
+	}); //btn1 click
+	
+	$("#btn2").on("click", function() {
+		$("h1").fadeTo("slow", 0.6);
+	}); //btn2 on click
+	
+	$("#btn3").on({
+		"click" : function() {
+			$("h1").fadeTo("slow", 1.0);
+		}//function
+		
+	}) //btn on click
+	
+}); //ready
+
+</script>
+</head>
+<body>
+	<button type="button" id="btn1">투명도(30%)</button>
+	<button type="button" id="btn2">투명도(60%)</button>
+	<button type="button" id="btn3">투명도(100%)</button>
+	<h1>내용</h1>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

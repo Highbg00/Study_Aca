@@ -1,0 +1,22 @@
+
+public class Gugudan {
+
+	public void gugudan(int dan1, int dan2) {
+		
+		int temp;
+		if ( dan1 < dan2) {
+			temp = dan2;
+			dan1 = dan2;
+			dan2 = temp;
+		}
+		
+		for (int i = 1; i <=9; i++) {
+			for (int j = dan1; j >= dan2; j--) {
+				System.out.print(j + " * " + i + " = " + (i*j) + "\t");
+			}
+			System.out.println();
+		}
+		
+	}
+	
+}

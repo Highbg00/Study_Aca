@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var color = ["red","yellow","aqua","purple"];
+	
+// 	color[0] = "white"
+
+	var i = 0;
+	
+	function colorBg() {
+		document.getElementsByTagName("body")[0].style.backgroundColor = color[i];
+		i++;
+		if (i == color.length) {
+			i = 0;
+		}
+	}
+	
+	
+	
+</script>
+</head>
+<body>
+	<button type="button" onclick="colorBg();">배경색 바꾸기</button>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

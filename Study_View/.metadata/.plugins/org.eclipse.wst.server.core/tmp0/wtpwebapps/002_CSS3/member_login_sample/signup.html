@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>회원가입</title>
+
+<style type="text/css">
+	@import url("css/signup.css");
+	@import url("https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap");
+</style>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="js/signup.js"></script>
+
+</head>
+<body>
+<div id="wrap">
+	<h1>회원 가입</h1><span id="close">x</span>
+	<!-- <span id="close" 
+				onclick="alert('메인 페이지로 이동합니다.'); 
+								location.href = 'index.html';">x</span> -->
+	<form action="#" method="get" name="signupForm" id="signupForm" >
+	
+		<table border="0">
+			<tr>
+				<td>&nbsp;이&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;름</td>
+				<td>
+					<input type="text" name="name" id="name" tabindex="1" 
+					autofocus="autofocus" onkeypress="if(event.keyCode==13){return false;}" 
+					placeholder="이름을 입력하세요" style="ime-mode:active;"
+					maxlength="5" >
+					<!-- 
+					style="ime-mode:disabled;" //영문만 가능
+					style="ime-mode:active;"   //한글우선
+					style="ime-mode:inactive;" //영문우선, 모두 익스플로러에서만 가능
+					-->
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>
+					<span class="nameSpan"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D</td>
+				<td>
+					<input type="text" name="id" id="id" onkeypress="if(event.keyCode==13){return false;}"
+					placeholder="ID를 입력하세요" maxlength="11" style="ime-mode:disabled;" >
+					<input type="button" name="idCheckBtn" id="idCheckBtn" value="ID중복확인" >
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<span class="idSpan"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;비&nbsp;밀&nbsp;&nbsp;번&nbsp;호</td>
+				<td>
+					<input type="password" name="pw" id="pw" onkeypress="if(event.keyCode==13){return false;}"
+					placeholder="비밀번호를 입력하세요" maxlength="11">
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>
+					<span class="pwSpan"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;비밀번호확인</td>
+				<td>
+					<input type="password" name="pwCheck" id="pwCheck" onkeypress="if(event.keyCode==13){return false;}"
+					placeholder="비밀번호를 다시 입력하세요" maxlength="11" >
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>
+					<span class="pwCheckSpan"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>이&nbsp;&nbsp;&nbsp;&nbsp;메&nbsp;&nbsp;&nbsp;&nbsp;일</td>
+				<td>
+					<input type="text" name="email" id="email" onkeypress="if(event.keyCode==13){return false;}" 
+					placeholder="이메일을 입력하세요" 
+					style="ime-mode:inactive;" >
+					<input type="button" name="emailCheckBtn" id="emailCheckBtn" value="email중복확인" />
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>
+					<span class="emailSpan"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>휴&nbsp;대&nbsp;&nbsp;전&nbsp;화</td>
+				<td>
+					<input type="text" name="tel1" id="tel1" maxlength="3" onkeypress="if(event.keyCode==13){return false;}"> - 
+					<input type="text" name="tel2" id="tel2" maxlength="4" onkeypress="if(event.keyCode==13){return false;}"> - 
+					<input type="text" name="tel3" id="tel3" maxlength="4" onkeypress="if(event.keyCode==13){return false;}">
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>
+					<span class="telSpan"></span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" name="submitBtn" id="submitBtn" value="회원가입" />
+					<input type="reset"  name="resetBtn"  id="resetBtn"  value="가입취소" />
+				</td>
+			</tr>
+		</table>
+	</form>
+	<p>이미 계정이 있다면 <a href="login.html">여기</a>를 클릭하여 로그인 하세요</p>
+</div>
+</body>
+</html>

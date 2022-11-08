@@ -1,0 +1,20 @@
+○ 표준 입출력 : 콘솔(Console)
+- 입력 : 키보드 ▶ System.in.read();
+- 출력 : 모니터 ▶ System.out.println();
+
+○ 입력 스트림 : IO Project
+InputStream is = System.in;
+InputStreamReader isr = new InputStreamReader(is);
+BufferedReader br = new BufferedReader(isr);
+
+○ 입력 클래스 : Scanner → 객체화(객체생성) ▶ new
+String str = "Apple";
+String str = new String("Apple");
+
+Scanner scanner = new Scanner(System.in);
+A          a    = new A();
+
+○ Scanner Class의 주요한 Method(기능)
+nextInt();	→ 키보드에서 정수값을 입력받는 기능
+nextDouble(); → 키보드에서 실수값을 입력받는 기능
+nextLine(); → 키보드에서 Enter 이전까지 입력받는 기능

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	table {
+		width: 500px;
+ 		text-align: center;
+		border: 1px solid black;
+		border-collapse: collapse;
+	}
+	
+	th, td {
+		border: 1px solid black;
+	}
+</style>
+</head>
+<body>
+	<form method="get" name="form" id="form">
+		<table>
+			<caption>인적사항</caption>
+			
+			<tr>
+				<td><label for="name">이름</label></td>
+				<td>
+					<input type="text" name="name" id="name"
+								 placeholder="이름을 입력하세요" />
+				</td>
+			</tr>
+			<tr>
+				<td><label for="id">아이디</label></td>
+				<td>
+					<input type="text" name="id" id="id"
+								 placeholder="아이디를 입력하세요" />
+				</td>
+			</tr>
+			<tr>
+				<td><label for="pw">비밀번호</label></td>
+				<td>
+					<input type="password" name="pw" id="pw"
+								 placeholder="비밀번호를 입력하세요" />
+				</td>
+			</tr>
+			<tr>
+				<td><label for="phone1">연락처</label></td>
+				<td>
+					<input type="text" name="phone1" id="phone1"
+								 placeholder="phone1" size="3" />-
+					<input type="text" name="phone2" id="phone2"
+								 placeholder="phone2" size="4" />-
+					<input type="text" name="phone3" id="phone3"
+								 placeholder="phone3" size="4" />
+				</td>
+			</tr>
+			<tr>
+				<td><label for="picture">사진</label></td>
+				<td>
+					<input type="file" name="picture" id="picture"
+								 />
+				</td>
+			</tr>
+			<tr>
+				<td><label for="gender">성별</label></td>
+				<td>
+					<input type="radio" name="gender" id="male"
+								 value="male" checked="checked" />남
+					<input type="radio" name="gender" id="female"
+								 value="female" />여
+				</td>
+			</tr>
+			<tr>
+				<td><label for="kor">사용언어</label></td>
+				<td>
+					<input type="checkbox" name="language" id="kor"
+								 value="kor" checked="checked" />한글
+					<input type="checkbox" name="language" id="eng"
+								 value="eng" />영어
+					<input type="checkbox" name="language" id="jap"
+								 value="jap" />일어
+					<input type="checkbox" name="language" id="chi"
+								 value="chi" />중국어
+				</td>
+			</tr>
+			<tr>
+				<td><label for="introduction">자기소개</label></td>
+				<td>
+					<textarea rows="5" cols="20"
+										name="introduction"
+										id="introduction"
+										placeholder="간단하게 입력하세요"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>국적</td>
+				<td>
+					<select name="nation" id="nation">
+						<option>국적을 선택하세요</option>
+						<option value="korea">KOREA</option>
+						<option value="usa">USA</option>
+						<option value="japan">JAPAN</option>
+						<option value="china">CHINA</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>좋아하는 음식</td>
+				<td>
+					<select name="food" id="food" multiple="multiple">
+						<option>좋아하는 음식을 선택하세요</option>
+						<option value="kimchi" selected="selected">김치</option>
+						<option value="bulgogi">불고기</option>
+						<option value="pajeon" selected="selected">파전</option>
+						<option value="bibimbab">비빔밥</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" value="전송" />
+					<input type="reset"  value="취소" />
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

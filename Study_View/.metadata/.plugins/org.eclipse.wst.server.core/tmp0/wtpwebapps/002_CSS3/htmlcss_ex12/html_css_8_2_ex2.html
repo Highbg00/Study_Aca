@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+
+<script src="prefixfree.min.js"></script>
+
+<style>
+/* input 태그의 type 속성값이 checkbox인 태그가 체크되었을 때,
+           바로 뒤에 위치하는 div 태그의 height 속성에 0픽셀을 적용합니다. 
+           
+   html_css_13_2_ex2.html 와 비슷         
+
+*/
+input[type="checkbox"]:checked+div {
+	height: 0px;
+}
+
+div {
+	overflow: hidden;
+	width: 500px; /* width, height 공간이 있으니까 transition-duration 적용 */
+	height: 300px; /* width, height 공간이 없으면 transition-duration 적용 안됨*/
+	background-color: yellow;
+	transition-duration: 1s;
+}
+</style>
+</head>
+<body>
+	<label for="hide">숨기기</label>
+	<input type="checkbox" id="hide" />
+	<div>
+		<h1>Lorem ipsum</h1>
+		<p>Lorem ipsum dolor sit amet, 
+		consectetur adipiscing elit.</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>회원가입</title>
+
+<style type="text/css">
+ 	@import url("css/signup.css");
+</style>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="js/signup.js"></script>
+<script>
+
+
+
+</script>
+
+
+</head>
+
+<body>
+	<table width="500" height="600" align="center" style="margin-top:-100px;">
+		<form action="#" method="post" name="myForm" id="myForm" autocomplete="on">
+		
+		<tr>
+			<th colspan="3" height="80"><h2>회원가입</h2></th>
+		</tr>
+		
+		<tr>
+			<th>이름</th>
+			<td><input type="text" name="userName" id="userName" placeholder="이름을 입력하세요"
+								size="20" maxlength="4"><br /><span id="namecheckmsg"></span></td>
+		</tr>
+		
+		
+		<tr>
+			<th>ID</th>
+			<td><input type="text" name="userId" id="userId" placeholder="아이디를 입력하세요"
+								size="20" maxlength="12"><br><span id="idmsg"></span></td>
+			<td><button type="button" id="idck">ID중복확인</button></td>
+		</tr>
+		
+		
+		<tr>
+			<th>비밀번호</th>
+			<td><input type="password" name="userPw" id="userPw" placeholder="비밀번호를 입력하세요"
+								size="20" maxlength="12"><br><span id="pwmsg"></span></td>
+		</tr>
+		
+		
+		<tr>
+			<th>비밀번호 확인</th>
+			<td><input type="password" name="userPwCheck" id="userPwCheck" placeholder="비밀번호를 확인하세요"
+								size="20" maxlength="12"><br><span id="pwcheckmsg"></span></td>
+		</tr>
+		
+		
+		<tr>
+		<td colspan="3"><span id="pwcheckspan"></span></td>
+		</tr>
+		
+		
+		<tr>
+			<th>이메일</th>
+			<td><input type="text" name="userEmail" id="userEmail" placeholder="이메일을 입력하세요"><br><span id="emailmsg"></span></td>
+			<td><button type="button" id="emailck">이메일중복확인</button></td>
+		</tr>
+		
+		
+		<tr>
+			<th>핸드폰 번호</th>
+			<td><input type="text" name="tel" id="tel" size="3" maxlength="3"> - 
+				<input type="text" name="tel" id="tel" size="4" maxlength="4"> - 
+				<input type="text" name="tel" id="tel" size="4" maxlength="4"></td>
+				<td><span id="telCheckmsg"></span></td>
+		</tr>
+		
+		
+		<tr>
+			<td align="center" colspan="3">
+			<input type="submit" id="submitBtn" value="회원가입">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="reset" id="resetBtn" value="가입취소" ></td>
+		</tr>
+		
+		
+		<tr>
+			<td colspan="3">
+			<div>이미 계정이 있다면<a href="./login.html"> 여기 </a>를 클릭하세요!</div>
+			</td>
+		</tr>
+	</form>
+</table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

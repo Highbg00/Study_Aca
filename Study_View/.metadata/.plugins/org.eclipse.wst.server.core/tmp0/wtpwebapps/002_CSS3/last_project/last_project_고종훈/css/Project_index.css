@@ -1,0 +1,219 @@
+@charset "UTF-8";
+
+
+* {	
+	margin: 0px auto; 
+	padding: 0px; 
+}
+
+.hd { 
+	text-align: center; 
+}
+
+body {
+	background-color: black;
+	
+}
+
+.hd {
+	color: white;
+	
+	
+}
+
+
+#join {
+	width: 1000px;
+	
+	
+}
+
+.header{
+	
+	
+}
+
+
+
+	
+/* Animation Canvas */
+.animation_canvas {
+	overflow: hidden;
+	position: relative;
+	width: 1000px;
+	height: 670px;
+	margin: 0px auto;
+	
+}
+
+/* Slider Panel */
+.slider_panel {
+	width: 5000px;
+	position: relative;
+	background-size: 100%;
+}
+
+.slider_image {
+	float: left;
+	width: 1000px;
+	height: 670px;
+}
+
+/* Slider Text Panel */
+.slider_text_panel {
+	position: absolute;
+	top: 500px;
+	left: 50px;
+}
+
+.slider_text {
+	position: absolute;
+	width: 250px;
+	height: 150px;
+	color: white;
+}
+
+/* Control Panel */
+.control_panel {
+	position: absolute;
+	top: 570px;
+	left: 470px;
+	height: 13px;
+	overflow: hidden;
+}
+
+.control_button {
+	width: 12px;
+	height: 46px;
+	position: relative;
+	float: left;
+	cursor: pointer;
+	background-image: url('../img/point_button.png');
+}
+
+.control_button:hover {
+	top: -16px;
+}
+
+.control_button.active {
+	top: -31px;
+}
+
+
+
+
+
+
+
+
+
+/* footer 링크 6개 */
+	.company {
+		overflow: hidden;
+		width: 1000px;
+		
+	}
+	
+	#canon {
+		border: 1px solid;
+		width: 331px;
+		height: 100px;
+		float: left;
+		
+		
+	}
+	
+	#canon>a{
+		background-image: url("../img/canonlogo.jpg");
+		background-size: 333px 102px;
+		width: 331px;
+		height: 100px;
+		display: block;
+		
+	}
+	#sony>a {
+		background-image: url("../img/sonylogo2.JPG");
+		background-size: 333px 102px;
+		border: 1px solid;
+		width: 331px;
+		height: 100px;
+		float: left;
+		
+	}
+	#nk>a {
+		background-image: url("../img/niconlogo.JPG");
+		background-size: 333px 102px;
+		border: 1px solid;
+		width: 331px;
+		height: 100px;
+		float: left;
+	}
+	#pana>a {
+		background-image: url("../img/panasoniclogo.JPG");
+		background-size: 333px 102px;
+		border: 1px solid;
+		width: 331px;
+		height: 100px;
+		float: left;
+	}
+	#leica>a {
+		background-image: url("../img/leicalogo.jpeg");
+		background-size: 333px 102px;
+		border: 1px solid;
+		width: 331px;
+		height: 100px;
+		float: left;
+	}
+	#fuzi>a {
+		background-image: url("../img/fujilogo.JPG");
+		background-size: 333px 102px;
+		border: 1px solid;
+		width: 331px;
+		height: 100px;
+		float: left;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

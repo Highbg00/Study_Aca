@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style type="text/css">
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	margin: 20px;
+}
+
+#wrap {
+	background-color: #cccccc;
+	padding: 0px 100px;
+	height: 100px;
+}
+
+#inner {
+	background-color: #999999;
+	height: 200px;
+}
+
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script>
+//mouseenter, mouseleave : 오로지 자기 자신에게 마우스 포인터가 와야만 발생
+//mouseover, mouseout    : 직접 이벤트를 걸지않은 자식요소에 마우스 포인터가 와도 발생 
+$(document).ready(function() {
+	
+	$("#wrap").mouseover(function() {
+		
+		$("p").html("mouseover").css("border","2px solid red").css("color","yellow");
+		
+	}); //inner mouseenter
+	
+	$("#wrap").mouseout(function() {
+		
+		$("p").html("mouseout").css("border","2px dashed red").css("color","yellow");
+		
+	}); //inner mouseleave
+	
+	
+}); //ready
+
+</script>
+</head>
+<body>
+	<div id="wrap">
+		<p id="inner">내용</p>
+	</div>	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

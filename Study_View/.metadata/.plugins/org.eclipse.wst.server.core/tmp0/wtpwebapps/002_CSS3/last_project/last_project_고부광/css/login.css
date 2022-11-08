@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+*	{
+	background-color: black;
+}
+h2{
+	display:flex;
+	justify-content: center;
+	color: white;
+}
+
+form{	
+	width: 400px;
+	height: 400px;
+	padding:10px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.input-box{
+	position:relative;
+	margin:10px 0;
+}
+
+.input-box > input{
+ 	background:transparent;
+    border:none;
+    border-bottom: solid 1px #ccc;
+    padding:20px 0px 5px 0px;
+    font-size:14pt;
+    width:100%;
+    color: white;
+}
+
+input::placeholder{
+    color:transparent;
+}
+
+input:placeholder-shown + label{
+    color: white;
+    font-size:14pt;
+    top:15px;
+
+}
+
+input:focus + label, label{
+    color: white;
+    font-size:10pt;
+    pointer-events: none;
+    position: absolute;
+    left:0px;
+    top:0px;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+
+input:focus, input:not(:placeholder-shown){
+    border-bottom: solid 1px #8aa1a1;
+    outline:none;
+}
+
+input[type=button]{
+    background-color: gray;
+    border:none;
+    color:white;
+    border-radius: 5px;
+    width:100%;
+    height:35px;
+    font-size: 14pt;
+    margin-top:20px;
+}
+
+input[type=button]:hover{
+    background-color: white;
+    color:black;
+}
+
+input[type=button]:active{
+    background-color: gray;
+    color:white;
+}
+
+#newbie{
+    text-align: center;
+    font-size:12pt;
+    color:rgb(164, 164, 164);
+    margin:10px 0px;
+}
+
+a {
+	color: #e81c45;
+	font-style: none;
+}

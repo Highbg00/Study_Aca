@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+#box {
+	position: relative;
+}
+
+h1 {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	line-height: 200px;
+	border-radius: 50%;
+	text-align: center;
+	color: white;
+	background: linear-gradient(red 0%, blue 100%);
+	
+	
+	animation-name: ball;
+	animation-duration: 10s; 
+	animation-iteration-count: infinite; /* 반복횟수 */ 
+	animation-direction: alternate;  
+	animation-timing-function: linear;  
+}
+
+@keyframes ball {
+	from {
+		left: 0px;
+		transform: rotate(0deg);
+	}
+	30% {
+		left: 0px;
+		transform: rotate(90deg);
+	}
+	70% {
+		left: 500px;
+		transform: rotate(180deg);
+	}
+	to {
+		left: 500px;
+		transform: rotate(360deg);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

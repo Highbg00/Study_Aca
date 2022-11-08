@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<!-- 
+	세로 가운데 정렬-> height(높이)와 같은 크기로 line-height 지정 
+	가로 가운데정렬-> text-align: center; 
+-->
+<style>
+#nav {
+	overflow: hidden;
+	width: 800px;
+	margin: 0px auto;
+	border: 1px solid red;
+}
+
+#nav>div {
+	float: left;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+	width: 150px;
+	height: 100px;
+	display: block;
+	line-height: 100px;
+	text-align: center;
+	font-size: 1.5em;
+	
+	border-top: 1px solid red;
+	border-bottom: 1px solid red;
+	margin: 5px;
+}
+</style>
+</head>
+<body>
+	<div id="nav">
+		<div><a href="#">menu1</a></div>
+		<div><a href="#">menu2</a></div>
+		<div><a href="#">menu3</a></div>
+		<div><a href="#">menu4</a></div>
+		<div><a href="#">menu5</a></div>
+	</div>
+</body>
+</html>

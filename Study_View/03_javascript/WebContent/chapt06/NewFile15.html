@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function() {
+		
+		var ttl = document.getElementById("ttl");
+		var btnImage = document.getElementById("btnImage");
+		var imgSrc = document.getElementById("imgSrc");
+		
+		btnImage.onmouseover = function() {
+			ttl.innerHTML = "마우스 오버";
+			btnImage.src = "btn_over.gif";
+			imgSrc.innerHTML = "btn_over.gif";
+		} //onmouseover
+		
+		btnImage.onmouseout = function() {
+			ttl.innerHTML = "마우스 아웃";
+			btnImage.src = "btn_out.gif";
+			imgSrc.innerHTML = "btn_out.gif";
+		} //onmouseout
+		
+		
+		
+	}
+</script>
+</head>
+<body>
+	<h1 id="ttl">마우스 상태</h1>
+	<img alt="버튼" src="btn_out.gif" width="100" height="50"
+			 id="btnImage">
+	<p id="imgSrc">이미지 원본</p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

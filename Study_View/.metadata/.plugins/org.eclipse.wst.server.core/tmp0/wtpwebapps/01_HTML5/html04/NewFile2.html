@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function func() {
+		location.href="http://www.naver.com";
+	}
+</script>
+</head>
+<body>
+	<form name="form" id="form">
+		<label for="name">이름</label> 
+		<input type="text" id="name" name="name" required="required"/>
+		<input type="submit" value="전송" />
+<!--<input type="button"> 과 <button type="button"> 은 기능적으로 동일하다
+		하지만, button 요소에 type 속성을 넣지않고 <button>만 사용하면  submit 기능을 수행한다.
+		자바스크립트 실행을 목적으로 한다.
+-->
+		<input type="button" value="뒤로"
+					 onclick="history.back();" /><br /><br />
+		
+		<a href="http://www.nate.com"><button type="button">네이트</button></a>
+		<button type="button" 
+				onclick="location.href='http://www.google.com';">구글</button>
+		
+		<input type="button" value="다음"
+				onclick="location.replace('http://www.daum.net');" />
+		
+		<input type="button" value="네이버"
+				onclick="func();" />
+	</form>
+</body>
+</html>

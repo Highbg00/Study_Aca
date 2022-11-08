@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>회원가입</title>
+<style type="text/css">
+ 	@import url("css/signup.css");
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="js/signup.js"></script>
+</head>
+<body>
+<div id="wrap">
+<form action="#" id="signup_form" name="signup_form">
+<table>
+	<tr align="right">
+		<td colspan="3">
+			<div id="close">
+				<button type="button"><a href="index.html">X</a></button>
+			</div>
+		</td>
+	</tr>
+
+	<tr align="center">
+		<th colspan="3">
+			<h1>회원 가입</h1>
+		</th>
+	</tr>
+
+	<tr align="left">
+		<td colspan="3">
+			&nbsp;&nbsp;*가 들어간 항목은 반드시 입력해주세요
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+			<label for="name">
+				이&nbsp;&nbsp;&nbsp;&nbsp;름*
+			</label>
+		</td>
+		<td> <input type="text" name="name" id="name" placeholder="이름을 입력하세요"/> </td>
+	</tr>
+
+	<tr align="center">
+		<td colspan="3"> 
+			<span id="name_span">&nbsp;</span> 
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<label for="id">
+				I&nbsp;&nbsp;&nbsp;D*
+			</label>
+		</td>
+
+		<td>
+			<input type="text" name="id" id="id" placeholder="ID를 입력하세요"/>
+		</td>
+	
+		<td>
+			<button id="idcheck"> ID 중복확인 </button>
+		</td>
+	</tr>
+	
+	<tr align="center">
+		<td colspan="3">
+			<span id="id_span">&nbsp;</span>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<label for="pw">
+				비밀&nbsp;&nbsp;번호*
+			</label>
+		</td>
+		
+		<td>
+			<input type="password" name="pw" id="pw" placeholder="비밀번호를 입력하세요"/>
+		</td>
+	</tr>
+
+	<tr align="center">
+		<td colspan="3">
+			<span id="pw_span">&nbsp;</span>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<label for="pwcheck">
+				비밀번호&nbsp;확인*
+			</label>
+		</td>
+		
+		<td>
+			<input type="password" name="pwcheck" id="pwcheck" placeholder="비밀번호를 다시 입력하세요" />
+		</td>
+	</tr>
+
+	<tr align="center">
+		<td colspan="3">
+			<span id="papwCheckSpan">&nbsp;</span>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<label for="email">
+				이&nbsp;&nbsp;메&nbsp;&nbsp;일
+			</label>
+		</td>
+		
+		<td>
+			<input type="text" name="email" id="email" placeholder="이메일을 입력하세요"/>
+		</td>
+		
+		<td>
+			<button type="button" id="emailcheck" >
+				e-mail 중복확인
+			</button>
+		</td>
+	</tr>
+	
+	<tr align="center">
+	
+	<td colspan="3">
+		<span id="emailSpan">&nbsp;</span>
+	</td>
+	
+	</tr>
+	
+	<tr>
+		<td>
+			<label for="tel1">
+				휴대&nbsp;&nbsp;&nbsp;전화
+			</label>
+		</td>
+
+		<td>
+			<input type="tel" size="3" maxlength="3" id="tel1" class="tel"/> - 
+			<input type="tel" size="3" maxlength="4" id="tel2" class="tel"/> - 
+			<input type="tel" size="3" maxlength="4" id="tel3" class="tel"/>
+		</td>
+	</tr>
+	
+	<tr align="center">
+		<td colspan="3">
+			<span id="telSpan">&nbsp;</span>
+		</td>
+	</tr>
+
+	<tr align="center">
+		<th colspan="3">
+			<input type="submit" id="sign_up" value="회원가입" />
+			<input type="reset" value="가입취소" id="cancel" />
+		</th>
+	</tr>
+	
+	<tr align="center">
+		<th colspan="3">
+			이미 계정이 있다면 <a href="login.html">여기</a>를 클릭하여 로그인 하세요
+		</th>
+	</tr>
+	
+</table>
+</form>
+</div>
+</body>
+</html>

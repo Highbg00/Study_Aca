@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+
+<!-- 
+	font-style, font-weight, line-height 
+	font-style ☞  글자 기울기 지정(normal 기본, italic 이탤릭, oblique 기울어짐)
+	font-family ☞ 글꼴 집합(굴림, 돋움, ...), 사용자 컴퓨터에 설치된 원하는 글꼴 하나 이상 사용
+	
+	font-style과 font-family는 꼭 지정, 별도로 지정하지 않으면 브라우저 기본값으로 출력 
+	
+	line-height : 글자의 높이 지정, 글자를 수직 가운데 정렬 시킬 때(줄 간격 조정 역할, 줄 높이 정함)
+		※ CSS에서는 블럭 형식 태그를 수직 정렬하는 스타일 속성은 없음.
+		블럭 형식 태그 : div, p, h1~h6, li, table, form
+		하위태그에서 상위태그인 글자를 감싸는 박스의 높이와 같은 크기로 지정
+		즉, 상위 태그에서 height 속성 지정하고 하위태그에서 수직 정렬 시킬 때 line-height 속성 지정 
+	-->
+
+<style>
+div {
+	width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	font-size: 1.5em;
+	font-style: italic;
+	background-color: lime;
+	border-radius: 20px;
+	border: 1px solid red;
+	margin-bottom: 10px;
+}
+
+div:nth-child(1) {
+	
+}
+
+div:nth-child(2) {
+	font-weight: bold; /* 숫자 가능 : 200 */
+}
+
+div:nth-child(3) {
+	font-weight: bold;
+	line-height: 50px;
+}
+</style>
+
+</head>
+<body>
+	<div>
+		abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+		abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+		abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+		abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+	</div>
+
+	<div>
+		abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+		abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+		abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+		abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+	</div>
+
+	<div>
+		abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+		abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+		abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+		abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+	</div>
+
+</body>
+</html>

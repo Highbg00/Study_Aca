@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3 Font Property</title>
+<style>
+.font_big {
+	font-size: 2em;
+}
+
+.font_italic {
+	font-style: italic;
+}
+
+.font_bold {
+	font-weight: bold;
+}
+
+.font_center {
+	text-align: center;
+}
+
+.button {
+	width: 150px;
+	height: 70px;
+	background-color: red;
+	border: 10px solid white;
+	border-radius: 30px;
+	box-shadow: 5px 5px 5px gray;
+	/* 	
+	5px : x-position : 가로 위치, 양수면 오른쪽에, 음수면 왼쪽에 그림자가 생성.(필수)
+	5px : y-position : 세로 위치, 양수면 아래쪽에, 음수면 위쪽에 그림자가 생성.(필수) 
+	blur : 그림자를 흐릿하게 함.
+	5px : 양수면 그림자를 확장하고, 음수면 축소
+	gray : 그림자 색상
+	*/
+	line-height: 70px;
+}
+
+.button>a {
+	display: block;
+	/* line-height: 70px; */
+}
+</style>
+</head>
+<body>
+	<div class="button">
+		<a href="#" class="font_big font_italic font_bold font_center">Click</a>
+	</div>
+</body>
+</html>

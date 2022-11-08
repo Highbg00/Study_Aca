@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>01.FirstProject</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 실제 주소로 값을 넘기기 위한 맵핑을 지정 -->
+  <servlet>
+  	<display-name>Member</display-name>		<!-- web.xml 파일이 속한 프로젝트명을 기재 (title 역할) -->
+  	<servlet-name>Member</servlet-name>		<!-- Required, Unique 사용할 servlet의 이름 -->
+  	<servlet-class>Member</servlet-class>	<!-- 사용할 클래스의 정규화 된 이름을 나타내는 변수 -->
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Member</servlet-name>		<!-- 매핑할 servlet-name을 선언하는 부분  -->
+  	<url-pattern>/member.do</url-pattern>	<!-- servlet과 매핑할 URL 패턴을 선언하는 부분 -->
+  </servlet-mapping>
+  
+  
+  
+</web-app>

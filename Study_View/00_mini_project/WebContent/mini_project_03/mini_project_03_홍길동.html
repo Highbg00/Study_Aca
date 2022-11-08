@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8" />
+<title>실습</title>
+<style type="text/css">
+#header, #content, #footer {
+	margin: 0px auto;
+	width: 1000px;
+	overflow: hidden;
+}
+
+#header .left_space {
+	float: left;
+	width: 150px;
+	height: 150px;
+	line-height: 150px;
+	background-color: red;
+	border: 1px solid black;
+	border-radius: 30px 0px;
+	text-align: center;
+	font-weight: bold;
+}
+
+#header .center_space {
+	float: left;
+	width: 694px;
+	height: 150px;
+	line-height: 150px;
+	background-color: green;
+	border: 1px solid black;
+	border-radius: 0px 0px 30px 30px;
+	text-align: center;
+	font-weight: bold;
+}
+
+#header .right_space {
+	float: left;
+	width: 150px;
+	height: 150px;
+	line-height: 150px;
+	background-color: red;
+	border: 1px solid black;
+	border-radius: 0px 30px;
+	text-align: center;
+	font-weight: bold;
+}
+
+#content .left_space {
+	float: left;
+	width: 150px;
+	height: 300px;
+	line-height: 300px;
+	background-color: red;
+	border: 1px solid black;
+	border-radius: 0px 30px 30px 0px;
+	text-align: center;
+	font-weight: bold;
+}
+
+#content .center_space {
+	float: left;
+	width: 694px;
+	height: 300px;
+	background-color: green;
+	border: 1px solid black;
+	border-radius: 30px;
+	font-weight: bold;
+}
+
+#content ul {
+	overflow: hidden;
+	padding: 0px;
+	margin: 15px auto;
+	display: table;
+}
+
+#content ul li {
+	float: left;
+	list-style: none;
+}
+
+#content ul li a {
+	display: block;
+	padding: 0px 54px;
+	font-weight: bold;
+	font-size: 20px;
+	text-decoration: none;
+	color: black; 
+}
+
+#content .hiseoul {
+	margin: 10px;
+}
+
+
+#content .right_space {
+	float: left;
+	width: 150px;
+	height: 300px;
+	line-height: 300px;
+	background-color: blue;
+	border: 1px solid black;
+	border-radius: 30px 0px 0px 30px;
+	text-align: center;
+	font-weight: bold;
+}
+
+#footer .left_space {
+	float: left;
+	width: 150px;
+	height: 150px;
+	line-height: 150px;
+	background-color: red;
+	border: 1px solid black;
+	border-radius: 0px 30px;
+	text-align: center;
+	font-weight: bold;
+}
+
+#footer .center_space {
+	float: left;
+	width: 694px;
+	height: 150px;
+	line-height: 150px;
+	background-color: green;
+	border: 1px solid black;
+	border-radius: 30px 30px 0px 0px;
+	text-align: center;
+	font-weight: bold;
+}
+
+#footer .right_space {
+	float: left;
+	width: 150px;
+	height: 150px;
+	line-height: 150px;
+	background-color: red;
+	border: 1px solid black;
+	border-radius: 30px 0px;
+	text-align: center;
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+	<div id="header">
+		<div class="left_space">150*150</div>
+		<div class="center_space">694*150</div>
+		<div class="right_space">150*150</div>
+	</div>
+
+	<div id="content">
+		<div class="left_space">150*300</div>
+		<div class="center_space">
+			<div>
+				<ul>
+					<li><a href="#">menu1</a></li>
+					<li><a href="#">menu2</a></li>
+					<li><a href="#">menu3</a></li>
+					<li><a href="#">menu4</a></li>
+				</ul>
+			</div>
+			<div class="hiseoul">
+				<h1>하이서울브랜드(694*300)</h1>
+				<p>서울시와 서울산업진흥원(SBA)이 공동으로 지원하는 하이 서울브랜드 사업은 우수한 기술력과 상품력을 보유하고
+					있으나 고유브랜드 육성에 어려움을 겪고 있는 우수기업들이 서울시가 인정한 기업 공동브랜드인 하이서울브랜드를 활용하여 제품
+					경쟁력을 강화할 수 있도록 각종 홍보 마케팅을 지원하는 사업입니다.
+				</p>
+			</div>
+		</div>
+
+		<div class="right_space">150*300</div>
+	</div>
+
+	<div id="footer">
+		<div class="left_space">150*150</div>
+		<div class="center_space">694*150</div>
+		<div class="right_space">150*150</div>
+	</div>
+</body>
+</html>

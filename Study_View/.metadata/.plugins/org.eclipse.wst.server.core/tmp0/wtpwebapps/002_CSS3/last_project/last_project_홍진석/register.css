@@ -1,0 +1,76 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;    
+}
+
+body {
+    background-color: #F3EBF6;
+}
+
+form {
+    width: 600px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 50px 70px;
+    border:none;
+    border-radius: 1.5em;
+  }
+
+  .sign {    
+    color: #8C55AA;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+
+#chkid {
+  padding: 8px 0px;
+}
+  div {
+    font-size: 15px;
+    margin: 5px;
+    padding: 10px;    
+  }
+  
+  input, select {
+    margin: 0px auto;   
+    width: 366px;
+    padding: 10px;
+    text-align: center;
+    border: none;    
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+  }
+  
+  input:focus, select:focus {
+    border: 2px solid rgba(0, 0, 0, 0.18) !important;
+    
+}
+  #email_id, #email_add  {
+    width: 33%
+  }
+  #email_sel {
+    width: 23%
+  }
+  
+  
+  .join_btn {
+    text-align: center;
+  }
+  
+  .join_btn button {
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(to right, #9C27B0, #E040FB);
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;   
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+  }

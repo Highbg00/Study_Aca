@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+
+<!--배경그림 반복 
+	background-repeat 생략시  : repeat가 기본값,
+	background-repeat : no-repeat ☞  반복 안됨
+		
+	background-position : 배경 이미지 위치 지정(스프라이트 이미지와 관련)		 	
+-->
+<style>
+div:first-child {
+	width: 80%;
+	margin: 0px auto;
+	height: 400px;
+	background-image: url("visual.jpg");
+	background-size: 30%;
+}
+
+div:last-child {
+	width: 80%;
+	margin: 0px auto;
+	height: 400px;
+	background-image: url("visual.jpg");
+	background-size: 30%;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	/* center bottom 두가지 중 한가지만 쓰면 나머지는 자동으로 center*/
+	/*left top 왼쪽 상단 
+		left center 왼쪽 중앙
+		left bottom 왼쪽 맨아래
+		right top 오른쪽 상단
+		right center 오른쪽 중앙
+		right bottom 오른쪽 맨아래
+		center top 가운데 상단
+		center center 정 가운데
+		center bottom 가운데 맨아래
+		
+		x% y% ☞ x는 가로 위치, y는 세로 위치
+		0% 0% ☞ left top
+		100% 100% ☞ right bottom
+		0px 50% ☞ 가로 0px, 세로 가운데, 
+					한 가지만 지정하면 나머지는 50%
+		cm, px, in, pt, px, em등의 단위와 섞어서  지정도 가능 */
+}
+</style>
+
+</head>
+<body>
+	<div></div>
+	<br />
+	<div></div>
+</body>
+</html>

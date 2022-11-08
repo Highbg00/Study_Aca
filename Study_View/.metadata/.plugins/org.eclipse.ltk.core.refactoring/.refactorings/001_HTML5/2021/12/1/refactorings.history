@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;wildlife.mp4&apos; to &apos;html03&apos;&#x0D;&#x0A;- Original project: &apos;001_HTML5&apos;&#x0D;&#x0A;- Destination element: &apos;html03&apos;&#x0D;&#x0A;- Original element: &apos;wildlife.mp4&apos;" description="Copy file" element1="WebContent/htmlcss_ex03/wildlife.mp4" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1640826304826" target="/01_HTML5/WebContent/html03" units="0" version="1.0"/>
+</session>

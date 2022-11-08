@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3 Selector Basic</title>
+<!-- 	
+		일반 구조 선택자 : 특정한 위치에 있는 태그를 선택할 때
+		:first-child ☞   형제 관계 중 첫번째 태그
+		:last-child ☞  형제 관계 중 마지막 태그
+		:nth-child(n) ☞  형제 관계 중 앞에서 n번째 위치 태그, n은 0부터 시작
+		:first-of-type ☞  형제관계 중 같은 타입 중 첫번째 태그
+		:last-of-type ☞  형제관계 중 같은 타입 중 마지막 태그
+
+ 중요 ☞ li:first-child = li:nth-child(1)
+ -->
+
+<style>
+ul {
+	overflow: hidden;
+	padding: 0px;
+}
+
+li {
+	list-style: none;
+	float: left;
+	padding: 10px 15px;
+	border: 1px solid black;
+}
+
+li:first-child {
+	border-radius: 20px 0 0 20px;
+}
+
+li:last-child {
+	border-radius: 0 20px 20px 0;
+}
+
+li:nth-child(2n+1) {
+	background-color: green;
+}
+
+li:nth-child(2n) {
+	background-color: red;
+}
+</style>
+</head>
+<body>
+	<ul>
+		<li><a href="http://www.naver.com">네이버</a></li>
+		<li><a href="http://www.google.com">구글</a></li>
+		<li><a href="http://www.youtube.com">유튜브</a></li>
+		<li><a href="http://www.daum.net">다음</a></li>
+		<li><a href="http://news.naver.com">네이버뉴스</a></li>
+		<li><a href="http://www.facebook.com">페이스북</a></li>
+		<li><a href="http://www.twitter.com">트위터</a></li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#header, #footer {
+		width: 700px;
+		background-color: #ffd800;
+		border: 1px solid #808080;
+		text-align: center;
+	}
+	
+	#wrap {
+		overflow: hidden; 
+		/* 공식 : 상위태그에 overflow: hidden; 
+						 하위태그에 각각 float: left/right; */
+		width: 700px;
+		border: 1px solid #808080;
+		background-color: #66dbf6;
+	}
+	
+	#content {
+		width: 450px;
+		background-color: #66dbf6;
+		border: 1px solid #808080;
+		float: left;
+	
+	}
+	
+	#banner {
+		border: 1px solid #808080;
+		width: 200px;
+		float: left;
+	}
+</style>
+</head>
+<body>
+	<div id="header">
+		<h1>HEADER</h1>
+	</div>
+	
+	<div id="wrap">
+		<div id="content">
+			<h1>CONTENT</h1>
+			
+			<ul>
+				<li>menu1</li>
+				<li>menu2</li>
+				<li>menu3</li>
+				<li>menu4</li>
+				<li>menu5</li>
+			</ul>
+		</div>
+		
+		<div id="banner">
+			<h1>BANNER</h1>
+			<img alt="서울산업진흥원" src="logo.png" />
+		</div>
+	</div>
+	
+	<div id="footer">
+		<h1>FOOTER</h1>
+	</div>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

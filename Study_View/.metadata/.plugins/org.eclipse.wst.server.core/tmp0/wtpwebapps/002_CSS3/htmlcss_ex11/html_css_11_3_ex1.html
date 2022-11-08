@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+
+<!--border : 테두리
+		border-width ☞  두께 : thin,medium,thick,em,px 
+		border-style ☞  형태  : none,hidden,dotted,dashed,solid,double,groove(홈, 고랑) 
+		border-color ☞  색깔 
+		3개 모두 사용해야 함
+ -->
+
+<style>
+div {
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	background-color: black;
+	font-weight: bold;
+	color: white;
+}
+
+div:nth-child(1) {
+	border-width: 5px;
+	border-style: dotted;
+	border-color: #ff0000;
+}
+
+div:nth-child(2) {
+	border-width: 10px;
+	border-style: dashed;
+	border-color: #00ff00;
+}
+
+div:nth-child(3) {
+	/* border: 15px solid #0000ff; */
+	/* border-width:15px;
+		 border-style:solid;
+		 border-color:#0000ff; */
+	/* border-top: 15px solid #0000ff; */
+	border-radius: 10px 10px 0 0;
+}
+</style>
+
+</head>
+<body>
+	<div>border테두리1</div>
+	<div>border테두리2</div>
+	<div>border테두리3</div>
+</body>
+</html>

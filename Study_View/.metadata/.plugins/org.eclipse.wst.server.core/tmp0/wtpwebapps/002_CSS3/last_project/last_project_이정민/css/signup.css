@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+body{
+    background-color: #eadcc3
+}
+
+#myForm{
+	font-family: 'Hi Melody', cursive;
+    background-color: #a78d98;
+    width: 450px;
+	padding: 10px;
+	border: none;
+	font-size: 1.2rem;
+	text-align: center;
+	border-radius: 5px;
+    color: #554936;
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 10px 10px 30px #d5b887;
+}
+
+fieldset{
+    border: none;
+}
+
+img{
+    height: 50px;
+}
+
+legend{
+    font-size: 1.8rem;
+}
+input[type="text"],input[type="password"]{		
+	display: inline-block;
+	width:260px;
+	border-color: red;
+	color: orange;
+	height: 35px;
+  width: 250px;
+  line-height: 35px;
+  font-family: 'Hi Melody', cursive;
+  font-size: 15px;
+  border-radius: 5px;
+  border: none;
+}
+
+
+input[type="submit"],input[type="reset"]{
+	border: none;
+	color: white;
+	border-radius: 10px;
+	transition-duration:0.25s;
+	text-align: center;
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	margin: 10px auto;
+	background-color: #eadcc3;
+	
+	width: 170px;
+	height: 35px;
+	line-height: 35px;
+	font-size: 1.5rem;
+}
+
+input[type="text"]:focus,input[type="password"]:focus{		
+	display: inline-block;
+	width:260px;
+	border-color: red;
+	color: orange;
+}
+
+.btn{
+    width: 150px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-family: 'Hi Melody', cursive;
+    font-size: 15px;
+    background-color: #d5b887;
+    border: none;
+    border-radius: 5px;
+}
+
+.notAMember a{
+    color: #ede0cb;
+}

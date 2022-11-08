@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+* {
+	margin: 0px auto;
+	padding: 0px;
+}
+/*header */
+.hd {
+	text-align: center;
+	overflow: hidden;
+	height: 110px;
+	background-color: white;
+}
+
+.icon_list {
+	overflow: hidden;
+	background-color: white;
+	height: 100px;
+	display: inline-block;
+}
+
+.icon_list li {
+	list-style: none;
+	text-align: center;
+	float: left;
+}
+
+.icon_login {
+	display: inline;
+	float: right;
+	background-color: white;
+}
+
+.icon_login button {
+	background-color: white;
+	border-style: none;
+}
+
+.icon_logo {
+	float: left;
+	background-color: white;
+}
+.icon_login img{
+	background-color: white;
+}
+.icon img {
+	background-color: white;
+}
+/* Animation Canvas */
+.animation_canvas {
+	overflow: hidden;
+	position: relative;
+	width: 1000px;
+	height: 800px;
+	margin: 0px auto;
+}
+
+/* Slider Panel */
+.slider_panel {
+	width: 5000px;
+	position: relative;
+}
+
+.slider_image {
+	float: left;
+	width: 1000px;
+	height: 800px;
+}
+
+/* Slider Text Panel */
+.slider_text_panel {
+	position: absolute;
+	top: 150px;
+	left: 10px;
+	
+}
+
+.slider_text {
+	position: absolute;
+	width: 250px;
+	height: 50px;
+	color: white;
+}
+/*footer  */
+.ft {
+	width: 900px;
+	text-align: center;
+	height: 100px;
+}
+
+.ft_cp {
+	text-align: center;
+}
+
+.cp_ul {
+	overflow: hidden;
+	text-align: center;
+}
+
+.cp_ul li {
+	float: left;
+	text-align: center;
+	list-style: none;
+}
+
+.cp {
+	text-align: center;
+}
+
+.icon img:hover li {
+	border-bottom: 2px solid black;
+}
+
+/*  .control_panel {
+	position: absolute;
+	top: 380px;
+	left: 270px;
+	height: 13px;
+	overflow: hidden;
+}
+
+.control_button {
+	width: 12px;
+	height: 46px;
+	position: relative;
+	float: left;
+	cursor: pointer;
+	background-image: url('img/point_button.png');
+}
+
+}  */

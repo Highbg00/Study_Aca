@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3 Selector Basic</title>
+<!-- 일반구조선택자 : 왕 꿈틀이 만들기 -->
+<!-- display : block
+넓이와 높이를 모두 갖는다.(줄바꿈 시킬 수 있음)
+width, height, margin, align 속성 적용됨						
+즉, 크기지정 가능 -->
+
+<style>
+a {text-decoration: none; color: black; font-weight: bold;}
+#mainMenu { overflow: hidden; }
+
+#mainMenu>li {
+	float: left;
+	list-style: none;
+}
+
+#mainMenu>li>a{
+	display: block;	
+	padding: 15px;
+ 	width: 50px;
+	text-align: center;
+}
+
+#mainMenu>li:nth-child(2n+1) {
+	background-color: green;
+}
+
+#mainMenu>li:nth-child(2n) {
+	background-color: red;
+}
+
+#mainMenu>li:first-child{
+	border-radius: 20px 0 0 20px;
+}
+
+#mainMenu>li:last-child {
+	border-radius: 0 20px 20px 0;
+}
+
+#subMenu {
+	margin: 0;
+	padding: 0;
+	display: none; /* 태그를 화면에 보이지 않게 만듦, 해당 요소가 흔적도 없이 사라짐 */
+	background: gray;
+	text-align: center;
+}
+
+#mainMenu>li>a:hover+ul { /* + : 동위 연산자, 바로 뒤 */
+	display: block;
+}
+
+/* #subMenu a:hover {
+	display: block;
+} XXX */
+
+#subMenu:hover {
+	display: block;
+}
+
+#subMenu li {
+	list-style: none;
+	padding: 3px;
+}
+
+#subMenu li a:hover {
+	background-color: white;
+	color: blue;
+}
+
+#subMenu li a:active {
+	color: red;
+}
+</style>
+</head>
+<body>
+	<ul id="mainMenu">
+		<li>
+			<a href="#">First</a>
+		</li>
+		<li>
+			<a href="#">Second</a>
+		</li>
+		<li>
+			<a href="#">Third</a>
+		</li>
+		<li>
+			<a href="#">Fourth</a>
+		</li>
+		<li>
+			<a href="#">Fifth</a>
+		</li>
+		<li>
+			<a href="#">Sixth</a>
+			<ul id="subMenu">
+				<li><a href="#">Sub61</a></li>
+				<li><a href="#">Sub62</a></li>
+				<li><a href="#">Sub63</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">Seventh</a>
+			<ul id="subMenu">
+				<li><a href="#">Sub71</a></li>
+				<li><a href="#">Sub72</a></li>
+				<li><a href="#">Sub73</a></li>
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>

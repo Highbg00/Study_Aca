@@ -1,0 +1,68 @@
+﻿@charset "utf-8";
+
+#graph {
+    width: 610px;
+    border: 3px solid black;
+}
+
+.bar {
+    width: 10px; 
+    height: 50px;
+    background-color: orange;
+    margin: 5px;
+    transition-duration: 5s;
+}
+
+#graph:hover > .bar {
+    width: 600px;
+}
+
+/* 
+animation-timing-function : 수치 변형 함수 지정
+- linear : 변화가 시작부터 종료까지 동일한 속도로 일어난다. 
+- ease : 극초반은 느리게, 초반은 빠르게, 종료지점은 느리게 변화가 진행된다. 
+- ease-in : 시작지점의 변화가 천천히 진행된다. 
+- ease-out : 종료지점의 변화가 천천히 진행된다.
+- ease-in-out : 시작지점과 종료지점의 변화가 천천히 진행된다.
+ */
+.bar:nth-child(1) { 
+    transition-delay: 0s;
+    transition-timing-function: linear; 
+}
+.bar:nth-child(2) { 
+    transition-delay: 1s;
+    transition-timing-function: ease; 
+}
+.bar:nth-child(3) { 
+    transition-delay: 2s;
+    transition-timing-function: ease-in; 
+}
+.bar:nth-child(4) { 
+    transition-delay: 3s;
+    transition-timing-function: ease-in-out;
+}
+.bar:nth-child(5) { 
+    transition-delay: 4s;
+    transition-timing-function: ease-out;
+}
+
+#graph:hover > .bar:nth-child(1) {
+    background-color: red;
+    width: 100px;
+}
+#graph:hover > .bar:nth-child(2) { 
+    background-color: blue;
+    width: 300px;
+}
+#graph:hover > .bar:nth-child(3) { 
+    background-color: green;
+    width: 400px;
+}
+#graph:hover > .bar:nth-child(4) { 
+    background-color: yellow;
+    width: 200px;
+}
+#graph:hover > .bar:nth-child(5) { 
+    background-color: pink;
+    width: 400px;
+}

@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+
+<!-- background-size : 주어진 크기에 이미지 크기를  맞춘다 -->
+<style>
+
+div:nth-child(1) {
+	width: 100%;
+	margin: 0px auto;
+	height: 400px;
+	background-image: url("visual.jpg");
+	background-size: 100%;
+	border: 1px solid red;
+	/* 브라우저 상에서 width: 100% 에서 background-size: 가로 100%, 세로는 자동으로 auto */
+}
+
+div:nth-child(2) {
+	width: 80%;
+	margin: 0px auto;
+	height: 400px;
+	background-image: url("visual.jpg");
+	background-size: 100%;
+	/* 브라우저 상에서 width: 80% 에서 background-size: 가로 100%, 세로는 자동으로 auto */
+	border: 1px solid red;
+}
+
+div:nth-child(3) {
+	width: 80%;
+	margin: 0px auto;
+	height: 400px;
+	background-image: url("visual.jpg");
+	background-size: 80%;
+	/* 브라우저 상에서 width: 80% 에서 background-size: 가로 80%, 세로는 자동으로 auto */
+	border: 1px solid red;
+}
+
+div:nth-child(4) {
+	width: 80%;
+	margin: 0 auto;
+	height: 400px;
+	background-image: url("visual.jpg");
+	background-size: 30%;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	/* 브라우저 상에서 width: 80% 에서 background-size: 가로 50%, 세로는 자동으로 auto */
+	border: 1px solid red;
+}
+</style>
+
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+*{
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+
+td{
+	border: 1px solid black;
+}
+
+form {
+	height: 600px;
+	padding:10px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+button{
+	background-color: white;
+}
+
+tr:nth-child(3)>td{
+	height: 20px;
+}
+
+tr:nth-child(6)>td {
+	height: 20px;
+}
+
+input[type=text],[type=password]{
+ 	background:transparent;
+  border:none;
+  border-bottom: solid 1px #ccc;
+  padding:20px 0px 5px 0px;
+  font-size:14pt;
+  width:100%;
+}
+
+input[type=button],[type=reset]{
+	height: 40px;
+	width: 80px;
+}
+
+input::placeholder{
+    color:transparent;
+}
+
+#hp1::placeholder{
+	color:gray;
+}
+
+#hp2::placeholder{
+	color:gray;
+}
+
+#hp3::placeholder{
+	color:gray;
+}
+
+input:placeholder-shown + label{
+    color: white;
+    font-size:14pt;
+    top:15px;
+
+}
+
+input:focus + label, label{
+    color: white;
+    font-size:10pt;
+    pointer-events: none;
+    position: absolute;
+    left:0px;
+    top:0px;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+
+.input-box{
+	position:relative;
+	margin:10px 0;
+}
+
+.input-box > input{
+ 	background:transparent;
+    border:none;
+    border-bottom: solid 1px #ccc;
+    padding:20px 0px 5px 0px;
+    font-size:14pt;
+    width:100%;
+    color: white;
+}
+
+input[type=button],input[type=reset],input[type=submit]{
+    background-color: gray;
+    width: 80px;
+    border:none;
+    color:white;
+    border-radius: 5px;
+    height:35px;
+    font-size: 10pt;
+    margin-top:20px;
+}

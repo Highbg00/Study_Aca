@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+	<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
+<style type="text/css">
+ 	@import url("https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap");
+ 	@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css");
+ 	@import url("css/signup.css");
+</style>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="js/signup.js"></script>
+</head>
+<body>
+    <form action="#" method="get" name="myForm" id="myForm" autocomplete="on">
+		<fieldset>
+			<legend>회원<img src="img/2dog.png" alt="2dog">가입</legend>
+			<p>
+				<label for="userId">아&nbsp;&nbsp;이&nbsp;&nbsp;디</label>
+				<input type="text" name="userId" id="userId" 
+					placeholder="영문자로 시작하고 5~12글자" 
+					size="20" maxlength="12" autofocus="autofocus" />
+			</p>
+			<p>
+				<label for="userPw">비밀&nbsp;번호</label>
+				<input type="password" name="userPw" id="userPw" 
+					placeholder="영문자로 시작하고 5~12글자" autocomplete="on"
+					size="20" maxlength="12"/>
+			</p>
+			<p>
+				<label for="userName">이&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;름</label>
+				<input type="text" name="userName" id="userName" 
+					placeholder="이름은 한글로 2~5글자" 
+					size="20" maxlength="5" />
+					<!-- autofocus="autofocus" autocomplete="on" -->
+			</p>
+			<p>
+				<label for="userTel">전화&nbsp;번호</label>
+				<input type="text" name="userTel" id="userTel"
+					placeholder="숫자로 11자" 
+					size="20" maxlength="11" />
+			</p>
+			<p>
+				<label for="userEmail">이&nbsp;&nbsp;메&nbsp;&nbsp;일</label>
+				<input type="text" name="userEmail" id="userEmail" 
+					placeholder="이메일을 입력하세요" />
+			</p>
+			<p>
+				<input type="submit" value="회원가입" class="btn"/>
+				<input type="reset"  value="가입취소" class="btn"/>
+			</p>
+            <div class="notAMember">잠깐! 회원가입을 취소하시겠습니까?
+                <a href="index.html">돌아가기</a>
+            </div>
+		</fieldset>
+	</form>	
+</body>
+</html>

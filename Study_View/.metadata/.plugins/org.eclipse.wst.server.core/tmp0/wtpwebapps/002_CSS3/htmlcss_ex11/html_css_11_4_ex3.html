@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+
+<!--
+		background-attachment ☞  배경 이미지 고정 결정
+		scroll ☞ 기본값, 스크롤시 스크롤, 이미지가 요소에 상대적인 위치
+		fixed ☞ 스크롤시 화면에 고정, 이미지가 윈도우창에 상대적인 위치 (스크롤 시켜도 이미지 고정)
+	-->
+<style>
+body {
+	margin: 0px;
+}
+
+div {
+	width: 100%;
+	margin: 0px auto;
+	height: 5000px;
+	background-image: url("visual.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	/* background-attachment: scroll; */
+}
+</style>
+
+</head>
+<body>
+	<div></div>
+</body>
+</html>

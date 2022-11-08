@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>메인화면</title>
+<style>
+	@import url("css/index.css");
+	@import url("css/moveSlider.css");
+	@import url("ui-lightness/jquery-ui.css");
+</style>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="js/moveSlider.js"></script>
+<script src="js/uiLogin.js"></script>
+<script src="ui-lightness/jquery-ui.js"></script>
+</head>
+
+<body>
+<div id="wrap">
+	<div id="header">
+		<div id="header_in">
+			
+			<div class="header_text">
+				<h4>1.라이트노벨 ul li a</h4>
+			</div>
+			<div class="login_part">
+				<ul>
+					<li><a href="signup.html" target="_self" class="signup">회원가입</a></li>
+					<li><a href="login.html"  target="_self" class="login">로 그 인</a></li>
+				</ul>
+			</div>
+			
+			<div class="header_text">
+				<h4>2.라이트노벨 ul li a button</h4>
+			</div>
+			<div class="login_part">
+				<ul>
+					<li>
+						<a href="signup.html" target="_self">
+							<button type="button" class="signup" >회원가입</button>
+						</a>
+					</li>
+					<li>
+						<a href="login.html"  target="_self">
+							<button type="button" class="login" >로 그 인</button>
+						</a>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="header_text">
+				<h4>3.라이트노벨 input type button</h4>
+			</div>
+			<div class="login_part">
+				<input type="button" class="signup" name="signup" value="회원가입" 
+							 onclick="location.href='signup.html';" />
+				<input type="button" class="login"  name="login"  value="로 그 인"
+							 onclick="location.href='login.html';" />
+			</div>
+			
+			<div class="header_text">
+				<h4>4.라이트노벨 input type button ui plugin div</h4>
+			</div>
+			<div class="login_part">
+				<input type="button" class="signup" id="signup" value="회원가입" 
+							 onclick="location.href='signup.html';" />
+				<input type="button" class="login"  id="login"  value="로 그 인" />
+			</div>
+			
+			
+			
+			
+			
+			
+			<div class="header_text">
+				<h4>5.라이트노벨 ul li a</h4>
+			</div>
+			<div class="login_part">
+				<ul class="login_info">
+					<li><a href="#" class="menu">로그인/회원가입</a>
+							<ul class="login_menu">
+								<li><a href="signup.html">회원가입</a></li>
+								<li><a href="login.html">로그인</a></li>
+							</ul>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	<div id="login_form" title="로그인 페이지">
+		I&nbsp;&nbsp;&nbsp;D&nbsp;
+		<input id="id" type="text" /><br/><br/>
+		P&nbsp;W&nbsp;
+		<input id="pw" type="password" />
+	</div>
+	
+	<div id="mouseslider">
+		<div class="animation_canvas1">
+			<div class="left_slider">
+				<a href="#"><img src="img/전생슬1.jpg" class="slider_image1" /></a> 
+				<a href="#"><img src="img/전생슬2.jpg" class="slider_image1" /></a> 
+				<a href="#"><img src="img/전생슬3.jpg" class="slider_image1" /></a> 
+				<a href="#"><img src="img/전생슬4.jpg" class="slider_image1" /></a> 
+				<a href="#"><img src="img/전생슬5.jpg" class="slider_image1" /></a>
+			</div>
+			<div class="control_panel1">
+				<div class="control_button1"></div>
+				<div class="control_button1"></div>
+				<div class="control_button1"></div>
+				<div class="control_button1"></div>
+				<div class="control_button1"></div>
+			</div>
+
+		</div>
+		<div class="animation_canvas2">
+			<div class="right_slider">
+
+				<a href="#"><img src="img/던만추1.jpg" class="slider_image2" /></a> 
+				<a href="#"><img src="img/던만추2.jpg" class="slider_image2" /></a> 
+				<a href="#"><img src="img/던만추3.jpg" class="slider_image2" /></a> 
+				<a href="#"><img src="img/던만추4.jpg" class="slider_image2" /></a> 
+				<a href="#"><img src="img/던만추5.jpg" class="slider_image2" /></a>
+			</div>
+			<div class="control_panel2">
+				<div class="control_button2"></div>
+				<div class="control_button2"></div>
+				<div class="control_button2"></div>
+				<div class="control_button2"></div>
+				<div class="control_button2"></div>
+			</div>
+		</div>
+	</div>
+
+	<div id="foot_link">
+
+		<a href="http://www.aniplustv.com" target="_blank"><img src="img/애니플러스.gif" /></a> 
+		<a href="https://www.bandaimall.co.kr" target="_blank"><img src="img/반다이몰.gif" /></a>
+		<a href="https://www.aladin.co.kr" target="_blank"><img src="img/알라딘.gif" /></a> 
+		<a href="http://www.kyobobook.co.kr" target="_blank"><img src="img/교보문고.gif" /></a> 
+		<a href="http://www.naver.com" target="_blank"><img src="img/네이버.gif" /></a> 
+		<a href="http://www.daum.net" target="_blank"><img src="img/다음.gif" /></a>
+
+	</div>
+
+</div>
+</body>
+</html>

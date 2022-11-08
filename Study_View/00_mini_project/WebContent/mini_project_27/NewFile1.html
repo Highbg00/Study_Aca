@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	while (true) {
+		var userString = prompt("가위, 바위, 보 중에서 입력하세요","");
+		
+		if (!(userString == "가위" || userString == "바위" || userString == "보")) {
+			userString = prompt("잘못입력하셨습니다. \n가위, 바위, 보 중에서만 입력하세요","");
+		} else {
+			break;
+		} //if
+	} //while
+		
+	var comNumber = Math.ceil(Math.random() * 3); //1, 2, 3
+	var comString;
+	
+	switch (comNumber) {
+	case 1:
+		comString = "가위"
+		break;
+
+	case 2:
+		comString = "바위"
+		break;
+
+	default:
+		comString = "보"
+		break;
+	} //switch
+	
+	//가위,바위,보 결판내기
+	
+	if ( (userString == "가위" && comString =="보") || (userString == "바위" && comString =="가위") || 
+			 (userString == "보"  && comString =="주먹") ) {
+		alert("내가 낸것은 " + userString + "이고, \n컴퓨터가 낸것은 " + comString + "이어서, \n내가 이겼습니다.");
+	} else if (userString == comString) {
+		alert("내가 낸것은 " + userString + "이고, \n컴퓨터가 낸것은 " + comString + "이어서, \n서로 비겼습니다.");
+		location.reload();
+	} else {
+		alert("내가 낸것은 " + userString + "이고, \n컴퓨터가 낸것은 " + comString + "이어서, \n내가 졌습니다.");
+		location.reload();
+	}
+	
+	
+	
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

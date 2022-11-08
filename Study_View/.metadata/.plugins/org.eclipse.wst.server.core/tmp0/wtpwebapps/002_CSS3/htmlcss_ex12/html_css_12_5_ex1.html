@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>이미지에 링크 걸기</title>
+
+<!-- 이미지에 링크 걸기 
+	https://www.image-map.net/ 
+	
+	이미지맵(image map) : 하나의 이미지에 여러개의 링크 걸때 사용, HTML 소스가 간단해지는 장점
+	x, y, radius : 원형일 때 (shape="circle") 일 때 원형 중앙과 반지름의 좌표
+	x1, y1, x2, y2 : 사각형 모양일 때(shape="rect") 좌상, 우하
+	다각형 꼭지점 좌표 여러개 즉, 좌상, 우상 , 우하, 좌하 
+	
+	※ coords : coordinate, 조화시키다. 맞추다, 맞게 하다. 수학용어로 축, 좌표
+	-->
+</head>
+<body>
+	<img src="display.jpg" usemap="#imagemap" />
+
+	<map name="imagemap">
+	
+		<area shape="circle" coords="330,350,150" 
+		href="http://www.naver.com" target="_blank">
+		<!-- 중심좌표 , 반지름 -->
+		
+		<area shape="rect" coords="700,230,1110,325"
+			href="http://www.google.com" target="_blank">
+		<!-- 시작좌표, 끝좌표, 즉 좌상, 우하  좌표-->
+		
+		<area shape="poly" coords="1430,145, 1540,145, 1580,280, 1400,280"
+			href="http://www.yahoo.com" target="_blank">
+		<!-- 다각형 꼭지점 좌표 여러개 즉, 좌상, 우상 , 우하, 좌하 좌표순으로-->
+		
+				
+		
+		
+	</map> <!-- **********  -->
+
+</body>
+</html>

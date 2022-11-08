@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Select Option</title>
+</head>
+<body>
+	<select name="food" id="food">
+		<option>좋아하는 음식</option>
+		<option value="kimbab">김밥</option>
+		<option value="ddukboggi" selected="selected">떡볶이</option>
+		<option value="soondai">순대</option>
+		<option value="eomook">어묵</option>
+	</select>
+</body>
+</html>
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>이벤트</title>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+	//$(function() {
+	$(document).ready(function() {
+	
+		//$("요소선택").change(function(){...}) : 폼 요소에 value 값이 변경될때 실행됨. 
+		//입력된 새값을 스크립트에 이용할때 사용
+		//$("요소선택").change() : 폼 요소에 값이 변경될때 실행됨.
+		//$(this) : 이벤트가 발생한 요소
+		
+		$("#site").change(function() {
+			$("#txt").text($("#site").val());
+			//$("#txt").text($(this).val());
+		});
+		
+	});
+</script>
+</head>
+<body>
+	<select name="site" id="site">
+		<option value="">사이트 선택</option>
+		<option value="http://www.naver.com">네이버</option>
+		<option value="http://www.nate.com">네이트</option>
+		<option value="http://www.daum.net">다음</option>
+	</select>
+	<p id="txt"></p>
+</body>
+</html> 
+-->

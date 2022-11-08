@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+
+<!-- position : 
+	fixed -> 화면에 고정, 스크롤과 상관없이 항상 화면 최 좌측상단을 기준으로 좌표를 고정합니다.
+	absolute -> 브라우저 시작점을 기준으로 절대 좌표로 위치 지정 
+	-->
+<style>
+#temp {
+	width: 100px;
+	height: 2000px;
+}
+
+div {
+	width: 100px;
+	height: 100px;
+	opacity: 0.7;
+}
+
+div:nth-child(1) {
+	background-color: #ff0000;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+div:nth-child(2) {
+	background-color: #00ff00;
+	position: absolute;
+	top: 50px;
+	left: 50px;
+}
+
+div:nth-child(3) {
+	background-color: #0000ff;
+	position: absolute;
+	top: 100px;
+	left: 100px;
+}
+
+#wrap {
+	width: 300px;
+	height: 300px;
+	position: fixed;
+	top: 300px;
+	left: 300px;
+	background-color: yellow;
+	opacity: 1.0;
+}
+
+#wrap #content {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	background-color: red;
+	opacity: 1.0;
+}
+
+#fixed {
+	width: 100px;
+	height: 50px;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	background-color: yellow;
+	border: 2px solid red;
+}
+</style>
+
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+
+	<div id="wrap">
+		<div id="content"></div>
+	</div>
+
+	<div id="fixed">여긴 고정된 박스입니다</div>
+	<div id="temp"></div>
+</body>
+</html>

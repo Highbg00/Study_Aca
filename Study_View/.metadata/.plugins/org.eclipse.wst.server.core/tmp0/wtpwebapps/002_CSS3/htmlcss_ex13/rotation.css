@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+* {margin:0px; padding: 0px;}
+/* 위치 속성(left속성과 top속성)을 변경하려면 position스타일 속성이 absolute이거나 relative이어야 함) */
+#box {position: relative;}
+h1 {
+	position: absolute; /* 없으면 오른쪽 방향으로 안감 */
+	width:200px; 
+	height:200px; 
+	border-radius: 50%;
+	text-align: center;
+	line-height: 200px;  
+	background: linear-gradient(#ff0000 0%, #0000ff 100%);	
+					/* linear-gradient함수(각도, 색상 위치, 색상 위치): 선형그라디언트함수Ʈ */
+	color: white;
+	
+	animation-name: ball;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;  /* iteration : 반복 */
+	animation-direction: alternate;	/* 방향 */
+	animation-timing-function: linear;	/* 변화 속도, 수치 변형 함수 지정 */
+}	
+/* animation-timing-function : 수치 변형 함수 지정
+- linear : 변화가 시작부터 종료까지 동일한 속도로 일어난다. 
+- ease : 극초반은 느리게, 초반은 빠르게, 종료지점은 느리게 변화가 진행된다. 
+- ease-in : 시작지점의 변화가 천천히 진행된다. 
+- ease-out : 종료지점의 변화가 천천히 진행된다.
+- ease-in-out : 시작지점과 종료지점의 변화가 천천히 진행된다. */
+
+h1:hover { 
+	animation-play-state: paused; /* 애니메이션 재생 상태 지정 */
+}
+
+/* @keyframes 규칙 */
+@keyframes ball { 
+	from {
+		left:0px;
+		transform: rotate(0deg);
+	}
+	30% {
+		left:0px;
+		transform: rotate(90deg);
+	}
+	70% {
+		left: 500px;
+		transform: rotate(180deg);
+	}		
+	to {
+		left: 500px;
+		transform: rotate(360deg);
+	}
+}

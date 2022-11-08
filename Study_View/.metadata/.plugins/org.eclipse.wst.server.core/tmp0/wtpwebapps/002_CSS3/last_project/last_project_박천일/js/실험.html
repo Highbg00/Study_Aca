@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>로그인</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Henny+Penny&display=swap" rel="stylesheet">
+<style type="text/css">
+ 	@import url("https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap");
+ 	@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css");
+ 	@import url("css/login.css");
+ 	
+ 	@charset "UTF-8";
+
+* {
+	font-family: 'Cute Font', cursive;
+	margin: 0px;
+	padding: 0px;
+	
+}
+
+body{
+	background: url(boracay-g83eba47ba_1920.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-size: cover;
+ }
+
+
+
+#wrap{
+	width: 450px;
+	padding: 10px;
+	border: 2px solid black;
+	font-size: 1.5rem;
+	text-align: center;
+	border-radius: 35px;
+	
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -100%);
+	
+}
+
+#wrap fieldset{
+	border: none;
+}
+
+#wrap legend{
+	font-size: 3.0rem;
+}
+
+div{
+	background-color: #EEEFF1;
+}
+
+a{
+	color: red;
+}
+
+table{
+	width: 445px;
+	text-align: center;
+}
+
+table tr td {
+	height: 35px;
+	line-height: 35px;
+}
+
+table tr td:first-child{
+	width: 15%;
+	
+}
+
+table tr td:last-child{
+	width: 85%;
+	text-align: left;
+}
+
+input[type='text'],input[type='password']{
+	display: inline-block;
+	text-align: center;
+	border: 2px solid black;
+	
+	width: 250px;
+	height: 25px;
+	line-height: 25px;
+	border-radius: 25px;
+	margin: 5px auto;
+	
+	outline: none;
+	transition-duration: 0.25s;
+}
+
+input[type='text']:focus,input[type='password']:focus{
+	display: inline-block;
+	width: 250px;
+	border-color: red;
+	color: orange;
+	
+}
+
+input[type='submit'],input[type='reset']{
+	border: 2px solid black;
+	color: white;
+	border-radius: 25px;
+	transition-duration: 0.25s;
+	text-align: center;
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	margin: 10px auto;
+	background-color: black;
+	
+	width: 170px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 1.2rem;
+}
+
+table tr:last-child td{
+	text-align: center;
+}
+
+.icon{
+	width: 36px;
+}
+
+.alert{
+	display: block;
+	font-weight: normal;
+	color: red;
+	font-size: 18px;
+	text-align: center;
+	line-height: 10px;
+	width: 270px;
+}
+
+.notAMember{
+	display: block;
+	width: 450px;
+	padding: 0px;
+	text-align: center;
+}
+
+.notAMember a{
+	color: red;
+}
+
+#close{
+	display: inline-block;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	outline: none;
+	border: 0px;
+	border-radius: 20px;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	background-color: pink;
+	color: red;
+	font-size: 25px;
+	cursor: pointer;
+	transition-duration: 0.5s;
+}
+
+#close:hover{
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+}
+
+#nun{
+	color: black;
+}
+
+#eye{
+	font-size: 23px;
+	color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 	
+</style>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="js/login.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		<form method="post" name="loginForm" id="loginForm">
+		
+			<fieldset>
+			<legend><strong>Login</strong></legend><span id="close">x</span>
+			<table border="0">
+				<tr>
+			<th colspan="3" height="80"><h2>회원가입</h2></th>
+		</tr>
+		
+		<tr>
+			<th>이름</th>
+			<td><input type="text" name="name" id="id" placeholder="이름을 입력하세요"
+								size="20" maxlength="4"></td>
+		</tr>
+		
+		<tr>
+			<th>ID</th>
+			<td><input type="text" name="id" id="id" placeholder="아이디를 입력하세요"
+								size="20" maxlength="12"></td>
+			<td><button type="button">ID중복확인</button></td>
+		</tr>
+		
+		<tr>
+			<th>비밀번호</th>
+			<td><input type="password" name="pw" id="pw" placeholder="비밀번호를 입력하세요"
+								size="20" maxlength="12"></td>
+		</tr>
+		
+		<tr>
+			<th>비밀번호 확인</th>
+			<td><input type="password" name="pwcheck" id="pwcheck" placeholder="비밀번호를 확인하세요"
+								size="20" maxlength="12"></td>
+		</tr>
+		
+		<tr>
+		<td colspan="3"><span id="pwcheckspan"></span></td>
+		</tr>
+		
+		<tr>
+			<th>이메일</th>
+			<td><input type="text" name="email" id="email" placeholder="이메일을 입력하세요"></td>
+			<td><button type="button">이메일중복확인</button></td>
+		</tr>
+		
+		<tr>
+			<th>핸드폰 번호</th>
+			<td><input type="text" name="tel" id="tel" size="3" maxlength="3"> - 
+				<input type="text" name="tel" id="tel" size="4" maxlength="4"> - 
+				<input type="text" name="tel" id="tel" size="4" maxlength="4"></td>
+		</tr>
+		
+		<tr>
+			<td align="center" colspan="3"><input type="submit" value="회원가입">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="reset" value="가입취소" ></td>
+		</tr>
+		
+		<tr>
+			<td colspan="3">
+			<div>이미 계정이 있다면<a href="./login.html"> 여기 </a>를 클릭하세요!</div>
+			</td>
+		</tr>
+			</table>
+		</fieldset>
+		
+		</form>
+		<div class="notAmember">아직 회원이 아니신가요?
+		<a href="signup.html">회원가입</a>
+		</div>
+	</div>
+</body>
+</html>
+
+

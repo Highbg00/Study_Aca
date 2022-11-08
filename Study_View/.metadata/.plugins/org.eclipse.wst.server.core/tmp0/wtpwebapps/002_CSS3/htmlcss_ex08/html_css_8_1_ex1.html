@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+
+<!-- 
+	반응선택자 : 사용자의 반응으로 생성되는 특정한 상태를 선택하는 선택자 
+	:active 선택자: 마우스 클릭시 
+	:hover 선택자 : 마우스 올렸을 때 
+-->
+
+<style>
+ol {
+	width: 300px;
+	background-color: red;
+	/* margin: 20px 0 0 50px; */
+	/* margin: 0; */
+	/* margin: 0 10px; */
+	/* margin: 0 auto; */
+	/* margin: 10px auto; */
+	/* margin: 0 0 0 0; */
+}
+
+ol>li {
+	font-size: 20px;
+	font-weight: bold;
+	color: orange;
+}
+
+ol>li:hover {
+	color: black;
+	cursor: pointer;
+	font-size: 2em;
+}
+
+ol>li:active {
+	color: blue;
+}
+</style>
+
+</head>
+
+<body>
+	<ol>
+		<li>menu1</li>
+		<li>menu2</li>
+		<li>menu3</li>
+		<li>menu4</li>
+		<li>menu5</li>
+	</ol>
+</body>
+</html>

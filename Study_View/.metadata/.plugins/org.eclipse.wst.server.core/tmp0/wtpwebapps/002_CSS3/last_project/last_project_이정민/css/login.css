@@ -1,0 +1,174 @@
+@charset "UTF-8";
+
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	background-color: #b6d7de;
+}
+ 
+#wrap{
+	width: 450px;
+	padding: 10px;
+	border: none;
+	font-size: 1.2rem;
+	text-align: center;
+	background-color: #f6cabd;
+	border-radius: 5px;
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -100%);
+	box-shadow: 10px 10px 30px gray;
+	
+}
+
+#wrap fieldset{
+	border: none;
+}
+
+#wrap img{
+	height: 50px;
+}
+
+#wrap legend {
+	font-size: 1.8rem;
+	font-family: 'Indie Flower', cursive; /* 영어 */
+}
+
+table{
+	width: 445px;
+	text-align: center;
+	font-family: 'Hi Melody', cursive;
+}
+
+table tr td{
+	height: 35px;
+	line-height: 35px;
+}
+
+table tr td:first-child{
+	width: 15%;
+}
+
+table tr td:last-child{
+	width: 85%;
+	text-align: left;
+}
+
+input[type="text"],input[type="password"]{
+	display: inline-block;
+	text-align: center;
+	border: none;
+	
+	width: 250px;
+	height: 45px;
+	line-height: 45px;
+	border-radius: 5px;
+	margin: 5px auto;
+	font-size: 20px;
+	
+	outline: none;
+	transition-duration: 0.25s;
+	font-family: 'Hi Melody', cursive;
+}
+
+input[type="text"]:focus,input[type="password"]:focus{		
+	display: inline-block;
+	width:260px;
+	border-color: red;
+	color: orange;
+}
+
+input[type="submit"],input[type="reset"]{
+	border: none;
+	color: white;
+	border-radius: 10px;
+	transition-duration:0.25s;
+	text-align: center;
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	margin: 10px auto;
+	background-color: #b2826f;
+	
+	width: 170px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 1.5rem;
+}
+
+table tr:last-child td{
+	text-align: center;
+}
+ 
+input[type="submit"]:hover,input[type="reset"]:hover{
+	background-color: #62504b;
+}
+	
+	
+.alert{
+	display: block;
+	font-weight: normal;
+	color: #b2826f;
+	font-size: 14px;
+	text-align: center;
+	line-height: 14px;
+	width: 270px;	
+}
+
+.notAMember{
+	display: block;
+	width: 450px;
+	padding: 0px;
+	text-align: center;
+	font-family: 'Hi Melody', cursive;
+}
+	
+.notAMember a{
+	color: #8f6858;
+}	
+
+#close{
+	display: inline-block;
+	position: absolute;
+	top: 3px;
+	right: 3px;
+	outline: none;
+	border: 0px;
+	border-radius: 5px;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	background-color: #e19c8b;
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+	transition-duration: 0.25s;
+}
+	
+#close:hover {
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+}
+
+#nun{
+	color: #e19c8b;
+}
+	
+#eye{
+	font-size: 15px;
+	color: #9c6a51;
+}
+
+#loginBtn, #resetBtn{
+	font-family: 'Hi Melody', cursive;
+}
+	
+	
+	

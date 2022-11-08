@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	body {
+		margin: 0px;
+	}
+	
+	div {
+		width: 100px;
+		height: 100px;
+		font-weight: bold;
+		text-align: center;
+	}
+	
+	div:nth-child(1) {
+		background-color: red;
+		margin: 10px;
+		/* margin 겹침현상 :
+		인접요소간 마진의 방향이 겹치면 작은값은 무시됨 
+		display : inline-block 으로 해결 */
+		display: inline-block;
+	}
+	div:nth-child(2) {
+		background-color: green;
+		margin: 20px;
+	}
+	div:nth-child(3) {
+		background-color: blue;
+		padding: 10px;
+	}
+	div:nth-child(4) {
+		background-color: orange;
+		padding: 10px;
+		margin: 10px;
+	}
+</style>
+</head>
+<body>
+	<div>
+		margin: 10px;
+	</div>
+	<div>
+		margin: 20px;
+	</div>
+	<div>
+		padding: 10px;
+	</div>
+	<div>
+		padding: 10px;<br /> margin: 10px;
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

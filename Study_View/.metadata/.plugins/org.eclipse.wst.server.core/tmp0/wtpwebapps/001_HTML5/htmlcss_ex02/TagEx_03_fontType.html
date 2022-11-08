@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" /><!-- 컴퓨터가 글씨를 나타내는 방식(유니코드를 위한 문자 인코딩방식)
+현재 페이지의 인코딩(문자셋)을 어떠한 방식으로 출력할 지 결정하는 속성, 
+유니코드는 전 세계 모든 문자를 컴퓨터에서 일관되게 표현하고 다룰 수 있도록 설계된 표준
+글자가 깨져 보일 때 보통 EUC-KR로 작성된 문서를 UTF-8로 변환 -->
+<title>글자 태그</title>
+</head>
+<body>
+	
+	<hr />
+	일반글자<br />
+	<b>굵게</b><br />	<!-- 굵게 -->
+	<strong>굵게</strong><br />	<!-- 굵게 -->
+	<i>기울임</i><br />	<!-- 기울임 -->
+	<em>기울임</em><br />	<!-- 기울임 -->
+	<b>긁게</b><sub>아래첨자</sub><br />	<!-- 아래첨자 -->
+	<b>굵게</b><sup>위첨자</sup><br />	<!-- 윗첨자 -->
+	<ins>밑줄글자</ins><br />	<!-- ins : 밑줄글자 -->
+	<del>취소선글자</del><br />	<!-- del : 취소선글자 -->
+	
+	<x-large>더 큰글자</x-large><br /> <!-- XXX 더 큰글자 -->
+	<large>큰글자</large><br /> <!-- XXX 큰글자 -->
+	<medium>기본 중간 글자</medium><br /> <!-- OOO 기본 중간 글자 -->
+	<small>작은글자</small><br />	<!-- OOO 작은글자 -->
+	<x-small>더 작은글자</x-small><br />	<!-- XXX 더 작은글자 -->
+	<hr/>
+	
+	<!-- ruby : 루비 문자(글자 위 덧말), rt : 위에 위치하는 작은 문자 -->
+	<ruby>	
+		<h1>KOREA</h1> 		
+		<rt>한국</rt>
+	</ruby>
+	<br />
+	<!-- 루비문자를 지원하지 않는 웹브라우저를 위한 rp 태그 -->
+	<ruby>			
+		<h1>KOREA</h1> 
+		<rp>(</rp>
+		<rt>한국</rt>		
+		<rp>)</rp>
+	</ruby>
+	
+	<br />
+	
+	<!-- 웹 표준에서 정하지 않은 태그지만 문제없이 실행은 됨-->
+	<food>food</food><br />
+  <rice>rice</rice>
+
+</body>
+</html>

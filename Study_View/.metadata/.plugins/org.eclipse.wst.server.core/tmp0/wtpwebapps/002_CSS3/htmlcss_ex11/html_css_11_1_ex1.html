@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+
+<!--width와 height 속성은 글자를 감싸는 영역크기 지정
+		width : 글자 들어가는 박스 너비, height : 글자 들어가는 박스 높이 
+		margin: 바깥여백, padding : 안여백 
+		
+		※ margin 겹침 오류 현상 
+		1. 마진 겹침 현상 : 인접 요소간 마진의 방향이 겹치면 작은값을 무시함
+		    그래서,display : inline-block;으로 해결
+		2. 더블 마진 현상 : 요소의 마진 방향과 float의 방향이 같을 때 마진이 2배로 적용됨
+			그래서, display : inline;으로 해결    
+-->
+
+<style>
+body {
+	margin: 0px;
+}
+
+div {
+	width: 100px;
+	height: 100px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#content1 {
+	background-color: red;
+	margin: 10px;
+	display: inline-block;
+}
+
+#content2 {
+	background-color: green;
+	margin: 20px;
+}
+
+#content3 {
+	background-color: blue;
+	padding: 10px;
+	display: inline-block;
+}
+
+#content4 {
+	background-color: orange;
+	padding: 10px;
+	margin: 10px;
+}
+</style>
+
+</head>
+<body>
+	<div id="content1">
+		margin: 10px
+	</div>
+	<div id="content2">
+		margin: 20px
+	</div>
+	<div id="content3">
+		padding: 10px
+	</div>
+	<div id="content4">
+		padding: 10px<br />margin: 10px
+	</div>
+</body>
+</html>

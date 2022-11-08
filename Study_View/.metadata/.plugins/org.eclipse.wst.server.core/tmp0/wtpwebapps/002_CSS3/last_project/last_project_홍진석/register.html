@@ -1,0 +1,42 @@
+<link href="register.css" rel="stylesheet" type="text/css" />
+<script src="register.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+<form name="join_form" action="join_ok.php" method="post">
+    <p class="sign" >Sign up</p>
+    <div>
+      <label>아이디
+      <br>
+      <input type="text" name="udi" id="uid"></label>
+      <button type="button" id="chkid" onclick="id_check();">중복확인</button>
+    </div>
+    <div><label>비밀번호<br><input type="password" name="pwd" id="pwd" placeholder="영문자+숫자+특수문자 조합"></label></div>
+    <div><label>비밀번호 재확인<br><input type="password" name="repwd" id="repwd"></label></div>
+    <div><label>이름<br><input type="text" name="uname" id="uname"></label></div>
+    <div>
+      <label>전화번호<br><input type="tel" name="mobile" id="mobile" placeholder="숫자만 입력"></label>
+    </div>
+    <div>
+      <label>이메일<br><input type="text" name="email_id" id="email_id">@</label>
+      <input type="text" name="email_add" id="email_add">
+      <select name="email_sel" id="email_sel" onchange="change_email();">
+        <!--onchage: select안에 있는 옵션들의 값이 바꼈을때 명령이 실행
+               onclick을 안하는 이유: 키보드 사용자는 click을 할수 없으므로-->
+        <option value="">직접입력</option>
+        <option value="naver.com">naver</option>
+        <option value="gmail.com">gmail</option>
+        <option value="nate.com">nate</option>
+      </select>
+    </div>
+    
+    <div class="join_btn">
+      <button type="button" onclick="history.back();">Cancel</button>
+      <!-- (window삭제).history.back 뒤로가기/history.forward 앞으로가기-->
+      <button type="button" onclick="joinform_check();">Submit</button>
+      <!-- 입력된 경우에 따라서 다르게 액션되면 button으로, 입력 값 상관 없이 무조건 보내기면 submit -->
+      <!-- type을 submit으로 하여 전송하기를 하지말고, script가서 함수를 만들고 전송하기를 함 button onclick으로 함수를 불러옴 함수안에 문제가 있는 경우 return false;-->
+    </div>
+  </form>
